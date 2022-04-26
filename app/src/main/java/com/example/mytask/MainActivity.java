@@ -1,28 +1,28 @@
 package com.example.mytask;
 
 import android.os.Bundle;
-import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity<s> extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
     private final String TAG = "666";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Calculator calculator = new Calculator(3,3,3f,3f);
+        Calculator calculator = new Calculator(3, 3);
+        Calculator calculatorf = new Calculator(3f, 3f);
 
-            int resultf = calculator.addf();
-            int result2f = calculator.subtractionf();
-            int result3f = calculator.divisionf();
-            int result4f = calculator.multiplicationf();
+        int resultf = calculatorf.addf();
+        int result2f = calculatorf.subtractionf();
+        int result3f = calculatorf.divisionf();
+        int result4f = calculatorf.multiplicationf();
 
-            int result = calculator.add();
-            int result2 = calculator.subtraction();
-            int result3 = calculator.division();
-            int result4 = calculator.multiplication();
+        int result = calculator.add();
+        int result2 = calculator.subtraction();
+        int result3 = calculator.division();
+        int result4 = calculator.multiplication();
 
 
 //        int myInt = 4;
@@ -107,11 +107,11 @@ public class MainActivity<s> extends AppCompatActivity {
 //            }
 //            Log.v(TAG,"мы вышли из цыкла ");
 
-        }
-
-
     }
+
+
 }
+
 
 
 
