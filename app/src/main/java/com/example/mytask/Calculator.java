@@ -1,45 +1,53 @@
 package com.example.mytask;
-import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.Scanner;
-import android.util.Log;
+ public class Calculator {
 
 
-public class Calculator extends AppCompatActivity {
-    public static void main(String[] args){
-
+    public  Calculator(int a, int b, float c, float d) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        this.d = d;
     }
-}
 
-class Lego {
-    private float number1 = 1;
-    private float number2 = 5;
-
-
-    public Lego() {
+     public int a;
+     public int b;
+     public float c;
+     public float d;
 
 
-        if( number1 >= number2 ){
-            System.out.println ( number1 + " - это число больше" );
-        }else{
-//            Log.v(TAG,  number2  + " - это число больше");
-
+        public int add() {
+             return a + b;
         }
-    }
-    public Lego Addition; {
-        double a = number1 + number2;
-        System.out.println( number1 + "+" + number2 + "=" + a);
-    }
-    public Lego Subtraction; {
-        double b = number1 - number2;
-        System.out.println( number1 + "-" + number2 + "=" + b);
-    }
-    public Lego Division; {
-        double d = number1 / number2;
-        System.out.println( number1 + "/" + number2 + "=" + d);
-    }
-    public Lego Multiplication; {
-        double c = number1 * number2;
-        System.out.println( number1 + "*" + number2 + "=" + c);
-    }
-}
+         public int subtraction(){
+            return a - b;
+        }
+         public int division () {
+             return a / b;
+         }
+         public int multiplication (){
+             return a * b;
+         }
+
+        public int addf() {
+         return a + b;
+         }
+
+        public int subtractionf() {
+         return a - b;
+          }
+
+        public int divisionf() {
+         return a / b;
+         }
+
+        public int multiplicationf() {
+         return a * b;
+         }
+
+
+
+
+
+
+
