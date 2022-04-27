@@ -18,5 +18,6 @@ public class MainActivity extends AppCompatActivity {
         int result3 = calculator.division();
         int result4 = calculator.multiplication();
         float result5=calculator.calculatorF();
+        int min=calculator.minFunction();
     }
 }

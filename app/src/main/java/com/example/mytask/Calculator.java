@@ -25,9 +25,19 @@ public class Calculator {
     public int multiplication() {
         return a * b;
     }
-    public float calculatorF(){
-        return a % b;
 
+    public float calculatorF() {
+        return a % b;
+    }
+
+    public void int minFunction () {
+        int min;
+        if (a > b)
+            min = b;
+        else
+            min = a;
+
+        return min;
     }
 }
 //    Ну вот тогда тебе такое задание:
