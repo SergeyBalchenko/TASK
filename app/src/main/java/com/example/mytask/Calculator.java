@@ -2,32 +2,6 @@ package com.example.mytask;
 
 public class Calculator {
 
-
-    public void Remainder(float d, float c) {
-        this.d = d;
-        this.c = c;
-    }
-
-    public float d;
-    public float c;
-
-    public float addWithRemainder() {
-        return d + c;
-    }
-
-    public float subtractionWithRemainder() {
-        return d - c;
-    }
-
-    public float divisionWithRemainder() {
-        return d / c;
-    }
-
-    public float multiplicationWithRemainder() {
-        return d * c;
-    }
-
-
     public Calculator(int a, int b) {
         this.a = a;
         this.b = b;
@@ -51,11 +25,9 @@ public class Calculator {
     public int multiplication() {
         return a * b;
     }
+    public float calculatorF(){
+        return a % b;
 
-    public void Check() {
-        if (a <= b) {
-            return;
-        }
     }
 }
 //    Ну вот тогда тебе такое задание:
