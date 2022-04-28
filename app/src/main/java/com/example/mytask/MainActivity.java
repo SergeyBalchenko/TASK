@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         int result2 = calculator.subtraction();
         int result3 = calculator.division();
         int result4 = calculator.multiplication();
-        float result5=calculator.calculatorF();
-        int min=calculator.minFunction();
+        float result5 = calculator.calculatorF();
+        int min = calculator.minFunction();
     }
 }
