@@ -1,6 +1,7 @@
 package com.example.mytask;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,13 +12,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Calculator calculator = new Calculator(3, 3);
+        Calculator calculator = new Calculator(0, 0);
 
         int result = calculator.add();
-        int result2 = calculator.subtraction();
-        int result3 = calculator.division();
-        int result4 = calculator.multiplication();
-        float result5 = calculator.calculatorF();
-        int min = calculator.minFunction();
+        int result1 = calculator.subtraction();
+        int result2 = calculator.division();
+        int result3 = calculator.multiplication();
+        float result4 = calculator.divisionWithRemainder();
+
+        Log.v(TAG, "add " + result);
+        Log.v(TAG, "subtraction " + result1);
+        Log.v(TAG, "multiplication " + result3);
+        Log.v(TAG, "division " + result2);
+        Log.v(TAG, "divisionWithRemainder " + result4);
     }
 }
