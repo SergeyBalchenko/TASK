@@ -5,9 +5,12 @@ public class Calculator {
     private int a;
     private int b;
 
+
     public Calculator(int a, int b) {
         this.a = a;
         this.b = b;
+//        this.d = d;
+//        this.c = c;
     }
 
     public int add() {
@@ -19,13 +22,16 @@ public class Calculator {
         return a - b;
     }
 
-    public int division() {
-        if (a == 0) {
+    public float division() {
+        float c = (float) a;
+        float d = (float) b;
+        if (c == 0) {
             return 0;
-        } else if (b == 0) {
+        } else if (d == 0) {
             return 0;
         } else
-            return a / b;
+            return c / d;
+
     }
 
     public int multiplication() {

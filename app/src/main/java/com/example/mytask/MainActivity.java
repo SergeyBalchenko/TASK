@@ -12,11 +12,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Calculator calculator = new Calculator(0, 0);
-
+        Calculator calculator = new Calculator(10, 3);
+//        String result2 = String.format("%.3f",calculator.division());
         int result = calculator.add();
         int result1 = calculator.subtraction();
-        int result2 = calculator.division();
+        float result2 = calculator.division();
         int result3 = calculator.multiplication();
         float result4 = calculator.divisionWithRemainder();
 
