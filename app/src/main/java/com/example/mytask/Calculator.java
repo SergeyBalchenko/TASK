@@ -2,21 +2,17 @@ package com.example.mytask;
 
 public class Calculator {
 
-    private int a;
-    private int b;
-
+    private final int a;
+    private final int b;
 
     public Calculator(int a, int b) {
         this.a = a;
         this.b = b;
-//        this.d = d;
-//        this.c = c;
     }
 
     public int add() {
         return a + b;
     }
-
 
     public int subtraction() {
         return a - b;
@@ -31,11 +27,9 @@ public class Calculator {
             return 0;
         } else
             return c / d;
-
     }
 
     public int multiplication() {
-
         return a * b;
     }
 
@@ -55,8 +49,3 @@ public class Calculator {
         return min;
     }
 }
-// + 1. Поля private, не public
-// + 2. Прочитать про public / private ...
-// + 3. Проверить работу calculatorF() метода.
-// + 4. Учесть случаи, если одно из чисел равно 0.
-// 5.
