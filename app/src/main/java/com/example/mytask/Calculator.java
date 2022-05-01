@@ -21,9 +21,9 @@ public class Calculator {
     public float division() {
         float c = (float) a;
         float d = (float) b;
-        if (c == 0) {
+        if (c <= 0) {
             return 0;
-        } else if (d == 0) {
+        } else if (d <= 0) {
             return 0;
         } else
             return c / d;

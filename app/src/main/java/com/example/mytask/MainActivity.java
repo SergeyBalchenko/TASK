@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Calculator calculator = new Calculator(10, 3);
+        Calculator calculator = new Calculator(3, 0);
 //        String result2 = String.format("%.3f",calculator.division());
         int result = calculator.add();
         int result1 = calculator.subtraction();
