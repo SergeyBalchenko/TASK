@@ -16,22 +16,6 @@ public class CalculatorTest {
     }
 
     @Test
-    public void subtraction() {
-    }
-
-    @Test
-    public void division() {
-    }
-
-    @Test
-    public void multiplication() {
-    }
-
-    @Test
-    public void calculatorF() {
-    }
-
-    @Test
     public void shouldReturnMinFirstNumber() {
         Calculator calculator = new Calculator(1, 2);
 
