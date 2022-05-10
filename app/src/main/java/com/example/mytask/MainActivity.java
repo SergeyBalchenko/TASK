@@ -24,5 +24,6 @@ public class MainActivity extends AppCompatActivity {
         Log.v(TAG, "multiplication " + result3);
         Log.v(TAG, "division " + result2);
         Log.v(TAG, "divisionWithRemainder " + result4);
+
     }
 }
