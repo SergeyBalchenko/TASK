@@ -25,5 +25,11 @@ public class MainActivity extends AppCompatActivity {
         Log.v(TAG, "division " + result2);
         Log.v(TAG, "divisionWithRemainder " + result4);
 
+
+        Classroom mainHall = new Classroom();
+        mainHall.setName("fdsgsd");
+        mainHall.setLocation("mayor");
+        Log.v(TAG,"gg" + mainHall.getName());
+
     }
 }
