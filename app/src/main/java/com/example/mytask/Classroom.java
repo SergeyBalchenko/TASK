@@ -25,4 +25,12 @@ class Classroom {
     public String getLocation() {
         return location;
     }
+
+    @Override
+    public String toString() {
+        return "Classroom{" +
+                "name='" + name + '\'' +
+                ", location='" + location + '\'' +
+                '}';
+    }
 }

@@ -35,4 +35,13 @@ class Teacher {
     public int getAge() {
         return age;
     }
+
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "name='" + name + '\'' +
+                ", phone='" + phone + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }

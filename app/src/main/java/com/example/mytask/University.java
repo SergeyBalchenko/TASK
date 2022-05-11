@@ -1,6 +1,6 @@
 package com.example.mytask;
 
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.List;
 
 class University {
@@ -8,9 +8,9 @@ class University {
     private static final String TAG = "666";
     private final String name = "ONPU";
 
-    private final List<Teacher> teachers = Collections.emptyList();
-    private final List<Subject> subjects = Collections.emptyList();
-    private final List<Classroom> classrooms = Collections.emptyList();
+    private final List<Teacher> teachers = new ArrayList();
+    private final List<Subject> subjects = new ArrayList();
+    private final List<Classroom> classrooms = new ArrayList();
 
     public List<Subject> getSubjects() {
         return subjects;
