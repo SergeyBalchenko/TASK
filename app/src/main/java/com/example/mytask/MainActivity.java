@@ -5,8 +5,6 @@ import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.ArrayList;
-
 public class MainActivity extends AppCompatActivity {
     private final String TAG = "666";
 
@@ -26,25 +24,5 @@ public class MainActivity extends AppCompatActivity {
         Log.v(TAG, "multiplication " + result3);
         Log.v(TAG, "division " + result2);
         Log.v(TAG, "divisionWithRemainder " + result4);
-
-
-        Classroom mainHall = new Classroom();
-        mainHall.setName("fdsgsd");
-        mainHall.setLocation("mayor");
-        Log.v(TAG,"gg" + mainHall.getName());
-
-
-//        ArrayList<String> myArrayList = new ArrayList<String>();
-//
-//        myArrayList.add("Hey!");
-//        myArrayList.add("This");
-//        myArrayList.add("is");
-//        myArrayList.add("my");
-//        myArrayList.add("first");
-//        myArrayList.add("list!");
-//
-//        for (int i = 0; i < myArrayList.size(); i++)
-//            Log.v(TAG,(myArrayList.get(i)));
-
     }
 }

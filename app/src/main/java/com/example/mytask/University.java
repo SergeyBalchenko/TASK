@@ -17,7 +17,7 @@ class University {
     }
 
     public void addTeacher(Teacher teacher) {
-        teachers.add(new Teacher());
+        teachers.add(teacher);
     }
 
     public void addSubject(Subject subject) {

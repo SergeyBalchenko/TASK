@@ -1,11 +1,17 @@
 package com.example.mytask;
 
-public class Subject {
+class Subject {
+
     private String name;
-    private String location;
+
+    public Subject(String name) {
+        this.name = name;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public String getName() {
         return name;
     }
