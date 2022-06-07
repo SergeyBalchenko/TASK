@@ -12,6 +12,6 @@ interface ClassroomWithSubjectDao {
     suspend fun insertClassroomSubjectCrossRef(crossRef: ClassroomSubjectCrossRef)
 
     @Transaction
-    @Query("SELECT * FROM teacher WHERE teacherName = :ClassroomName")
-    suspend fun getClassroomOfSubject(ClassroomName: String): List<ClassroomWithSubject>
+    @Query("SELECT * FROM subject WHERE subjectName = :subjectName")
+    suspend fun getClassroomOfSubject(subjectName: String): List<ClassroomWithSubject>
 }

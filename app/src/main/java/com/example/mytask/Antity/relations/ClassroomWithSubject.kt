@@ -1,18 +1,18 @@
-package com.example.mytask.antity.relations
+package com.example.mytask.Antity.relations
 
 import androidx.room.Embedded
+import androidx.room.Entity
 import androidx.room.Junction
 import androidx.room.Relation
 import com.example.mytask.Antity.Classroom
 import com.example.mytask.Antity.Subject
-import com.example.mytask.Antity.relations.ClassroomSubjectCrossRef
 
-data class ClassroomWithSubject (
-    @Embedded val classroom : Classroom,
+data class ClassroomWithSubject(
+    @Embedded val subject: Subject,
     @Relation(
-        parentColumn = "classroomName",
-        entityColumn = "subjectName",
+        parentColumn = "subjectName",
+        entityColumn = "classroomName",
         associateBy = Junction(ClassroomSubjectCrossRef::class)
     )
-    val subjects: List<Subject>
-        )
+    val classroom: List<Classroom>
+)
