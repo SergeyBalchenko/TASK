@@ -5,6 +5,7 @@ import com.example.mytask.entities.Subject
 import com.example.mytask.entities.relations.UniversityWithSubject
 @Dao
 interface SubjectDao {
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertSubject(subject: Subject)
 

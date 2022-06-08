@@ -8,7 +8,9 @@ import com.example.mytask.entities.Subject
 
 data class ClassroomWithSubject(
 
-    @Embedded val subject: Subject,
+    @Embedded
+    val subject: Subject,
+
     @Relation(
         parentColumn = "subjectName",
         entityColumn = "classroomName",

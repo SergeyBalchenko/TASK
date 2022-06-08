@@ -34,7 +34,7 @@ abstract class UniversityDatabase : RoomDatabase() {
         private var INSTANCE: UniversityDatabase? = null
 
         fun getInstance(context: Context): UniversityDatabase {
-            synchronized(this){
+            synchronized(this) {
                 return INSTANCE ?: Room.databaseBuilder(
                     context.applicationContext,
                     UniversityDatabase::class.java,
@@ -44,6 +44,5 @@ abstract class UniversityDatabase : RoomDatabase() {
                 }
             }
         }
-
     }
 }

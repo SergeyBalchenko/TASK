@@ -7,11 +7,14 @@ import com.example.mytask.entities.Subject
 import com.example.mytask.entities.Teacher
 
 data class SubjectWithTeacher (
-    @Embedded val subject: Subject,
+
+    @Embedded
+    val subject: Subject,
+
     @Relation(
         parentColumn = "subjectName",
         entityColumn = "teacherName",
         associateBy = Junction(TeacherSubjectCrossRef::class)
     )
     val teacher: List<Teacher>
-        )
+)

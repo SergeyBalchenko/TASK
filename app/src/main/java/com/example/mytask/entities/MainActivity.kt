@@ -10,11 +10,13 @@ import com.example.mytask.db.UniversityDatabase
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val  dao = UniversityDatabase.getInstance(this).universityDao
-        val  classroomDao = UniversityDatabase.getInstance(this).classroomDao
+
+        val dao = UniversityDatabase.getInstance(this).universityDao
+        val classroomDao = UniversityDatabase.getInstance(this).classroomDao
         val teacherDao = UniversityDatabase.getInstance(this).teacherDao
         val subjectDao = UniversityDatabase.getInstance(this).subjectDao
         val sWtDao = UniversityDatabase.getInstance(this).sWtDao
@@ -66,6 +68,7 @@ class MainActivity : AppCompatActivity() {
             ClassroomSubjectCrossRef("Hom Tanks", "Avoiding depression"),
             ClassroomSubjectCrossRef("Hom Tanks", "Dating for programmers")
         )
+
         lifecycleScope.launch {
             classroom.forEach { classroomDao.insertClassroom(it)}
             university.forEach { dao.insertUniversity(it) }
@@ -73,8 +76,6 @@ class MainActivity : AppCompatActivity() {
             teacher.forEach { teacherDao.insertTeacher(it) }
             teacherSubjectCrossRef.forEach { sWtDao.insertTeacherSubjectCrossRef(it) }
             classroomSubjectCrossRef.forEach {cWsDao.insertClassroomSubjectCrossRef(it)}
-
         }
-
     }
 }

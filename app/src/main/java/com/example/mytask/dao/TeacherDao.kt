@@ -6,6 +6,7 @@ import com.example.mytask.entities.relations.SubjectWithTeacher
 
 @Dao
 interface TeacherDao {
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertTeacher(teacher: Teacher)
 
