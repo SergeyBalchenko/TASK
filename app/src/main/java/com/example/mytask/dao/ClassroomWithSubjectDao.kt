@@ -9,8 +9,4 @@ interface ClassroomWithSubjectDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertClassroomSubjectCrossRef(crossRef: ClassroomSubjectCrossRef)
-
-    @Transaction
-    @Query("SELECT * FROM subject WHERE subjectName = :subjectName")
-    suspend fun getClassroomOfSubject(subjectName: String): List<ClassroomWithSubject>
 }

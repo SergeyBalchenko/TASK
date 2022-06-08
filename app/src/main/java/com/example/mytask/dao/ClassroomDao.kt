@@ -11,6 +11,6 @@ interface ClassroomDao {
     suspend fun insertClassroom(classroom: Classroom)
 
     @Transaction
-    @Query("SELECT * FROM classroom WHERE classroomName = :classroomName")
+    @Query("SELECT * FROM classroom WHERE classroomName =:classroomName")
     suspend fun getClassroomWithSubject(classroomName: String): List<ClassroomWithSubject>
 }
