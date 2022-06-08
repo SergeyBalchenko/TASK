@@ -21,13 +21,13 @@ import com.example.mytask.Dao.*
     ],
     version = 1
 )
-abstract class UniversityDatabase : RoomDatabase(){
+abstract class UniversityDatabase : RoomDatabase() {
 
-    abstract  val universityDao: UniversityDao
-    abstract  val classroomDao: ClassroomDao
-    abstract val   teacherDao: TeacherDao
+    abstract val universityDao: UniversityDao
+    abstract val classroomDao: ClassroomDao
+    abstract val teacherDao: TeacherDao
     abstract val subjectDao: SubjectDao
-    abstract  val sWtDao: SubjectWithTeacherDao
+    abstract val sWtDao: SubjectWithTeacherDao
     abstract val cWsDao: ClassroomWithSubjectDao
 
     companion object {
