@@ -1,13 +1,13 @@
-package com.example.mytask.Antity.relations
+package com.example.mytask.entities.relations
 
 import androidx.room.Embedded
-import androidx.room.Entity
 import androidx.room.Junction
 import androidx.room.Relation
-import com.example.mytask.Antity.Classroom
-import com.example.mytask.Antity.Subject
+import com.example.mytask.entities.Classroom
+import com.example.mytask.entities.Subject
 
 data class ClassroomWithSubject(
+
     @Embedded val subject: Subject,
     @Relation(
         parentColumn = "subjectName",

@@ -1,9 +1,9 @@
-package com.example.mytask.Antity.relations
+package com.example.mytask.entities.relations
 
 import androidx.room.Embedded
 import androidx.room.Relation
-import com.example.mytask.Antity.Subject
-import com.example.mytask.Antity.University
+import com.example.mytask.entities.Subject
+import com.example.mytask.entities.University
 
 data class UniversityWithSubject (
     @Embedded val university: University,

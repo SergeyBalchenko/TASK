@@ -1,8 +1,8 @@
-package com.example.mytask.Dao
+package com.example.mytask.dao
 
 import androidx.room.*
-import com.example.mytask.Antity.Subject
-import com.example.mytask.Antity.relations.UniversityWithSubject
+import com.example.mytask.entities.Subject
+import com.example.mytask.entities.relations.UniversityWithSubject
 @Dao
 interface SubjectDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)

@@ -1,4 +1,4 @@
-package com.example.mytask.Antity.relations
+package com.example.mytask.entities.relations
 
 import androidx.room.Entity
     @Entity(primaryKeys = ["teacherName","subjectName"])

@@ -1,9 +1,8 @@
-package com.example.mytask.Dao
+package com.example.mytask.dao
 
 import androidx.room.*
-import com.example.mytask.Antity.relations.ClassroomSubjectCrossRef
-import com.example.mytask.Antity.relations.ClassroomWithSubject
-import com.example.mytask.Antity.relations.TeacherWithSubject
+import com.example.mytask.entities.relations.ClassroomSubjectCrossRef
+import com.example.mytask.entities.relations.ClassroomWithSubject
 
 @Dao
 interface ClassroomWithSubjectDao {

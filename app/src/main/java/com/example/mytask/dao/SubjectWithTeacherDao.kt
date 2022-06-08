@@ -1,8 +1,8 @@
-package com.example.mytask.Dao
+package com.example.mytask.dao
 
 import androidx.room.*
-import com.example.mytask.Antity.relations.TeacherSubjectCrossRef
-import com.example.mytask.Antity.relations.TeacherWithSubject
+import com.example.mytask.entities.relations.TeacherSubjectCrossRef
+import com.example.mytask.entities.relations.TeacherWithSubject
 @Dao
 interface SubjectWithTeacherDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)

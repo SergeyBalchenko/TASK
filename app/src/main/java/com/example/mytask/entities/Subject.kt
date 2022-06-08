@@ -1,4 +1,4 @@
-package com.example.mytask.Antity
+package com.example.mytask.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

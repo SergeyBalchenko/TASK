@@ -4,11 +4,10 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.mytask.Antity.*
-import com.example.mytask.Antity.relations.ClassroomSubjectCrossRef
-import com.example.mytask.Antity.relations.SubjectWithTeacher
-import com.example.mytask.Antity.relations.TeacherSubjectCrossRef
-import com.example.mytask.Dao.*
+import com.example.mytask.entities.*
+import com.example.mytask.entities.relations.ClassroomSubjectCrossRef
+import com.example.mytask.entities.relations.TeacherSubjectCrossRef
+import com.example.mytask.dao.*
 
 @Database(
     entities =[

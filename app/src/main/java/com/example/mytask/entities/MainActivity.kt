@@ -1,10 +1,10 @@
-package com.example.mytask.Antity
+package com.example.mytask.entities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.example.mytask.Antity.relations.ClassroomSubjectCrossRef
-import com.example.mytask.Antity.relations.TeacherSubjectCrossRef
+import com.example.mytask.entities.relations.ClassroomSubjectCrossRef
+import com.example.mytask.entities.relations.TeacherSubjectCrossRef
 import com.example.mytask.R
 import com.example.mytask.db.UniversityDatabase
 import kotlinx.coroutines.launch
