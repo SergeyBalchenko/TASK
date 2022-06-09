@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 @Entity
 data class Teacher (
 
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = false)
     val teacherName: String,
 
     @ColumnInfo

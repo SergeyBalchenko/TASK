@@ -9,12 +9,12 @@ import com.example.mytask.entities.Subject
 data class ClassroomWithSubject(
 
     @Embedded
-    val subject: Subject,
+    val classroom: Classroom,
 
     @Relation(
-        parentColumn = "subjectName",
-        entityColumn = "classroomName",
+        parentColumn = "classroomName",
+        entityColumn = "subjectName",
         associateBy = Junction(ClassroomSubjectCrossRef::class)
     )
-    val classroom: List<Classroom>
+    val subject: List<Subject>
 )
