@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="396dp"
+    android:layout_height="307dp"
+    tools:context=".FistPage">
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/shape" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="473dp"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/undraw_teaching_re_g7e3__1_" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
