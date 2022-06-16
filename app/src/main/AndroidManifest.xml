@@ -20,7 +20,7 @@
             android:label="@string/title_activity_fist_page"
             android:theme="@style/Theme.MyTask.NoActionBar" />
         <activity
-            android:name=".MainActivity"
+            android:name=".presentation.main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

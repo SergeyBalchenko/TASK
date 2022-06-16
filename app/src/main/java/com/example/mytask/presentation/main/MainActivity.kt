@@ -1,10 +1,11 @@
-package com.example.mytask
+package com.example.mytask.presentation.main
 
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.example.mytask.R
 import com.example.mytask.data.db.UniversityDatabase
 import com.example.mytask.data.entities.Classroom
 import com.example.mytask.data.entities.Subject
@@ -12,21 +13,27 @@ import com.example.mytask.data.entities.Teacher
 import com.example.mytask.data.entities.University
 import com.example.mytask.data.entities.relations.ClassroomSubjectCrossRef
 import com.example.mytask.data.entities.relations.TeacherSubjectCrossRef
+import com.example.mytask.databinding.ActivityMainBinding
+import com.example.mytask.presentation.welcome.WelcomeFragment
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var primaryButton: Button
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        primaryButton = findViewById(R.id.primaryButton)
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.container, WelcomeFragment.newInstance())
+            .commit()
 
-        primaryButton.setOnClickListener {
-            doItMe()
-        }
+        createDbSettings()
+    }
+
+    private fun createDbSettings() {
 
         val dao = UniversityDatabase.getInstance(this).universityDao
         val classroomDao = UniversityDatabase.getInstance(this).classroomDao
@@ -91,12 +98,5 @@ class MainActivity : AppCompatActivity() {
             classroomSubjectCrossRef.forEach { cWsDao.insertClassroomSubjectCrossRef(it) }
         }
     }
-
-    fun doItMe() {
-//        val doItMeIntent = Intent(this, SecondPage::class.java)
-//        startActionMode(doItMeIntent)
-        Toast.makeText(this, "Hello from primary button", Toast.LENGTH_LONG).show()
-    }
-
 
 }
