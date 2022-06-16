@@ -1,4 +1,4 @@
-package com.example.mytask.entities.relations
+package com.example.mytask.data.entities.relations
 
 import androidx.room.Entity
 

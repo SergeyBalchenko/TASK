@@ -1,13 +1,13 @@
-package com.example.mytask.db
+package com.example.mytask.data.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.mytask.entities.*
-import com.example.mytask.entities.relations.ClassroomSubjectCrossRef
-import com.example.mytask.entities.relations.TeacherSubjectCrossRef
-import com.example.mytask.dao.*
+import com.example.mytask.data.entities.*
+import com.example.mytask.data.entities.relations.ClassroomSubjectCrossRef
+import com.example.mytask.data.entities.relations.TeacherSubjectCrossRef
+import com.example.mytask.data.dao.*
 
 @Database(
     entities =[

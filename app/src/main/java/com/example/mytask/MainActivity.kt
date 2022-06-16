@@ -5,13 +5,13 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.example.mytask.db.UniversityDatabase
-import com.example.mytask.entities.Classroom
-import com.example.mytask.entities.Subject
-import com.example.mytask.entities.Teacher
-import com.example.mytask.entities.University
-import com.example.mytask.entities.relations.ClassroomSubjectCrossRef
-import com.example.mytask.entities.relations.TeacherSubjectCrossRef
+import com.example.mytask.data.db.UniversityDatabase
+import com.example.mytask.data.entities.Classroom
+import com.example.mytask.data.entities.Subject
+import com.example.mytask.data.entities.Teacher
+import com.example.mytask.data.entities.University
+import com.example.mytask.data.entities.relations.ClassroomSubjectCrossRef
+import com.example.mytask.data.entities.relations.TeacherSubjectCrossRef
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {

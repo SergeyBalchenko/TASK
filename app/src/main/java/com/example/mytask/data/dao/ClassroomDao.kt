@@ -1,10 +1,9 @@
-package com.example.mytask.dao
+package com.example.mytask.data.dao
 
 import androidx.room.*
-import com.example.mytask.entities.Classroom
-import com.example.mytask.entities.relations.ClassroomWithSubject
-import com.example.mytask.entities.relations.SubjectWithClassroom
-import com.example.mytask.entities.relations.SubjectWithTeacher
+import com.example.mytask.data.entities.Classroom
+import com.example.mytask.data.entities.relations.ClassroomWithSubject
+import com.example.mytask.data.entities.relations.SubjectWithClassroom
 
 @Dao
 interface ClassroomDao {

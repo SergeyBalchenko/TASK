@@ -1,4 +1,4 @@
-package com.example.mytask.entities
+package com.example.mytask.data.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

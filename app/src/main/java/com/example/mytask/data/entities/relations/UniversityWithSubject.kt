@@ -1,9 +1,9 @@
-package com.example.mytask.entities.relations
+package com.example.mytask.data.entities.relations
 
 import androidx.room.Embedded
 import androidx.room.Relation
-import com.example.mytask.entities.Subject
-import com.example.mytask.entities.University
+import com.example.mytask.data.entities.Subject
+import com.example.mytask.data.entities.University
 
 data class UniversityWithSubject (
 
