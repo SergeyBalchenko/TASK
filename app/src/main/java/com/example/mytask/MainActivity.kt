@@ -1,19 +1,32 @@
-package com.example.mytask.entities
+package com.example.mytask
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.example.mytask.db.UniversityDatabase
+import com.example.mytask.entities.Classroom
+import com.example.mytask.entities.Subject
+import com.example.mytask.entities.Teacher
+import com.example.mytask.entities.University
 import com.example.mytask.entities.relations.ClassroomSubjectCrossRef
 import com.example.mytask.entities.relations.TeacherSubjectCrossRef
-import com.example.mytask.R
-import com.example.mytask.db.UniversityDatabase
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var primaryButton: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        primaryButton = findViewById(R.id.primaryButton)
+
+        primaryButton.setOnClickListener {
+            doItMe()
+        }
 
         val dao = UniversityDatabase.getInstance(this).universityDao
         val classroomDao = UniversityDatabase.getInstance(this).classroomDao
@@ -33,11 +46,11 @@ class MainActivity : AppCompatActivity() {
             University("JetBrains School")
         )
         val subjects = listOf(
-            Subject("Dating for programmers","ONPU"),
-            Subject("Avoiding depression","Mechnikov"),
-            Subject("Bug Fix Meditation","ONPU"),
-            Subject("Logcat for Newbies","ONPU"),
-            Subject("How to use Google","ONPU")
+            Subject("Dating for programmers", "ONPU"),
+            Subject("Avoiding depression", "Mechnikov"),
+            Subject("Bug Fix Meditation", "ONPU"),
+            Subject("Logcat for Newbies", "ONPU"),
+            Subject("How to use Google", "ONPU")
         )
         val teacher = listOf(
             Teacher("Beff Jezos", "Nokia", 33),
@@ -70,12 +83,20 @@ class MainActivity : AppCompatActivity() {
         )
 
         lifecycleScope.launch {
-            classroom.forEach { classroomDao.insertClassroom(it)}
+            classroom.forEach { classroomDao.insertClassroom(it) }
             university.forEach { dao.insertUniversity(it) }
             subjects.forEach { subjectDao.insertSubject(it) }
             teacher.forEach { teacherDao.insertTeacher(it) }
             teacherSubjectCrossRef.forEach { sWtDao.insertTeacherSubjectCrossRef(it) }
-            classroomSubjectCrossRef.forEach {cWsDao.insertClassroomSubjectCrossRef(it)}
+            classroomSubjectCrossRef.forEach { cWsDao.insertClassroomSubjectCrossRef(it) }
         }
     }
+
+    fun doItMe() {
+//        val doItMeIntent = Intent(this, SecondPage::class.java)
+//        startActionMode(doItMeIntent)
+        Toast.makeText(this, "Hello from primary button", Toast.LENGTH_LONG).show()
+    }
+
+
 }

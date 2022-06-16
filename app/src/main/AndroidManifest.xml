@@ -10,8 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyTask">
         <activity
-            android:name=".FistPage"
+            android:name=".ScrollingActivity"
             android:exported="false"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/Theme.MyTask.NoActionBar" />
+        <activity
+            android:name=".SecondPage"
+            android:exported="true"
             android:label="@string/title_activity_fist_page"
             android:theme="@style/Theme.MyTask.NoActionBar" />
         <activity
