@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.example.mytask.R
+import com.example.mytask.TheSampleActivity
 import com.example.mytask.data.db.UniversityDatabase
 import com.example.mytask.data.entities.Classroom
 import com.example.mytask.data.entities.Subject
@@ -14,12 +15,13 @@ import com.example.mytask.data.entities.University
 import com.example.mytask.data.entities.relations.ClassroomSubjectCrossRef
 import com.example.mytask.data.entities.relations.TeacherSubjectCrossRef
 import com.example.mytask.databinding.ActivityMainBinding
+import com.example.mytask.presentation.splash.SplashScreen
 import com.example.mytask.presentation.welcome.WelcomeFragment
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+     lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         supportFragmentManager.beginTransaction()
-            .replace(R.id.container, WelcomeFragment.newInstance())
+
             .commit()
 
         createDbSettings()

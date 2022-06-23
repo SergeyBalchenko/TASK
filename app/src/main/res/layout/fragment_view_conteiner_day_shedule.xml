@@ -7,24 +7,36 @@
     tools:context="presentation.viewDayShedule.ViewContainerDayShedule">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
+        android:id="@+id/cardInfoSubject"
+        android:layout_width="387dp"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
         app:cardBackgroundColor="@color/grey">
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:layout_margin="10dp"
+            android:contentDescription="@string/hello_moto"
+            android:fontFamily="@font/poppins_bold"
+            android:src="@drawable/ic_vector_more"
+            android:textSize="14sp" />
 
-            android:padding="10dp">
+        <TableLayout
+            android:layout_width="347dp"
+            android:layout_height="match_parent"
+            android:layout_column="2"
+            android:layout_margin="5dp">
 
             <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_span="3">
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView1"
+                    android:id="@+id/nameSubject"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:fontFamily="@font/poppins_bold"
@@ -32,51 +44,47 @@
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/nameTeacher"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:fontFamily="@font/poppins_bold"
                     android:text="@string/name_teacher"
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/date"
+                    android:layout_width="113dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:fontFamily="@font/poppins_bold"
                     android:text="@string/date"
                     android:textSize="14sp" />
 
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_bold"
-                    android:src="@drawable/ic_vector_more"
-                    android:textSize="14sp" />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_span="2">
+                android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/nameCumpus"
                     android:layout_weight="1"
                     android:fontFamily="@font/poppins_bold"
                     android:text="@string/name_auditoria"
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/nameAuditoria"
                     android:layout_weight="1"
                     android:fontFamily="@font/poppins_bold"
                     android:text="@string/name_classroom"
                     android:textSize="14sp" />
-            </TableRow>
-        </TableLayout>
-    </androidx.cardview.widget.CardView>
 
+            </TableRow>
+
+
+        </TableLayout>
+
+    </androidx.cardview.widget.CardView>
 </FrameLayout>

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyTask">
         <activity
+            android:name=".TheSampleActivity"
+            android:exported="false" />
+        <activity
             android:name=".SecondPage"
             android:exported="true"
             android:label="@string/title_activity_fist_page"
