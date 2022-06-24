@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.blank_for_add_subject.BlankAddSubject">
+
+    <ImageView
+        android:id="@+id/girlReadBook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp"
+        android:src="@drawable/ic_girl_read_book__1_"
+        tools:visibility="visible" />
+
+
+    <ImageView
+        android:id="@+id/btnWeek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity=""
+        android:layout_margin="90dp"
+        android:src="@drawable/botton_week_shedule_black" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shape" />
+
+    <TextView
+        android:id="@+id/mondayText"
+        android:layout_width="359dp"
+        android:layout_height="440dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="140dp"
+        android:background="@color/major"
+        android:fontFamily="@font/poppins_bold"
+        android:padding="10dp"
+        android:text="@string/subject"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+
+    <TableLayout
+        android:layout_width="337dp"
+        android:layout_height="347dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/grey_blank">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:padding="10dp"
+                android:text="@string/subject_name"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_rounded_corners"
+                android:ems="10"
+                android:hint="@string/write_name_subject"
+                android:inputType="textPersonName"
+                android:shadowRadius="10"
+                android:textSize="14sp"
+                app:layout_column="0"
+                app:layout_row="0" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/more_black"
+                android:padding="10dp"
+                />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textTime"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:padding="10dp"
+                android:text="@string/time"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextTextTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_rounded_corners"
+                android:ems="10"
+                android:hint="@string/write_time"
+                android:inputType="textPersonName"
+                android:shadowRadius="10"
+                android:textSize="14sp"
+                app:layout_column="0"
+                app:layout_row="0" />
+
+            <ImageView
+                android:id="@+id/bottom_more_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/more_black"
+                android:padding="10dp"
+                />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textDay"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:padding="10dp"
+                android:text="@string/day"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_rounded_corners"
+                android:ems="10"
+                android:hint="@string/write_day_of_week"
+                android:inputType="textPersonName"
+                android:shadowRadius="10"
+                android:textSize="14sp"
+                app:layout_column="0"
+                app:layout_row="0" />
+
+            <ImageView
+                android:id="@+id/bottom_more_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/more_black"
+                android:padding="10dp"
+                />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textLocation"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:padding="10dp"
+                android:text="@string/Location_name"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_rounded_corners"
+                android:ems="10"
+                android:hint="@string/write_name_location"
+                android:inputType="textPersonName"
+                app:layout_column="0"
+                app:layout_row="0"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/bottom_more_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/more_black"
+                android:padding="10dp"
+                />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textClassroom"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:padding="10dp"
+                android:text="@string/classroom_name"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextClassroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_rounded_corners"
+                android:ems="10"
+                android:hint="@string/write_name_classroom"
+                android:inputType="textPersonName"
+                android:shadowRadius="10"
+                android:textSize="14sp"
+                app:layout_column="0"
+                app:layout_row="0" />
+
+            <ImageView
+                android:id="@+id/bottom_more_classroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/more_black"
+                android:padding="10dp"
+                />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textTeacherName"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:padding="10dp"
+                android:text="@string/teacher_name"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextTeacherName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_rounded_corners"
+                android:ems="10"
+                android:hint="@string/write_name_teacher"
+                android:inputType="textPersonName"
+                android:shadowRadius="10"
+                android:textSize="14sp"
+                app:layout_column="0"
+                app:layout_row="0" />
+
+            <ImageView
+                android:id="@+id/bottom_more_teacher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/more_black"
+                android:padding="10dp"
+                />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textAge"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:padding="10dp"
+                android:text="@string/age"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_rounded_corners"
+                android:ems="10"
+                android:hint="@string/write_age"
+                android:inputType="textPersonName"
+                android:shadowRadius="10"
+                android:textSize="14sp"
+                app:layout_column="0"
+                app:layout_row="0"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <ImageView
+                android:id="@+id/bottom_more_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/more_black"
+                android:padding="10dp"
+                />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textPhoneNumber"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:padding="10dp"
+                android:text="@string/phone_number"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextPhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_rounded_corners"
+                android:ems="10"
+                android:hint="@string/write_phone_number"
+                android:inputType="textPersonName"
+                android:shadowRadius="10"
+                android:textSize="14sp"
+                app:layout_column="0"
+                app:layout_row="0" />
+
+            <ImageView
+                android:id="@+id/bottom_more_phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/more_black"
+                android:padding="10dp"
+                />
+
+        </TableRow>
+    </TableLayout>
+</FrameLayout>

@@ -23,7 +23,32 @@
     <string name="hello_moto">Hello Motherfucker</string>
     <string name="delete">Delete</string>
     <string name="remove">Remove</string>
+    <string name="subject">Subject</string>
+    <string name="teacher">Teacher</string>
+    <string name="teacher_in_a_week">Teacher in a week</string>
+    <string name="subject_in_a_week">Subject in a week</string>
+    <string name="add_teacher">Add Teacher</string>
+    <string name="add_subject">Add Subject</string>
+    <string name="add_university">Add University</string>
+    <string name="create_subject">Create Subject</string>
+    <string name="subject_name">Subject name:</string>
+    <string name="write_name_teacher">Write Teacher name</string>
+    <string name="teacher_name">Teacher name:</string>
+    <string name="write_name_subject">Write Subject name</string>
+    <string name="age">Age:</string>
+    <string name="write_age">Write Age</string>
+    <string name="classroom_name">Classroom:</string>
+    <string name="write_name_classroom">Write Classroom name</string>
+    <string name="Location_name">Location:</string>
+    <string name="write_name_location">Write Location name</string>
+    <string name="phone_number">Phone number:</string>
+    <string name="write_phone_number">Write phone number</string>
+    <string name="day">Day:</string>
+    <string name="write_day_of_week">Write day of week</string>
+    <string name="time">Time:</string>
+    <string name="write_time">Write time</string>
     <string name="large_text">
+
 
         "Material is the metaphor.\n\n"
 

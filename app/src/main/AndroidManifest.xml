@@ -13,7 +13,7 @@
             android:name=".TheSampleActivity"
             android:exported="false" />
         <activity
-            android:name=".SecondPage"
+            android:name=".presentation.welcomePgWork.WelcomeScreen"
             android:exported="true"
             android:label="@string/title_activity_fist_page"
             android:theme="@style/Theme.MyTask.NoActionBar" />

@@ -22,7 +22,7 @@
             android:layout_margin="10dp"
             android:contentDescription="@string/hello_moto"
             android:fontFamily="@font/poppins_bold"
-            android:src="@drawable/ic_vector_more"
+            android:src="@drawable/ic_more"
             android:textSize="14sp" />
 
         <TableLayout
@@ -39,6 +39,7 @@
                     android:id="@+id/nameSubject"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:ellipsize="end"
                     android:fontFamily="@font/poppins_bold"
                     android:text="@string/name_subject"
                     android:textSize="14sp" />
@@ -50,6 +51,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/poppins_bold"
                     android:text="@string/name_teacher"
+                    android:ellipsize="end"
                     android:textSize="14sp" />
 
                 <TextView
@@ -59,6 +61,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/poppins_bold"
                     android:text="@string/date"
+                    android:ellipsize="end"
                     android:textSize="14sp" />
 
             </TableRow>
@@ -72,6 +75,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/poppins_bold"
                     android:text="@string/name_auditoria"
+                    android:ellipsize="end"
                     android:textSize="14sp" />
 
                 <TextView
@@ -79,12 +83,9 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/poppins_bold"
                     android:text="@string/name_classroom"
+                    android:ellipsize="end"
                     android:textSize="14sp" />
-
             </TableRow>
-
-
         </TableLayout>
-
     </androidx.cardview.widget.CardView>
 </FrameLayout>

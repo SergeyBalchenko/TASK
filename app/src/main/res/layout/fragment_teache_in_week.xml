@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="presentation.teacherWeek.">
+
+    <ImageView
+        android:id="@+id/girlReadBook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp"
+        android:src="@drawable/ic_girl_read_book__1_"
+        tools:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="359dp"
+        android:layout_height="403dp"
+        android:layout_marginVertical="200dp"
+        android:layout_marginStart="20dp"
+        android:background="@color/major"
+        android:padding="10dp"
+        android:visibility="visible">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/mondayText"
+        android:layout_width="359dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="150dp"
+        android:background="@color/major"
+        android:fontFamily="@font/poppins_bold"
+        android:padding="10dp"
+        android:text="@string/teacher_in_a_week"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/btnUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="165dp"
+        android:src="@drawable/vector_down" />
+
+    <ImageView
+        android:id="@+id/btnPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/add_botton" />
+
+    <ImageView
+        android:id="@+id/btnWeek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity=""
+        android:layout_margin="100dp"
+        android:src="@drawable/botton_week_shedule_black" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shape" />
+
+</FrameLayout>
