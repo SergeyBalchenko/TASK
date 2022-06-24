@@ -10,8 +10,8 @@
         android:id="@+id/girlReadBook"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="500dp"
-        android:src="@drawable/ic_girl_read_book__1_"
+        android:layout_marginTop="520dp"
+        android:src="@drawable/ic_graduation_im"
         tools:visibility="visible" />
 
 
@@ -31,9 +31,9 @@
 
     <TextView
         android:id="@+id/mondayText"
-        android:layout_width="359dp"
+        android:layout_width="382dp"
         android:layout_height="440dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="140dp"
         android:background="@color/major"
@@ -45,11 +45,11 @@
 
 
     <TableLayout
-        android:layout_width="337dp"
-        android:layout_height="347dp"
+        android:layout_width="359dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
         android:background="@color/grey_blank">
 
         <TableRow
@@ -83,9 +83,8 @@
                 android:id="@+id/imageView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/more_black"
                 android:padding="10dp"
-                />
+                android:src="@drawable/more_black" />
 
         </TableRow>
 
@@ -120,9 +119,8 @@
                 android:id="@+id/bottom_more_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/more_black"
                 android:padding="10dp"
-                />
+                android:src="@drawable/more_black" />
 
         </TableRow>
 
@@ -157,11 +155,11 @@
                 android:id="@+id/bottom_more_day"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/more_black"
                 android:padding="10dp"
-                />
+                android:src="@drawable/more_black" />
 
         </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -184,19 +182,19 @@
                 android:ems="10"
                 android:hint="@string/write_name_location"
                 android:inputType="textPersonName"
+                android:textSize="14sp"
                 app:layout_column="0"
-                app:layout_row="0"
-                android:textSize="14sp" />
+                app:layout_row="0" />
 
             <ImageView
                 android:id="@+id/bottom_more_location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/more_black"
                 android:padding="10dp"
-                />
+                android:src="@drawable/more_black" />
 
         </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -228,11 +226,11 @@
                 android:id="@+id/bottom_more_classroom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/more_black"
                 android:padding="10dp"
-                />
+                android:src="@drawable/more_black" />
 
         </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -264,11 +262,11 @@
                 android:id="@+id/bottom_more_teacher"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/more_black"
                 android:padding="10dp"
-                />
+                android:src="@drawable/more_black" />
 
         </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -301,11 +299,11 @@
                 android:id="@+id/bottom_more_age"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/more_black"
                 android:padding="10dp"
-                />
+                android:src="@drawable/more_black" />
 
         </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -337,10 +335,22 @@
                 android:id="@+id/bottom_more_phone_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/more_black"
                 android:padding="10dp"
-                />
+                android:src="@drawable/more_black" />
 
         </TableRow>
     </TableLayout>
+
+    <Button
+        android:id="@+id/buttonDone"
+        android:layout_width="74dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="305dp"
+        android:layout_marginTop="538dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/roundstyle"
+        android:text="@string/done"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/grey_blank" />
+
 </FrameLayout>
