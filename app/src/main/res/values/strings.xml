@@ -48,6 +48,11 @@
     <string name="time">Time:</string>
     <string name="write_time">Write time</string>
     <string name="done">Done</string>
+    <string name="university">University</string>
+    <string name="week_shedule">Week schedule</string>
+    <string name="write_name_university">Write University name</string>
+    <string name="teacher_university">University:</string>
+    <string name="new_university">New University</string>
     <string name="large_text">
 
 
