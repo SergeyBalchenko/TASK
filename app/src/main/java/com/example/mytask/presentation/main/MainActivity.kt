@@ -6,7 +6,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.example.mytask.R
-import com.example.mytask.TheSampleActivity
 import com.example.mytask.data.db.UniversityDatabase
 import com.example.mytask.data.entities.Classroom
 import com.example.mytask.data.entities.Subject

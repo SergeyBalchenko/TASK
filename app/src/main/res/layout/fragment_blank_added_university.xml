@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.blank_adde_university.BlankAddedUniversity">
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shape"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subjectText"
+        android:layout_width="377dp"
+        android:layout_height="196dp"
+        android:layout_marginTop="36dp"
+        android:background="@color/major"
+        android:fontFamily="@font/poppins_bold"
+        android:padding="10dp"
+        android:text="@string/university"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.562"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView36"
+        tools:ignore="TextContrastCheck" />
+
+    <ImageView
+        android:id="@+id/imageView34"
+        android:layout_width="414dp"
+        android:layout_height="656dp"
+        android:layout_marginTop="228dp"
+        android:src="@drawable/blank_university"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableRow
+        android:id="@+id/tableRowBlankSubject"
+        android:layout_width="360dp"
+        android:layout_height="80dp"
+        android:background="@color/grey_blank"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/subjectText"
+        app:layout_constraintEnd_toEndOf="@+id/subjectText"
+        app:layout_constraintStart_toStartOf="@+id/subjectText"
+        app:layout_constraintTop_toTopOf="@+id/subjectText">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="10dp"
+            android:text="@string/university"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_rounded_corners"
+            android:ems="10"
+            android:hint="@string/write_name_university"
+            android:inputType="textPersonName"
+            android:shadowRadius="10"
+            android:textSize="14sp"
+            app:layout_column="0"
+            app:layout_row="0"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </TableRow>
+
+    <Button
+        android:id="@+id/buttonDone"
+        android:layout_width="74dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/roundstyle"
+        android:text="@string/done"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/grey_blank"
+        app:layout_constraintEnd_toEndOf="@+id/subjectText"
+        app:layout_constraintTop_toBottomOf="@+id/tableRowBlankSubject"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageView
+        android:id="@+id/imageView36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:src="@drawable/botton_week_shedule_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

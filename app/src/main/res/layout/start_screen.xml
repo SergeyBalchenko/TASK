@@ -19,17 +19,15 @@
         android:id="@+id/imageView14"
         android:layout_width="760dp"
         android:layout_height="229dp"
-        android:layout_marginTop="6dp"
-        android:src="@drawable/girl_read_book"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView26" />
+        android:src="@drawable/ic_girl_read_book__1_"
+        tools:layout_editor_absoluteX="-103dp"
+        tools:layout_editor_absoluteY="484dp" />
 
     <ImageView
         android:id="@+id/imageView25"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="136dp"
+        android:layout_marginBottom="112dp"
         android:src="@drawable/botton_friday_show_more"
         app:layout_constraintBottom_toBottomOf="@+id/imageView14"
         app:layout_constraintEnd_toEndOf="parent"

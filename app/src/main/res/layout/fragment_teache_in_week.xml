@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="300dp"
         android:layout_marginTop="165dp"
-        android:src="@drawable/vector_down" />
+        android:src="@drawable/vector_higher" />
 
     <ImageView
         android:id="@+id/btnPlus"

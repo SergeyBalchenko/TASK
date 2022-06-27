@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.blank_add_subject.BlankAdededSubject">
+
+    <ImageView
+        android:id="@+id/image_blank_subject"
+        android:layout_width="287dp"
+        android:layout_height="316dp"
+        android:src="@drawable/blank_subjeck"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnWeek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity=""
+        android:layout_margin="90dp"
+        android:src="@drawable/botton_week_shedule_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subjectText"
+        android:layout_width="384dp"
+        android:layout_height="230dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/major"
+        android:fontFamily="@font/poppins_bold"
+        android:padding="10dp"
+        android:text="@string/new_university"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnWeek"
+        tools:ignore="TextContrastCheck" />
+
+    <TableRow
+        android:id="@+id/tableRowBlankSubject"
+        android:layout_width="360dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="96dp"
+        android:background="@color/grey_blank"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/image_blank_subject"
+        app:layout_constraintEnd_toEndOf="@+id/subjectText"
+        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintStart_toStartOf="@+id/subjectText">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="10dp"
+            android:text="@string/subject_name"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_rounded_corners"
+            android:ems="10"
+            android:hint="@string/write_name_subject"
+            android:inputType="textPersonName"
+            android:shadowRadius="10"
+            android:textSize="14sp"
+            app:layout_column="0"
+            app:layout_row="0"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </TableRow>
+
+    <Button
+        android:id="@+id/buttonDone"
+        android:layout_width="107dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/roundstyle"
+        android:text="@string/done"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/grey_blank"
+        app:layout_constraintBottom_toTopOf="@+id/image_blank_subject"
+        app:layout_constraintEnd_toEndOf="@+id/subjectText"
+        app:layout_constraintTop_toBottomOf="@+id/tableRowBlankSubject"
+        app:layout_constraintVertical_bias="0.208"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageView
+        android:id="@+id/imageView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shape"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
