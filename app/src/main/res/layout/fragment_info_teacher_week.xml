@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="presentation.SubjectWeek.BlankFragment">
+    tools:context=".presentation.info_teacher_week.InfoTeacher">
 
     <ImageView
         android:id="@+id/girlReadBook"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="212dp"
         android:src="@drawable/ic_girl_read_book__1_"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -19,6 +19,7 @@
         tools:visibility="visible" />
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="374dp"
         android:layout_height="427dp"
         android:layout_marginTop="14dp"
@@ -26,13 +27,14 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_week_shedule">
+        app:layout_constraintTop_toBottomOf="@+id/button_week_shedule"
+        android:visibility="visible">
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="10dp"
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/subjectDayWeekText"
@@ -40,13 +42,13 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_bold"
                 android:padding="10dp"
-                android:text="@string/subject_in_a_week"
+                android:text="@string/teacher_in_a_week"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="24sp" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnUp_for_subject"
+                android:id="@+id/btnUp_for_teacher"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="10dp"
@@ -57,7 +59,7 @@
         </TableRow>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
+            android:id="@+id/recyclerViewTeacherInWeek"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
 
@@ -88,7 +90,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_plus_subject"
+        android:id="@+id/button_plus_teacher"
         android:layout_width="51dp"
         android:layout_height="50dp"
         android:layout_marginTop="64dp"

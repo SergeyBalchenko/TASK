@@ -1,56 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".presentation.blank_for_add_subject.BlankAddSubject">
 
+
     <ImageView
         android:id="@+id/girlReadBook"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="520dp"
         android:src="@drawable/ic_graduation_im"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:visibility="visible" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_week_shedule"
+        android:layout_width="232dp"
+        android:layout_height="54dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="72dp"
+        android:background="@drawable/btn_radius_10dp"
+        android:backgroundTint="@color/major"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/week_shedule"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/btnWeek"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity=""
-        android:layout_margin="90dp"
-        android:src="@drawable/botton_week_shedule_black" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/shape" />
+        android:src="@drawable/shape"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+      />
 
     <TextView
         android:id="@+id/mondayText"
-        android:layout_width="382dp"
-        android:layout_height="440dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="140dp"
+        android:layout_width="379dp"
+        android:layout_height="469dp"
+        android:layout_margin="10dp"
         android:background="@color/major"
         android:fontFamily="@font/poppins_bold"
         android:padding="10dp"
         android:text="@string/subject"
         android:textColor="@color/white"
-        android:textSize="20sp" />
-
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TableLayout
+        android:id="@+id/tableLayout2"
         android:layout_width="359dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="5dp"
-        android:background="@color/grey_blank">
+        android:background="@color/grey_blank"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/mondayText"
+        app:layout_constraintEnd_toEndOf="@+id/mondayText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mondayText">
 
         <TableRow
             android:layout_width="match_parent"
@@ -345,12 +365,14 @@
         android:id="@+id/buttonDone"
         android:layout_width="74dp"
         android:layout_height="36dp"
-        android:layout_marginStart="305dp"
-        android:layout_marginTop="538dp"
-        android:layout_marginEnd="10dp"
         android:background="@drawable/roundstyle"
         android:text="@string/done"
         android:textColor="@color/black"
-        app:backgroundTint="@color/grey_blank" />
+        app:backgroundTint="@color/grey_blank"
+        app:layout_constraintBottom_toBottomOf="@+id/mondayText"
+        app:layout_constraintEnd_toEndOf="@+id/tableLayout2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/tableLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout2" />
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

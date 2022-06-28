@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="presentation.MainScrolChooseUniversity.">
+    tools:context=".presentation.scrollForSubject.ScrollForSubject">
 
     <ImageView
         android:id="@+id/girlReadBook"
@@ -15,6 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteX="0dp"
         tools:visibility="visible" />
 
     <ImageView
@@ -26,14 +27,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/buttonUniversity"
+        android:id="@+id/button_subject"
         android:layout_width="195dp"
         android:layout_height="43dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/btn_radius_10dp"
         android:backgroundTint="@color/major"
         android:fontFamily="@font/poppins_bold"
-        android:text="@string/university"
+        android:text="@string/subject"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="20sp"
@@ -47,7 +48,7 @@
         android:layout_width="232dp"
         android:layout_height="54dp"
         android:layout_marginStart="22dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="96dp"
         android:background="@drawable/btn_radius_10dp"
         android:backgroundTint="@color/major"
         android:fontFamily="@font/poppins_bold"
@@ -64,7 +65,7 @@
         android:id="@+id/button_plus"
         android:layout_width="49dp"
         android:layout_height="47dp"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="96dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/add_botton"
         android:backgroundTint="@color/major"
@@ -77,7 +78,7 @@
         android:layout_width="40dp"
         android:layout_height="46dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="96dp"
         android:background="@drawable/vector_higher"
         android:backgroundTint="@color/major"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,17 +86,17 @@
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <ScrollView
-        android:id="@+id/scroll_for_one_question"
+        android:id="@+id/scroll_for_only_subject"
         android:layout_width="312dp"
         android:layout_height="408dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.343"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonUniversity"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toBottomOf="@+id/button_subject"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -121,5 +122,4 @@
                 android:textSize="16sp" />
         </LinearLayout>
     </ScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

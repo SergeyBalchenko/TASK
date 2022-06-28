@@ -15,15 +15,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/btnWeek"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity=""
-        android:layout_margin="90dp"
-        android:src="@drawable/botton_week_shedule_black"
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_week_shedule"
+        android:layout_width="232dp"
+        android:layout_height="54dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="72dp"
+        android:background="@drawable/btn_radius_10dp"
+        android:backgroundTint="@color/major"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/week_shedule"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
         android:id="@+id/subjectText"
@@ -38,7 +45,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnWeek"
+        app:layout_constraintTop_toBottomOf="@+id/button_week_shedule"
         tools:ignore="TextContrastCheck" />
 
     <TextView
@@ -54,7 +61,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnWeek"
+        app:layout_constraintTop_toBottomOf="@+id/button_week_shedule"
         tools:ignore="TextContrastCheck" />
 
     <TableLayout
@@ -163,7 +170,7 @@
         android:id="@+id/imageView37"
         android:layout_width="369dp"
         android:layout_height="553dp"
-        android:layout_marginTop="264dp"
+        android:layout_marginTop="276dp"
         android:src="@drawable/ic_blank_teacher"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.38"

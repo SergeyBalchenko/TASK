@@ -15,6 +15,10 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_scrolling">ScrollingActivity</string>
     <string name="Monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
     <string name="name_teacher">Tim Cook</string>
     <string name="name_subject">Marketing</string>
     <string name="name_auditoria">Mayor Hall</string>
@@ -53,6 +57,10 @@
     <string name="write_name_university">Write University name</string>
     <string name="teacher_university">University:</string>
     <string name="new_university">New University</string>
+    <string name="choose_teacher">\n\u2022Choose teacher</string>
+    <string name="choose_subject">\n\u2022Choose subject</string>
+    <string name="use_your_time">\n\u2022Use your time with smart</string>
+    <string name="do_it">DO IT</string>
     <string name="large_text">
 
 

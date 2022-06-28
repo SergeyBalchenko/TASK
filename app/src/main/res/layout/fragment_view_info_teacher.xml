@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment_view_info_teacher">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardInfoOnlyTeacher"
+        android:layout_width="396dp"
+        android:layout_height="59dp"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/grey_blank"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:layout_margin="10dp"
+            android:contentDescription="@string/hello_moto"
+            android:fontFamily="@font/poppins_bold"
+            android:src="@drawable/ic_more"
+            android:textSize="14sp" />
+
+        <TableLayout
+            android:layout_width="351dp"
+            android:layout_height="48dp"
+            android:layout_column="2"
+            android:layout_margin="5dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/nameTeacher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/name_teacher"
+                    android:textColor="#090909"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/nameAuditoria"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/phone_number"
+                    android:textColor="#090909"
+                    android:textSize="14sp" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/nameCumpus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/age"
+                    android:textColor="#090909"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="left"
+                    android:id="@+id/buttonDone"
+                    android:textAllCaps="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/roundstyle"
+                    android:backgroundTint="@color/grey_blank"
+                    android:text="Show all Subjeject Tim Cook"
+                    android:textColor="@color/black"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </TableRow>
+        </TableLayout>
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>
