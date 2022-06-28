@@ -16,15 +16,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView28"
-        android:layout_width="429dp"
-        android:layout_height="708dp"
-        android:layout_marginTop="76dp"
-        android:src="@drawable/blank_teacher"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnWeek" />
-
-    <ImageView
         android:id="@+id/btnWeek"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -67,6 +58,7 @@
         tools:ignore="TextContrastCheck" />
 
     <TableLayout
+        android:id="@+id/tableLayout"
         android:layout_width="359dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -166,5 +158,16 @@
 
         </TableRow>
     </TableLayout>
+
+    <ImageView
+        android:id="@+id/imageView37"
+        android:layout_width="369dp"
+        android:layout_height="553dp"
+        android:layout_marginTop="264dp"
+        android:src="@drawable/ic_blank_teacher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

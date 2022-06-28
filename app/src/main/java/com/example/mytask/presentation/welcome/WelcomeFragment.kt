@@ -1,19 +1,21 @@
 package com.example.mytask.presentation.welcome
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.fragment.app.Fragment
 import com.example.mytask.R
 import com.example.mytask.databinding.FragmentWelcomeBinding
+import com.example.mytask.presentation.main.MainFragment
 
 class WelcomeFragment : Fragment() {
 
     private lateinit var binding: FragmentWelcomeBinding
 
     companion object {
+        val TAG = WelcomeFragment::class.simpleName
+
         fun newInstance(): WelcomeFragment {
             return WelcomeFragment()
         }
@@ -32,11 +34,14 @@ class WelcomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.primaryButton.setOnClickListener {
-            doItMe()
+            openMainFragment()
         }
     }
 
-    private fun doItMe() {
-        Toast.makeText(requireActivity(), "Hello from primary button", Toast.LENGTH_LONG).show()
+    private fun openMainFragment() {
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.container, MainFragment.newInstance(), MainFragment.TAG)
+            .addToBackStack(TAG)
+            .commit()
     }
 }

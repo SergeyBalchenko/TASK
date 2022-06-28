@@ -46,10 +46,10 @@
         android:id="@+id/tableRowBlankSubject"
         android:layout_width="360dp"
         android:layout_height="64dp"
-        android:layout_marginBottom="96dp"
+        android:layout_marginBottom="116dp"
         android:background="@color/grey_blank"
         android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/image_blank_subject"
+        app:layout_constraintBottom_toBottomOf="@+id/subjectText"
         app:layout_constraintEnd_toEndOf="@+id/subjectText"
         app:layout_constraintHorizontal_bias="0.458"
         app:layout_constraintStart_toStartOf="@+id/subjectText">

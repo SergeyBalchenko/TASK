@@ -93,9 +93,10 @@
         android:layout_marginBottom="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.343"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonUniversity1">
+        app:layout_constraintTop_toBottomOf="@+id/buttonUniversity1"
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -107,18 +108,18 @@
                 android:id="@+id/answer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView"
-                android:fontFamily="@font/poppins_bold"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:padding="5dp"
-                android:textColor="@color/black"
+
                 android:layout_marginStart="10dp"
                 android:background="@drawable/roundstyle"
-                android:backgroundTint="@color/grey_blank"
+                android:backgroundTint="@color/grey_blank_alpha"
                 android:ellipsize="end"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
                 android:maxLines="1"
-                />
+                android:padding="5dp"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
         </LinearLayout>
     </ScrollView>
 
