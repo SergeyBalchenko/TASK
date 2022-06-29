@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.day_screen.DayScreenFragment">
+    tools:context=".presentation.tuesday.FragmentTuesday">
 
     <ImageView
         android:id="@+id/girlReadBook"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="184dp"
         android:src="@drawable/ic_girl_read_book__1_"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -19,6 +19,7 @@
         tools:visibility="visible" />
 
     <LinearLayout
+        android:visibility="visible"
         android:layout_width="374dp"
         android:layout_height="427dp"
         android:layout_marginTop="14dp"
@@ -40,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_bold"
                 android:padding="10dp"
-                android:text="@string/Monday"
+                android:text="@string/tuesday"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="24sp" />
@@ -57,6 +58,7 @@
         </TableRow>
 
         <ScrollView
+            android:id="@+id/scroll_tuesday"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
