@@ -90,7 +90,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_back"
+        android:id="@+id/button_add_teacher"
         android:layout_width="51dp"
         android:layout_height="50dp"
         android:layout_marginTop="64dp"

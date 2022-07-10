@@ -33,15 +33,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.88" />
+        app:layout_constraintGuide_percent="0.60" />
 
     <ImageView
         android:id="@+id/girlReadBook"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:src="@drawable/ic_graduation_im"
+        app:layout_constraintTop_toBottomOf="@id/bottom_guideline"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:visibility="visible" />
 
@@ -73,7 +75,7 @@
       />
 
     <TextView
-        android:id="@+id/universityText"
+        android:id="@+id/subjectText"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/major"
@@ -100,17 +102,17 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="50dp"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/universityText"
-        app:layout_constraintEnd_toEndOf="@+id/universityText"
-        app:layout_constraintStart_toStartOf="@id/universityText"
-        app:layout_constraintTop_toTopOf="@+id/universityText">
+        app:layout_constraintBottom_toBottomOf="@+id/subjectText"
+        app:layout_constraintEnd_toEndOf="@+id/subjectText"
+        app:layout_constraintStart_toStartOf="@id/subjectText"
+        app:layout_constraintTop_toTopOf="@+id/subjectText">
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/university"
+                android:id="@+id/subjectName"
                 android:layout_width="wrap_content"
                 android:fontFamily="@font/poppins_bold"
                 android:padding="10dp"
@@ -119,7 +121,7 @@
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName"
+                android:id="@+id/editTextTextSubjectName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -402,10 +404,10 @@
         android:text="@string/done"
         android:textColor="@color/black"
         app:backgroundTint="@color/grey_blank"
-        app:layout_constraintBottom_toBottomOf="@+id/universityText"
+        app:layout_constraintBottom_toBottomOf="@+id/subjectText"
         app:layout_constraintEnd_toEndOf="@+id/tableLayout2"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@id/universityText"
+        app:layout_constraintStart_toStartOf="@id/subjectText"
         app:layout_constraintTop_toBottomOf="@+id/tableLayout2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

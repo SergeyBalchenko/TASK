@@ -7,55 +7,113 @@
     tools:context=".presentation.blank_add_subject.BlankAdededSubject">
 
     <ImageView
+        android:id="@+id/imageView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shape"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="45dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottom_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <ImageView
         android:id="@+id/image_blank_subject"
-        android:layout_width="287dp"
-        android:layout_height="316dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:src="@drawable/blank_subjeck"
+        app:layout_constraintTop_toTopOf="@id/bottom_guideline"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/btnWeek"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity=""
-        android:layout_margin="90dp"
-        android:src="@drawable/botton_week_shedule_black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@id/button_week_shedule"
+        android:layout_width="232dp"
+        android:layout_height="54dp"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_radius_10dp"
+        android:backgroundTint="@color/major"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/week_shedule"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintTop_toTopOf="@id/top_guideline"
+        app:layout_constraintStart_toEndOf="@id/button_add_teacher"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@id/button_add_teacher"
+        android:layout_width="51dp"
+        android:layout_height="50dp"
+        android:background="@drawable/vector_back"
+        android:backgroundTint="@color/major"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toTopOf="@id/top_guideline"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <TextView
-        android:id="@+id/universityText"
-        android:layout_width="384dp"
-        android:layout_height="230dp"
+        android:id="@+id/subjectText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="12dp"
         android:background="@color/major"
         android:fontFamily="@font/poppins_bold"
         android:padding="10dp"
-        android:text="@string/new_university"
+        android:text="@string/subject"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnWeek"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/button_week_shedule"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
         tools:ignore="TextContrastCheck" />
 
     <TableRow
-        android:id="@+id/tableRowBlankUniversity"
-        android:layout_width="360dp"
-        android:layout_height="64dp"
-        android:layout_marginBottom="116dp"
+        android:id="@+id/tableRowBlankSubject"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:background="@color/grey_blank"
         android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="@+id/universityText"
-        app:layout_constraintEnd_toEndOf="@+id/universityText"
+        app:layout_constraintTop_toTopOf="@id/subjectText"
+        app:layout_constraintBottom_toBottomOf="@id/subjectText"
+        app:layout_constraintEnd_toEndOf="@id/subjectText"
         app:layout_constraintHorizontal_bias="0.458"
-        app:layout_constraintStart_toStartOf="@+id/universityText">
+        app:layout_constraintStart_toStartOf="@id/subjectText">
 
         <TextView
-            android:id="@+id/university"
+            android:id="@+id/subjectName"
             android:layout_width="wrap_content"
             android:fontFamily="@font/poppins_bold"
             android:padding="10dp"
@@ -64,7 +122,7 @@
             android:textSize="14sp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/editTextTextSubjectName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -84,24 +142,16 @@
         android:id="@+id/buttonDone"
         android:layout_width="107dp"
         android:layout_height="35dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="10dp"
         android:background="@drawable/roundstyle"
         android:text="@string/done"
         android:textColor="@color/black"
         app:backgroundTint="@color/grey_blank"
-        app:layout_constraintBottom_toTopOf="@+id/image_blank_subject"
-        app:layout_constraintEnd_toEndOf="@+id/universityText"
-        app:layout_constraintTop_toBottomOf="@+id/tableRowBlankUniversity"
+        app:layout_constraintBottom_toBottomOf="@id/subjectText"
+        app:layout_constraintEnd_toEndOf="@+id/subjectText"
+        app:layout_constraintTop_toBottomOf="@+id/tableRowBlankSubject"
         app:layout_constraintVertical_bias="0.208"
         tools:ignore="TouchTargetSizeCheck" />
-
-    <ImageView
-        android:id="@+id/imageView29"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/shape"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
