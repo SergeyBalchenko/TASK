@@ -29,6 +29,7 @@
     <string name="remove">Remove</string>
     <string name="subject">Subject</string>
     <string name="teacher">Teacher</string>
+    <string name="teacher_week">Teacher in a week</string>
     <string name="teacher_in_a_week">Teacher in a week</string>
     <string name="subject_in_a_week">Subject in a week</string>
     <string name="add_teacher">Add Teacher</string>

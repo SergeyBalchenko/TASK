@@ -102,7 +102,7 @@
                 tools:itemCount="1"
                 tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:listitem="@layout/fragment_view_conteiner_day_shedule"
-                tools:orientation="vertical"></androidx.recyclerview.widget.RecyclerView>
+                tools:orientation="vertical" />
         </ScrollView>
 
     </LinearLayout>

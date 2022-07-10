@@ -40,13 +40,13 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:src="@drawable/ic_graduation_im"
-        app:layout_constraintTop_toBottomOf="@id/liner_teacher"
+        app:layout_constraintTop_toBottomOf="@id/liner_all_subject_of_teacher"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
-        android:id="@+id/liner_teacher"
+        android:id="@+id/liner_all_subject_of_teacher"
         android:visibility="visible"
         android:layout_width="0dp"
         android:layout_height="0dp"
