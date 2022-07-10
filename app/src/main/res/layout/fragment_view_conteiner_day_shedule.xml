@@ -8,28 +8,25 @@
 
     <androidx.cardview.widget.CardView
     android:id="@+id/cardInfoSubject"
-    android:layout_width="387dp"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
     android:padding="10dp"
     app:cardBackgroundColor="@color/grey">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_gravity="right"
-        android:layout_margin="10dp"
-        android:contentDescription="@string/hello_moto"
-        android:fontFamily="@font/poppins_bold"
-        android:src="@drawable/ic_more"
-        android:textSize="14sp" />
+
 
     <TableLayout
-        android:layout_width="347dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_column="2"
         android:layout_margin="5dp">
+
+        <androidx.constraintlayout.widget.Barrier
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            app:barrierDirection="start"
+            app:constraint_referenced_ids="imageView3" />
 
         <TableRow
             android:layout_width="wrap_content"
@@ -63,6 +60,15 @@
                 android:text="@string/date"
                 android:ellipsize="end"
                 android:textSize="14sp" />
+            <ImageView
+                android:id="@+id/setting_view_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:contentDescription="@string/hello_moto"
+                android:fontFamily="@font/poppins_bold"
+                android:src="@drawable/ic_more"
+                />
 
         </TableRow>
 
@@ -73,9 +79,9 @@
             <TextView
                 android:id="@+id/nameCumpus"
                 android:layout_weight="1"
+                android:ellipsize="end"
                 android:fontFamily="@font/poppins_bold"
                 android:text="@string/name_auditoria"
-                android:ellipsize="end"
                 android:textSize="14sp" />
 
             <TextView
