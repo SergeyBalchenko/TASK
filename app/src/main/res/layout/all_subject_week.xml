@@ -36,7 +36,7 @@
         app:layout_constraintGuide_percent="0.88" />
 
     <LinearLayout
-        android:id="@+id/linearLayout4"
+        android:id="@+id/header_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
@@ -81,15 +81,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!--    <androidx.constraintlayout.widget.Barrier-->
-<!--        android:id="@+id/barrier_header"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:barrierDirection="bottom"-->
-<!--        app:constraint_referenced_ids="button_week_shedule,button_plus_subject"-->
-<!--        tools:layout_editor_absoluteX="0dp"-->
-<!--        tools:layout_editor_absoluteY="0dp" />-->
-
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="0dp"
@@ -99,7 +90,7 @@
         app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        app:layout_constraintTop_toBottomOf="@+id/header_btn"
         app:layout_constraintVertical_bias="0.497">
 
         <TableRow
@@ -127,14 +118,6 @@
                 android:background="@drawable/vector_higher"
                 android:backgroundTint="@color/white"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-            <!--            <androidx.constraintlayout.widget.Barrier-->
-            <!--                android:id="@+id/barrier2"-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                app:barrierDirection="bottom"-->
-            <!--                app:constraint_referenced_ids="subjectDayWeekText,btnUp_for_subject" />-->
-
         </TableRow>
 
         <androidx.recyclerview.widget.RecyclerView
@@ -149,7 +132,6 @@
             tools:listitem="@layout/fragment_view_conteiner_day_shedule"
             tools:orientation="vertical">
         </androidx.recyclerview.widget.RecyclerView>
-
 
     </LinearLayout>
 
