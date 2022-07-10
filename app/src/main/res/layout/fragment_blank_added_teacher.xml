@@ -70,7 +70,7 @@
         app:layout_constraintTop_toTopOf="@id/top_guideline"
         app:layout_constraintEnd_toEndOf="@id/end_guideline" />
     <TextView
-        android:id="@+id/teacherText"
+        android:id="@+id/universityText"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="12dp"
@@ -101,7 +101,7 @@
         app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
-        app:layout_constraintTop_toTopOf="@id/teacherText">
+        app:layout_constraintTop_toTopOf="@id/universityText">
 
         <TableRow
             android:layout_width="match_parent"
@@ -202,10 +202,10 @@
         android:text="@string/done"
         android:textColor="@color/black"
         app:backgroundTint="@color/grey_blank"
-        app:layout_constraintBottom_toBottomOf="@+id/teacherText"
-        app:layout_constraintEnd_toEndOf="@id/teacherText"
+        app:layout_constraintBottom_toBottomOf="@+id/universityText"
+        app:layout_constraintEnd_toEndOf="@id/universityText"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@id/teacherText"
+        app:layout_constraintStart_toStartOf="@id/universityText"
         app:layout_constraintTop_toBottomOf="@id/tableLayout" />
 
     <ImageView

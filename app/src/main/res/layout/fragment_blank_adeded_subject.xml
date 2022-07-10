@@ -27,7 +27,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/teacherText"
+        android:id="@+id/universityText"
         android:layout_width="384dp"
         android:layout_height="230dp"
         android:layout_marginTop="12dp"
@@ -43,19 +43,19 @@
         tools:ignore="TextContrastCheck" />
 
     <TableRow
-        android:id="@+id/tableRowBlankSubject"
+        android:id="@+id/tableRowBlankUniversity"
         android:layout_width="360dp"
         android:layout_height="64dp"
         android:layout_marginBottom="116dp"
         android:background="@color/grey_blank"
         android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="@+id/teacherText"
-        app:layout_constraintEnd_toEndOf="@+id/teacherText"
+        app:layout_constraintBottom_toBottomOf="@+id/universityText"
+        app:layout_constraintEnd_toEndOf="@+id/universityText"
         app:layout_constraintHorizontal_bias="0.458"
-        app:layout_constraintStart_toStartOf="@+id/teacherText">
+        app:layout_constraintStart_toStartOf="@+id/universityText">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/university"
             android:layout_width="wrap_content"
             android:fontFamily="@font/poppins_bold"
             android:padding="10dp"
@@ -91,8 +91,8 @@
         android:textColor="@color/black"
         app:backgroundTint="@color/grey_blank"
         app:layout_constraintBottom_toTopOf="@+id/image_blank_subject"
-        app:layout_constraintEnd_toEndOf="@+id/teacherText"
-        app:layout_constraintTop_toBottomOf="@+id/tableRowBlankSubject"
+        app:layout_constraintEnd_toEndOf="@+id/universityText"
+        app:layout_constraintTop_toBottomOf="@+id/tableRowBlankUniversity"
         app:layout_constraintVertical_bias="0.208"
         tools:ignore="TouchTargetSizeCheck" />
 

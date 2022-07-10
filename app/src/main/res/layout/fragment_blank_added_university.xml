@@ -43,7 +43,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/teacherText"
+        android:id="@id/universityText"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="20dp"
@@ -61,31 +61,31 @@
         tools:ignore="TextContrastCheck" />
 
     <ImageView
-        android:id="@+id/imageView34"
+        android:id="@+id/imageOmega"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:src="@drawable/blank_university"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/teacherText"
+        app:layout_constraintTop_toBottomOf="@id/universityText"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
     <TableRow
-        android:id="@+id/tableRowBlankSubject"
+        android:id="@+id/tableRowBlankUniversity"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/grey_blank"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="@id/teacherText"
-        app:layout_constraintEnd_toEndOf="@id/teacherText"
-        app:layout_constraintStart_toStartOf="@id/teacherText"
-        app:layout_constraintTop_toTopOf="@id/teacherText">
+        app:layout_constraintBottom_toBottomOf="@id/universityText"
+        app:layout_constraintEnd_toEndOf="@id/universityText"
+        app:layout_constraintStart_toStartOf="@id/universityText"
+        app:layout_constraintTop_toTopOf="@id/universityText">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@id/university"
             android:layout_width="wrap_content"
             android:fontFamily="@font/poppins_bold"
             android:padding="10dp"
@@ -111,7 +111,7 @@
     </TableRow>
 
     <Button
-        android:id="@+id/buttonDone"
+        android:id="@id/buttonDone"
         android:layout_width="74dp"
         android:layout_height="36dp"
         android:layout_marginTop="12dp"
@@ -120,12 +120,12 @@
         android:text="@string/done"
         android:textColor="@color/black"
         app:backgroundTint="@color/grey_blank"
-        app:layout_constraintEnd_toEndOf="@+id/teacherText"
-        app:layout_constraintTop_toBottomOf="@+id/tableRowBlankSubject"
+        app:layout_constraintEnd_toEndOf="@+id/universityText"
+        app:layout_constraintTop_toBottomOf="@+id/tableRowBlankUniversity"
         tools:ignore="TouchTargetSizeCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_week_shedule"
+        android:id="@id/button_week_shedule"
         android:layout_width="232dp"
         android:layout_height="54dp"
         android:layout_gravity="center"
@@ -141,7 +141,7 @@
         app:layout_constraintStart_toEndOf="@id/button_back"/>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_back"
+        android:id="@id/button_back"
         android:layout_width="51dp"
         android:layout_height="50dp"
         android:background="@drawable/vector_back"
