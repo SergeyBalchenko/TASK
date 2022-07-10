@@ -73,7 +73,7 @@
       />
 
     <TextView
-        android:id="@+id/subjectText"
+        android:id="@+id/teacherText"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/major"
@@ -100,10 +100,10 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="50dp"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/subjectText"
-        app:layout_constraintEnd_toEndOf="@+id/subjectText"
-        app:layout_constraintStart_toStartOf="@id/subjectText"
-        app:layout_constraintTop_toTopOf="@+id/subjectText">
+        app:layout_constraintBottom_toBottomOf="@+id/teacherText"
+        app:layout_constraintEnd_toEndOf="@+id/teacherText"
+        app:layout_constraintStart_toStartOf="@id/teacherText"
+        app:layout_constraintTop_toTopOf="@+id/teacherText">
 
         <TableRow
             android:layout_width="match_parent"
@@ -402,10 +402,10 @@
         android:text="@string/done"
         android:textColor="@color/black"
         app:backgroundTint="@color/grey_blank"
-        app:layout_constraintBottom_toBottomOf="@+id/subjectText"
+        app:layout_constraintBottom_toBottomOf="@+id/teacherText"
         app:layout_constraintEnd_toEndOf="@+id/tableLayout2"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@id/subjectText"
+        app:layout_constraintStart_toStartOf="@id/teacherText"
         app:layout_constraintTop_toBottomOf="@+id/tableLayout2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

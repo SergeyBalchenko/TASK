@@ -27,7 +27,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/subjectText"
+        android:id="@+id/teacherText"
         android:layout_width="384dp"
         android:layout_height="230dp"
         android:layout_marginTop="12dp"
@@ -49,10 +49,10 @@
         android:layout_marginBottom="116dp"
         android:background="@color/grey_blank"
         android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="@+id/subjectText"
-        app:layout_constraintEnd_toEndOf="@+id/subjectText"
+        app:layout_constraintBottom_toBottomOf="@+id/teacherText"
+        app:layout_constraintEnd_toEndOf="@+id/teacherText"
         app:layout_constraintHorizontal_bias="0.458"
-        app:layout_constraintStart_toStartOf="@+id/subjectText">
+        app:layout_constraintStart_toStartOf="@+id/teacherText">
 
         <TextView
             android:id="@+id/textView"
@@ -91,7 +91,7 @@
         android:textColor="@color/black"
         app:backgroundTint="@color/grey_blank"
         app:layout_constraintBottom_toTopOf="@+id/image_blank_subject"
-        app:layout_constraintEnd_toEndOf="@+id/subjectText"
+        app:layout_constraintEnd_toEndOf="@+id/teacherText"
         app:layout_constraintTop_toBottomOf="@+id/tableRowBlankSubject"
         app:layout_constraintVertical_bias="0.208"
         tools:ignore="TouchTargetSizeCheck" />
