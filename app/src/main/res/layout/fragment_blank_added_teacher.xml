@@ -217,10 +217,7 @@
         android:src="@drawable/ic_blank_teacher"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toBottomtOf="@id/subjectText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bottom_guideline"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@id/bottom_guideline" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
