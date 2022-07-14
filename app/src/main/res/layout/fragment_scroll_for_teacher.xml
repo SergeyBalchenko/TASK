@@ -6,19 +6,50 @@
     android:layout_height="match_parent"
     tools:context=".presentation.scroll_for_teacher.ScrollForTeacher">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottom_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
     <ImageView
-        android:id="@+id/girlReadBook"
-        android:layout_width="433dp"
-        android:layout_height="203dp"
-        android:src="@drawable/girl_yoga"
+        android:id="@+id/graduation"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_graduation_im"
+        app:layout_constraintTop_toBottomOf="@id/bottom_guideline"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:visibility="visible" />
 
+
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/shape"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/shape"
@@ -37,17 +68,15 @@
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_week_shedule"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/button_name_university"
         tools:ignore="TouchTargetSizeCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_week_shedule"
+        android:id="@+id/button_name_university"
         android:layout_width="232dp"
         android:layout_height="54dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="112dp"
         android:background="@drawable/btn_radius_10dp"
         android:backgroundTint="@color/major"
         android:fontFamily="@font/poppins_bold"
@@ -56,69 +85,57 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/button_plus"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.568"
         app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/top_guideline" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_plus"
         android:layout_width="49dp"
         android:layout_height="47dp"
-        android:layout_marginTop="116dp"
-        android:layout_marginEnd="16dp"
         android:background="@drawable/add_botton"
         android:backgroundTint="@color/major"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintTop_toTopOf="@id/top_guideline"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button3"
         android:layout_width="40dp"
         android:layout_height="46dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="112dp"
         android:background="@drawable/vector_higher"
         android:backgroundTint="@color/major"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toTopOf="@id/top_guideline"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <ScrollView
-        android:id="@+id/scroll_for_only_teacher"
-        android:layout_width="312dp"
-        android:layout_height="408dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="36dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_teacher"
-        app:layout_constraintVertical_bias="1.0">
+        android:id="@+id/scroll_for_teacher"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/button_teacher"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="10dp">
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp" >
 
-            <TextView
-                android:id="@+id/answer"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                tools:itemCount="7"
+                tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/choose_added_word"
+                tools:orientation="vertical">
 
-                android:layout_marginStart="10dp"
-                android:background="@drawable/roundstyle"
-                android:backgroundTint="@color/grey_blank_alpha"
-                android:ellipsize="end"
-                android:fontFamily="@font/poppins_bold"
-                android:gravity="center"
-                android:maxLines="1"
-                android:padding="5dp"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+            </androidx.recyclerview.widget.RecyclerView>
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

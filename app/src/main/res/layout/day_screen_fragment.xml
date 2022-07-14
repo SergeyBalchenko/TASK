@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="45dp" />
+        app:layout_constraintGuide_percent="0.15" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/bottom_guideline"
@@ -35,21 +35,12 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.88" />
 
-    <LinearLayout
-        android:id="@+id/header_btn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="@id/end_guideline"
-        app:layout_constraintStart_toStartOf="@id/start_guideline"
-        app:layout_constraintTop_toTopOf="@id/top_guideline"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_week_shedule"
+            android:id="@+id/button_name_university"
             android:layout_width="232dp"
             android:layout_height="54dp"
-            android:layout_margin="15dp"
+            android:layout_marginBottom="15dp"
             android:background="@drawable/btn_radius_10dp"
             android:backgroundTint="@color/major"
             android:fontFamily="@font/poppins_bold"
@@ -58,21 +49,25 @@
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toTopOf="@id/top_guideline"
+            app:layout_constraintEnd_toEndOf="@id/button_plus_subject"
             />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_plus_subject"
-            android:layout_margin="15dp"
+            android:layout_marginBottom="15dp"
             android:layout_width="51dp"
             android:layout_height="50dp"
             android:background="@drawable/add_botton"
             android:backgroundTint="@color/major"
-            app:layout_constraintStart_toStartOf="@id/button_week_shedule"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-    </LinearLayout>
+            app:layout_constraintTop_toTopOf="@id/top_guideline"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+            />
+
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/shape"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="visible"
@@ -81,7 +76,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
+        android:id="@+id/linearLayoutDayWeek"
+        android:layout_marginTop="15dp"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/major"
@@ -89,7 +85,7 @@
         app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
-        app:layout_constraintTop_toBottomOf="@+id/header_btn"
+        app:layout_constraintTop_toBottomOf="@+id/button_name_university"
         app:layout_constraintVertical_bias="0.497">
 
         <TableRow

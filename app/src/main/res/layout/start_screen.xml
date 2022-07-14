@@ -6,39 +6,65 @@
     android:layout_height="match_parent"
     tools:context=".presentation.StartScreen.StartScreen">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottom_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
 
     <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="match_parent"
-        android:layout_height="428dp"
-        android:layout_marginTop="320dp"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:id="@+id/graduation"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_graduation_im"
+        app:layout_constraintTop_toBottomOf="@id/bottom_guideline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_girl_read_book__1_" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:visibility="visible" />
 
     <ImageView
         android:id="@+id/imageView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:src="@drawable/shape"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TableLayout
-        android:layout_width="373dp"
-        android:layout_height="496dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
         app:layout_constraintHorizontal_bias="0.48"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/button_name_university"
         app:layout_constraintVertical_bias="0.645"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="20dp">
 
         <TableRow
             android:layout_width="match_parent"
@@ -68,7 +94,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
 
         </TableRow>
 
@@ -198,32 +223,30 @@
         </TableRow>
     </TableLayout>
 
-
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_week_shedule"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@id/button_name_university"
+        android:layout_width="232dp"
+        android:layout_height="54dp"
         android:layout_gravity="center"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="64dp"
         android:background="@drawable/btn_radius_10dp"
         android:backgroundTint="@color/major"
         android:fontFamily="@font/poppins_bold"
-        android:text="@string/university"
+        android:text="@string/week_shedule"
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintTop_toTopOf="@id/top_guideline"
+        app:layout_constraintStart_toEndOf="@id/button_back" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_add_teacher"
+        android:id="@+id/button_back"
         android:layout_width="51dp"
         android:layout_height="50dp"
-        android:layout_marginTop="64dp"
         android:background="@drawable/vector_back"
         android:backgroundTint="@color/major"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@id/top_guideline"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
         app:layout_row="1"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
         tools:layout_editor_absoluteX="26dp" />

@@ -6,27 +6,59 @@
     android:layout_height="match_parent"
     tools:context="presentation.teacherWeek.">
 
-    <ImageView
-        android:id="@+id/girlReadBook"
-        android:layout_width="match_parent"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_guideline"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="232dp"
-        android:src="@drawable/ic_girl_read_book__1_"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottom_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.88" />
+
+
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_graduation_im"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible" />
+        app:layout_constraintTop_toTopOf="@+id/bottom_guideline" />
 
     <LinearLayout
-        android:layout_width="374dp"
-        android:layout_height="427dp"
+        android:id="@+id/dayOfWeekShedule"
+        android:visibility="visible"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="14dp"
         android:background="@color/major"
         android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_week_shedule">
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/button_name_university"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline">
 
         <TableRow
             android:layout_width="match_parent"
@@ -35,18 +67,18 @@
             android:layout_marginTop="10dp">
 
             <TextView
-                android:id="@+id/teacherInfoText"
+                android:id="@+id/subjectOfTeacherInAWeek"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_bold"
                 android:padding="10dp"
-                android:text="@string/teacher"
+                android:text="@string/teacher_in_a_week"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="24sp" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnUp_for_teacher"
+                android:id="@+id/btnUp_day_week"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="10dp"
@@ -56,27 +88,31 @@
 
         </TableRow>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
+        <ScrollView
+            android:id="@+id/scroll_friday"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="match_parent">
 
-            android:background="@color/major"
-            android:padding="10dp"
-            android:visibility="visible">
-
-
-        </androidx.recyclerview.widget.RecyclerView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/major"
+                android:padding="5dp"
+                android:visibility="visible"
+                tools:itemCount="5"
+                tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/fragment_view_teacher_week"
+                tools:orientation="vertical" />
+        </ScrollView>
 
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_week_shedule"
+        android:id="@+id/button_name_university"
         android:layout_width="232dp"
         android:layout_height="54dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/btn_radius_10dp"
         android:backgroundTint="@color/major"
         android:fontFamily="@font/poppins_bold"
@@ -84,29 +120,30 @@
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toTopOf="@id/top_guideline"
+        app:layout_constraintEnd_toEndOf="@id/button_plus_subject"
+        />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_add_teacher"
+        android:id="@+id/button_plus_subject"
+        android:layout_marginBottom="15dp"
         android:layout_width="51dp"
         android:layout_height="50dp"
-        android:layout_marginTop="64dp"
         android:background="@drawable/add_botton"
         android:backgroundTint="@color/major"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
-        app:layout_constraintStart_toEndOf="@+id/button_week_shedule"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_row="1"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        app:layout_constraintTop_toTopOf="@id/top_guideline"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+        />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/shape"
         android:layout_width="234dp"
         android:layout_height="wrap_content"
         android:src="@drawable/shape"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

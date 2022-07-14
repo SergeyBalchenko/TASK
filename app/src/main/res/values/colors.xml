@@ -11,4 +11,5 @@
     <color name="grey">#D9D9D9</color>
     <color name="grey_blank">#D9D9D9</color>
     <color name="grey_blank_alpha">#80D9D9D9</color>
+    <color name="transparent">#00000000</color>
 </resources>

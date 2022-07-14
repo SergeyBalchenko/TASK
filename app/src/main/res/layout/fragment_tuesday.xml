@@ -6,28 +6,58 @@
     android:layout_height="match_parent"
     tools:context=".presentation.tuesday.FragmentTuesday">
 
-    <ImageView
-        android:id="@+id/girlReadBook"
-        android:layout_width="match_parent"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_guideline"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="184dp"
-        android:src="@drawable/ic_girl_read_book__1_"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="45dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottom_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <ImageView
+        android:id="@+id/graduation"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_graduation_im"
+        app:layout_constraintTop_toBottomOf="@id/dayOfWeekShedule"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:visibility="visible" />
 
     <LinearLayout
+        android:id="@+id/dayOfWeekShedule"
         android:visibility="visible"
-        android:layout_width="374dp"
-        android:layout_height="427dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="14dp"
         android:background="@color/major"
         android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_week_shedule">
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/button_name_university"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline">
 
         <TableRow
             android:layout_width="match_parent"
@@ -41,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_bold"
                 android:padding="10dp"
-                android:text="@string/tuesday"
+                android:text="@string/thursday"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="24sp" />
@@ -58,38 +88,30 @@
         </TableRow>
 
         <ScrollView
-            android:id="@+id/scroll_tuesday"
+            android:id="@+id/scroll_friday"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <LinearLayout
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerView"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-
-                    android:background="@color/major"
-                    android:padding="10dp"
-                    android:visibility="visible">
-
-
-                </androidx.recyclerview.widget.RecyclerView>
-            </LinearLayout>
+                android:layout_height="match_parent"
+                android:background="@color/major"
+                android:padding="5dp"
+                android:visibility="visible"
+                tools:itemCount="5"
+                tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/fragment_view_conteiner_day_shedule"
+                tools:orientation="vertical" />
         </ScrollView>
 
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_week_shedule"
+        android:id="@id/button_name_university"
         android:layout_width="232dp"
         android:layout_height="54dp"
         android:layout_gravity="center"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="72dp"
         android:background="@drawable/btn_radius_10dp"
         android:backgroundTint="@color/major"
         android:fontFamily="@font/poppins_bold"
@@ -97,15 +119,15 @@
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintTop_toTopOf="@id/top_guideline"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"/>
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/shape"
         android:layout_width="234dp"
         android:layout_height="wrap_content"
         android:src="@drawable/shape"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

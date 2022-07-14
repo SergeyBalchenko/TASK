@@ -6,6 +6,35 @@
     android:layout_height="match_parent"
     tools:context=".presentation.main.MainFragment">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.18" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottom_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="wrap_content"
@@ -16,30 +45,30 @@
 
     <ImageView
         android:id="@+id/imageView11"
-        android:layout_width="541dp"
-        android:layout_height="231dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:src="@drawable/teacher_with_desc"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.412"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@id/top_guideline"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout"
         app:layout_constraintVertical_bias="0.175" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="358dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@color/white"
         android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
         app:layout_constraintHorizontal_bias="0.457"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView11">
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/imageView11"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_week_shedule"
+            android:id="@+id/button_name_university"
             android:layout_width="232dp"
             android:layout_height="54dp"
             android:layout_gravity="center"
@@ -56,7 +85,6 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:gravity="center"
-
             >
 
             <androidx.appcompat.widget.AppCompatButton
@@ -66,7 +94,6 @@
                 android:layout_marginEnd="10dp"
                 android:background="@drawable/add_botton"
                 android:backgroundTint="@color/major"
-                app:layout_row="1"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -80,8 +107,6 @@
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="20sp"
-                app:layout_column="2"
-                app:layout_row="1"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -145,7 +170,7 @@
             android:gravity="center">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_add_teacher"
+                android:id="@+id/button_back"
                 android:layout_width="49dp"
                 android:layout_height="43dp"
                 android:layout_marginEnd="10dp"
@@ -183,11 +208,11 @@
 
     <ImageView
         android:id="@+id/imageView12"
-        android:layout_width="392dp"
-        android:layout_height="134dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@id/bottom_guideline"
         app:srcCompat="@drawable/ic_graduation_im" />
 </androidx.constraintlayout.widget.ConstraintLayout>

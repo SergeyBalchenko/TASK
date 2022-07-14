@@ -6,85 +6,111 @@
     android:layout_height="match_parent"
     tools:context=".presentation.welcome.WelcomeFragment">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.18" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottom_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="234dp"
         android:layout_height="152dp"
         android:src="@drawable/shape"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
         app:layout_constraintHorizontal_bias="0.029"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="282dp"
-        android:layout_height="262dp"
-        android:layout_marginTop="130dp"
-        android:src="@drawable/undraw_education_f8ru"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        app:layout_constraintTop_toTopOf="@id/top_guideline"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+        >
 
-    <TextView
-        android:id="@+id/Shedule_day"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/poppins_bold"
-        android:text="@string/shedule_day"
-        android:textColor="#2E3131"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="282dp"
+            android:layout_height="262dp"
+            android:src="@drawable/undraw_education_f8ru" />
 
-    <TextView
-        android:id="@+id/TextView2"
-        android:layout_width="299dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="12dp"
-        android:fontFamily="@font/poppins_bold"
-        android:text="@string/text_about"
-        android:textColor="#595D5F"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Shedule_day" />
+        <TextView
+            android:id="@+id/Shedule_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/shedule_day"
+            android:textColor="#2E3131"
+            android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
-        android:fontFamily="@font/poppins_bold"
-        android:text="@string/motivation_text"
-        android:textColor="#595D5F"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TextView2" />
+        <TextView
+            android:id="@+id/TextView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/text_about"
+            android:textColor="#595D5F"
+            android:textSize="16sp" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/primaryButton"
-        android:layout_width="232dp"
-        android:layout_height="54dp"
-        android:layout_gravity="center"
-        android:layout_marginBottom="92dp"
-        android:background="@drawable/btn_radius_10dp"
-        android:backgroundTint="@color/major"
-        android:fontFamily="@font/poppins_bold"
-        android:text="@string/do_it"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/motivation_text"
+            android:textColor="#595D5F"
+            android:textSize="16sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/primaryButton"
+            android:layout_width="232dp"
+            android:layout_height="54dp"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_radius_10dp"
+            android:backgroundTint="@color/major"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/do_it"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
