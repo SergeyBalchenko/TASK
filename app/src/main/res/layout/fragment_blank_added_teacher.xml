@@ -26,14 +26,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="45dp" />
+        app:layout_constraintGuide_percent="0.1" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/bottom_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.4" />
+        app:layout_constraintGuide_percent="0.6" />
 
 
     <ImageView
@@ -193,12 +193,13 @@
         </TableRow>
 
     </TableLayout>
+
     <Button
         android:id="@+id/buttonDone"
         android:layout_width="74dp"
         android:layout_height="36dp"
-        android:background="@drawable/roundstyle"
         android:layout_margin="20dp"
+        android:background="@drawable/roundstyle"
         android:text="@string/done"
         android:textColor="@color/black"
         app:backgroundTint="@color/grey_blank"
@@ -206,7 +207,8 @@
         app:layout_constraintEnd_toEndOf="@id/subjectText"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@id/subjectText"
-        app:layout_constraintTop_toBottomOf="@id/tableLayout" />
+        app:layout_constraintTop_toBottomOf="@id/tableLayout"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <ImageView
         android:id="@+id/imageView37"
@@ -216,7 +218,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toBottomtOf="teacher"
+        app:layout_constraintStart_toBottomtOf="@id/subjectText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/bottom_guideline"
         app:layout_constraintVertical_bias="1.0" />
