@@ -81,7 +81,7 @@
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <TextView
-        android:id="@+id/subjectText"
+        android:id="@+id/subject_text"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="12dp"
@@ -106,14 +106,14 @@
         android:layout_marginEnd="10dp"
         android:background="@color/grey_blank"
         android:gravity="center"
-        app:layout_constraintTop_toTopOf="@id/subjectText"
-        app:layout_constraintBottom_toBottomOf="@id/subjectText"
-        app:layout_constraintEnd_toEndOf="@id/subjectText"
+        app:layout_constraintTop_toTopOf="@id/subject_text"
+        app:layout_constraintBottom_toBottomOf="@id/subject_text"
+        app:layout_constraintEnd_toEndOf="@id/subject_text"
         app:layout_constraintHorizontal_bias="0.458"
-        app:layout_constraintStart_toStartOf="@id/subjectText">
+        app:layout_constraintStart_toStartOf="@id/subject_text">
 
         <TextView
-            android:id="@+id/subjectName"
+            android:id="@+id/subject_name"
             android:layout_width="wrap_content"
             android:fontFamily="@font/poppins_bold"
             android:padding="10dp"
@@ -122,7 +122,7 @@
             android:textSize="14sp" />
 
         <EditText
-            android:id="@+id/editTextTextSubjectName"
+            android:id="@+id/edit_text_text_subject_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -139,7 +139,7 @@
     </TableRow>
 
     <Button
-        android:id="@+id/buttonDone"
+        android:id="@+id/button_done"
         android:layout_width="107dp"
         android:layout_height="35dp"
         android:layout_marginTop="12dp"
@@ -148,8 +148,8 @@
         android:text="@string/done"
         android:textColor="@color/black"
         app:backgroundTint="@color/grey_blank"
-        app:layout_constraintBottom_toBottomOf="@id/subjectText"
-        app:layout_constraintEnd_toEndOf="@+id/subjectText"
+        app:layout_constraintBottom_toBottomOf="@id/subject_text"
+        app:layout_constraintEnd_toEndOf="@+id/subject_text"
         app:layout_constraintTop_toBottomOf="@+id/tableRowBlankSubject"
         app:layout_constraintVertical_bias="0.208"
         tools:ignore="TouchTargetSizeCheck" />

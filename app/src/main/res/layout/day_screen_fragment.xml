@@ -7,14 +7,14 @@
     tools:context=".presentation.day_screen.DayScreenFragment">
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/start_guideline"
+        android:id="@id/start_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="16dp"
         />
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/end_guideline"
+        android:id="@id/end_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -22,14 +22,14 @@
         />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/top_guideline"
+        android:id="@id/top_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.15" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/bottom_guideline"
+        android:id="@id/bottom_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -37,7 +37,7 @@
 
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_name_university"
+            android:id="@+id/button_week_schedule"
             android:layout_width="232dp"
             android:layout_height="54dp"
             android:layout_marginBottom="15dp"
