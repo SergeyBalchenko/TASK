@@ -40,14 +40,14 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:src="@drawable/ic_graduation_im"
-        app:layout_constraintTop_toBottomOf="@id/dayOfWeekShedule"
+        app:layout_constraintTop_toBottomOf="@id/day_of_week_shedule"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:visibility="visible" />
 
     <LinearLayout
-        android:id="@+id/dayOfWeekShedule"
+        android:id="@+id/day_of_week_shedule"
         android:visibility="visible"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -56,7 +56,7 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
-        app:layout_constraintTop_toBottomOf="@+id/button_name_university"
+        app:layout_constraintTop_toBottomOf="@+id/button_week_schedule"
         app:layout_constraintBottom_toBottomOf="@id/bottom_guideline">
 
         <TableRow
@@ -66,21 +66,21 @@
             android:layout_marginTop="10dp">
 
             <TextView
-                android:id="@+id/dayOfWeekText"
+                android:id="@+id/day_of_week_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_bold"
-                android:padding="10dp"
+                android:padding="@dimen/dp_10"
                 android:text="@string/wednesday"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="@dimen/sp_24" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnUp_day_week"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="10dp"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginStart="@dimen/dp_10"
                 android:background="@drawable/vector_higher"
                 android:backgroundTint="@color/white"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
@@ -93,11 +93,11 @@
             android:layout_height="match_parent">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerView"
+                android:id="@+id/recycler_view_subject_in_week"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/major"
-                android:padding="5dp"
+                android:padding="@dimen/dp_5"
                 android:visibility="visible"
                 tools:itemCount="5"
                 tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -108,7 +108,7 @@
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@id/button_name_university"
+        android:id="@id/button_week_schedule"
         android:layout_width="232dp"
         android:layout_height="54dp"
         android:layout_gravity="center"
@@ -118,7 +118,7 @@
         android:text="@string/week_shedule"
         android:textAllCaps="false"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="@dimen/sp_20"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
         app:layout_constraintTop_toTopOf="@id/top_guideline"
         app:layout_constraintStart_toStartOf="@id/start_guideline"/>

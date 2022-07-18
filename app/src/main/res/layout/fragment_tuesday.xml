@@ -40,33 +40,32 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:src="@drawable/ic_graduation_im"
-        app:layout_constraintTop_toBottomOf="@id/dayOfWeekShedule"
+        app:layout_constraintTop_toBottomOf="@id/day_of_week_shedule"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:visibility="visible" />
 
     <LinearLayout
-        android:id="@+id/dayOfWeekShedule"
+        android:id="@+id/day_of_week_shedule"
         android:visibility="visible"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="@dimen/dp_20"
         android:background="@color/major"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
-        app:layout_constraintTop_toBottomOf="@+id/button_name_university"
+        app:layout_constraintTop_toBottomOf="@+id/button_week_schedule"
         app:layout_constraintBottom_toBottomOf="@id/bottom_guideline">
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginTop="10dp">
+            android:gravity="center">
 
             <TextView
-                android:id="@+id/dayOfWeekText"
+                android:id="@+id/day_of_week_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_bold"
@@ -93,7 +92,7 @@
             android:layout_height="match_parent">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerView"
+                android:id="@+id/recycler_view_subject_in_week"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/major"
@@ -108,7 +107,7 @@
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@id/button_name_university"
+        android:id="@id/button_week_schedule"
         android:layout_width="232dp"
         android:layout_height="54dp"
         android:layout_gravity="center"

@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="45dp" />
+        app:layout_constraintGuide_percent="0.1" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@id/bottom_guideline"
@@ -37,8 +37,8 @@
 
     <ImageView
         android:id="@+id/imageGraduation"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="@dimen/zero_size"
+        android:layout_height="@dimen/zero_size"
         android:src="@drawable/ic_graduation_im"
         app:layout_constraintTop_toBottomOf="@id/liner_all_subject_of_teacher"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -48,20 +48,19 @@
     <LinearLayout
         android:id="@+id/liner_all_subject_of_teacher"
         android:visibility="visible"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="14dp"
+        android:layout_width="@dimen/zero_size"
+        android:layout_height="@dimen/zero_size"
+        android:layout_marginTop="@dimen/dp_20"
         android:background="@color/major"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
-        app:layout_constraintTop_toBottomOf="@+id/button_name_university"
+        app:layout_constraintTop_toBottomOf="@+id/button_week_schedule"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
         app:layout_constraintBottom_toBottomOf="@id/bottom_guideline">
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:gravity="center">
 
             <TextView
@@ -69,17 +68,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_bold"
-                android:padding="10dp"
                 android:text="@string/teacher"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="@dimen/sp_24" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnUp_for_teacher"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="10dp"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginStart="@dimen/dp_10"
                 android:background="@drawable/vector_higher"
                 android:backgroundTint="@color/white"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
@@ -89,8 +87,7 @@
         <ScrollView
             android:id="@+id/scroll_teacher"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="10dp">
+            android:layout_height="match_parent">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/cardTeacher"
@@ -107,18 +104,17 @@
 
     </LinearLayout>
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_back"
+        android:id="@id/button_back"
         android:layout_width="51dp"
         android:layout_height="50dp"
         android:background="@drawable/vector_back"
         android:backgroundTint="@color/major"
-        android:layout_marginEnd="10dp"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
         app:layout_constraintTop_toTopOf="@id/top_guideline"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_name_university"
+        android:id="@id/button_week_schedule"
         android:layout_width="232dp"
         android:layout_height="54dp"
         android:layout_gravity="center"
@@ -128,13 +124,13 @@
         android:text="@string/week_shedule"
         android:textAllCaps="false"
         android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/button_back"
+        android:textSize="@dimen/sp_20"
+        app:layout_constraintEnd_toStartOf="@+id/button_plus"
         app:layout_constraintStart_toEndOf="@id/button_back"
         app:layout_constraintTop_toTopOf="@id/top_guideline" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@id/button_back"
+        android:id="@id/button_plus"
         android:layout_width="51dp"
         android:layout_height="50dp"
         android:background="@drawable/add_botton"
@@ -144,7 +140,7 @@
         tools:ignore="DuplicateIds,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <ImageView
-        android:id="@+id/shape"
+        android:id="@id/shape"
         android:layout_width="234dp"
         android:layout_height="wrap_content"
         android:src="@drawable/shape"

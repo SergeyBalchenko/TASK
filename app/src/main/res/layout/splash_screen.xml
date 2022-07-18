@@ -15,7 +15,7 @@
         app:layout_constraintGuide_percent="0.65" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/image_for_splash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
@@ -27,7 +27,7 @@
         app:srcCompat="@drawable/ic_undraw_high_five_re_jy71" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@id/shape"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,13 +46,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="5dp">
-
-
 
                 <TextView
                     android:id="@+id/textView4"
@@ -86,7 +83,7 @@
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="5dp">
+                android:padding="@dimen/dp_5">
 
                 <TextView
                     android:id="@+id/textView6"
@@ -102,6 +99,5 @@
         </TableLayout>
 
     </androidx.cardview.widget.CardView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

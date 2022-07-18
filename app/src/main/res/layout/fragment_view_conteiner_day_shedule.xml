@@ -7,57 +7,57 @@
     tools:context="presentation.viewDayShedule.ViewContainerDayShedule">
 
     <androidx.cardview.widget.CardView
-    android:id="@+id/cardInfoSubject"
+    android:id="@+id/card_info_subject"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
-    android:padding="10dp"
+    android:layout_margin="@dimen/dp_10"
+    android:padding="@dimen/dp_10"
     app:cardBackgroundColor="@color/grey">
 
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_column="2"
-        android:layout_margin="5dp">
+        android:layout_margin="@dimen/dp_5">
 
         <androidx.constraintlayout.widget.Barrier
             android:layout_width="136dp"
             android:layout_height="match_parent"
             app:barrierDirection="start"
-            app:constraint_referenced_ids="imageView3" />
+            app:constraint_referenced_ids="image_setting" />
 
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/nameSubject"
+                android:id="@id/name_subject"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:ellipsize="end"
                 android:fontFamily="@font/poppins_bold"
                 android:text="@string/name_subject"
-                android:textSize="14sp" />
+                android:textSize="@dimen/sp_14" />
 
             <TextView
-                android:id="@+id/nameTeacher"
+                android:id="@id/name_teacher"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:fontFamily="@font/poppins_bold"
                 android:text="@string/name_teacher"
                 android:ellipsize="end"
-                android:textSize="14sp" />
+                android:textSize="@dimen/sp_14" />
 
             <TextView
-                android:id="@+id/date"
+                android:id="@id/date"
                 android:layout_width="113dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:fontFamily="@font/poppins_bold"
                 android:text="@string/date"
                 android:ellipsize="end"
-                android:textSize="14sp" />
+                android:textSize="@dimen/sp_14" />
             <ImageView
                 android:id="@+id/setting_view_info"
                 android:layout_width="wrap_content"
@@ -75,20 +75,20 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/nameCumpus"
+                android:id="@id/name_campus"
                 android:layout_weight="1"
                 android:ellipsize="end"
                 android:fontFamily="@font/poppins_bold"
                 android:text="@string/name_auditoria"
-                android:textSize="14sp" />
+                android:textSize="@dimen/sp_14" />
 
             <TextView
-                android:id="@+id/nameAuditoria"
+                android:id="@+id/name_auditoria"
                 android:layout_weight="1"
                 android:fontFamily="@font/poppins_bold"
                 android:text="@string/name_classroom"
                 android:ellipsize="end"
-                android:textSize="14sp" />
+                android:textSize="@dimen/sp_14" />
         </TableRow>
     </TableLayout>
 </androidx.cardview.widget.CardView>

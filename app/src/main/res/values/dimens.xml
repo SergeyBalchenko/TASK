@@ -3,11 +3,20 @@
     <dimen name="app_bar_height">180dp</dimen>
     <dimen name="text_margin">16dp</dimen>
     <dimen name="selectable_item_card_radius">15dp</dimen>
-    <dimen name="normal_size_text">14sp</dimen>
-    <dimen name="padding_btn_more">10dp</dimen>
-    <dimen name="big_size_text">20sp</dimen>
+
     <dimen name="zero_size">0dp</dimen>
-    <dimen name="normal_margin">20dp</dimen>
-    <dimen name="big_margin">45dp</dimen>
-    <dimen name="very_big_margin">100dp</dimen>
+    <dimen name="dp_5">5dp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+    <dimen name="dp_30">30dp</dimen>
+    <dimen name="dp_40">40dp</dimen>
+    <dimen name="dp_45">45dp</dimen>
+    <dimen name="dp_100">100dp</dimen>
+
+
+    /*//////---------------Text sizing "sp"--------////////*
+    <dimen name="normal_size_text">14sp</dimen>
+    <dimen name="sp_14">14sp</dimen>
+    <dimen name="sp_20">20sp</dimen>
+    <dimen name="sp_24">24sp</dimen>
 </resources>

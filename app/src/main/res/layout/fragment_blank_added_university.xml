@@ -6,6 +6,160 @@
     android:layout_height="match_parent"
     tools:context=".presentation.blank_adde_university.BlankAddedUniversity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/liner_blank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@id/shape"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shape" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@id/button_back"
+                    android:layout_width="51dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:background="@drawable/vector_back"
+                    android:backgroundTint="@color/major"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@id/button_week_schedule"
+                    android:layout_width="232dp"
+                    android:layout_height="54dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/btn_radius_10dp"
+                    android:backgroundTint="@color/major"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/week_shedule"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/subject_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@color/major"
+                android:fontFamily="@font/poppins_bold"
+                android:padding="@dimen/dp_10"
+                android:text="@string/subject"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_20"
+                tools:ignore="TextContrastCheck">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/major"
+                        android:fontFamily="@font/poppins_bold"
+                        android:padding="10dp"
+                        android:text="@string/university"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+                        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+                        app:layout_constraintHorizontal_bias="0.592"
+                        app:layout_constraintStart_toStartOf="@id/start_guideline"
+                        app:layout_constraintTop_toBottomOf="@id/button_week_schedule"
+                        tools:ignore="TextContrastCheck" />
+                </TableRow>
+
+
+                <TableRow
+                    android:id="@+id/tableRowBlankUniversity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/grey_blank"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/university_name"
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
+                        android:padding="10dp"
+                        android:text="@string/add_university"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/edit_text_text_university_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_rounded_corners"
+                        android:ems="10"
+                        android:hint="@string/write_name_university"
+                        android:inputType="textPersonName"
+                        android:shadowRadius="10"
+                        android:textSize="14sp"
+                        app:layout_column="0"
+                        app:layout_row="0"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/button_done"
+                        android:layout_width="107dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/roundstyle"
+                        android:text="@string/done"
+                        android:textColor="@color/black"
+                        app:backgroundTint="@color/grey_blank"
+                        app:layout_constraintBottom_toBottomOf="@id/subject_text"
+                        app:layout_constraintEnd_toEndOf="@+id/subject_text"
+                        app:layout_constraintTop_toBottomOf="@+id/tableRowBlankSubject"
+                        app:layout_constraintVertical_bias="0.208"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </TableRow>
+            </TableLayout>
+
+            <ImageView
+                android:id="@+id/imageOmega"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/blank_university" />
+
+        </LinearLayout>
+    </ScrollView>
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/start_guideline"
         android:layout_width="wrap_content"
@@ -34,120 +188,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.4" />
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/shape"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@id/subject_text"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/major"
-        android:fontFamily="@font/poppins_bold"
-        android:padding="20dp"
-        android:text="@string/university"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintHorizontal_bias="0.562"
-        app:layout_constraintStart_toStartOf="@id/start_guideline"
-        app:layout_constraintEnd_toEndOf="@id/end_guideline"
-        app:layout_constraintTop_toBottomOf="@+id/button_name_university"
-        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
-        tools:ignore="TextContrastCheck" />
 
-    <ImageView
-        android:id="@+id/imageOmega"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:src="@drawable/blank_university"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/subject_text"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-
-    <TableRow
-        android:id="@+id/tableRowBlankSubject"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@color/grey_blank"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="@id/subject_text"
-        app:layout_constraintEnd_toEndOf="@id/subject_text"
-        app:layout_constraintStart_toStartOf="@id/subject_text"
-        app:layout_constraintTop_toTopOf="@id/subject_text">
-
-        <TextView
-            android:id="@id/subject_name"
-            android:layout_width="wrap_content"
-            android:fontFamily="@font/poppins_bold"
-            android:padding="10dp"
-            android:text="@string/university"
-            android:textColor="@color/black"
-            android:textSize="14sp" />
-
-        <EditText
-            android:id="@+id/edit_text_text_subject_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/edittext_rounded_corners"
-            android:ems="10"
-            android:hint="@string/write_name_university"
-            android:inputType="textPersonName"
-            android:shadowRadius="10"
-            android:textSize="14sp"
-            app:layout_column="0"
-            app:layout_row="0"
-            tools:ignore="TouchTargetSizeCheck" />
-
-    </TableRow>
-
-    <Button
-        android:id="@id/button_done"
-        android:layout_width="74dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/roundstyle"
-        android:text="@string/done"
-        android:textColor="@color/black"
-        app:backgroundTint="@color/grey_blank"
-        app:layout_constraintEnd_toEndOf="@+id/subject_text"
-        app:layout_constraintTop_toBottomOf="@+id/tableRowBlankSubject"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@id/button_name_university"
-        android:layout_width="232dp"
-        android:layout_height="54dp"
-        android:layout_gravity="center"
-        android:background="@drawable/btn_radius_10dp"
-        android:backgroundTint="@color/major"
-        android:fontFamily="@font/poppins_bold"
-        android:text="@string/week_shedule"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@id/end_guideline"
-        app:layout_constraintTop_toTopOf="@id/top_guideline"
-        app:layout_constraintStart_toEndOf="@id/button_back"/>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@id/button_back"
-        android:layout_width="51dp"
-        android:layout_height="50dp"
-        android:background="@drawable/vector_back"
-        android:backgroundTint="@color/major"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintStart_toStartOf="@id/start_guideline"
-        app:layout_constraintTop_toTopOf="@id/top_guideline"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>

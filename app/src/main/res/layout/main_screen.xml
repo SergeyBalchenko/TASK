@@ -36,7 +36,7 @@
         app:layout_constraintGuide_percent="0.9" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@id/shape"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/shape"
@@ -44,31 +44,31 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView11"
+        android:id="@id/image_for_main"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/zero_size"
         android:src="@drawable/teacher_with_desc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.412"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/top_guideline"
-        app:layout_constraintBottom_toTopOf="@id/linearLayout"
+        app:layout_constraintBottom_toTopOf="@id/linear_layout_main"
         app:layout_constraintVertical_bias="0.175" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:id="@+id/linear_layout_main"
+        android:layout_width="@dimen/zero_size"
+        android:layout_height="@dimen/zero_size"
         android:background="@color/white"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
         app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
-        app:layout_constraintTop_toBottomOf="@+id/imageView11"
+        app:layout_constraintTop_toBottomOf="@+id/image_for_main"
         app:layout_constraintBottom_toBottomOf="@id/bottom_guideline">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_name_university"
+            android:id="@+id/button_week_schedule"
             android:layout_width="232dp"
             android:layout_height="54dp"
             android:layout_gravity="center"
@@ -83,7 +83,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="@dimen/dp_10"
             android:gravity="center"
             >
 
@@ -91,7 +91,7 @@
                 android:id="@+id/button_plus_university"
                 android:layout_width="49dp"
                 android:layout_height="43dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginEnd="@dimen/dp_10"
                 android:background="@drawable/add_botton"
                 android:backgroundTint="@color/major"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
@@ -106,14 +106,14 @@
                 android:text="@string/university"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="@dimen/sp_20"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button_show_more_university"
                 android:layout_width="37dp"
                 android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="@dimen/dp_10"
                 android:background="@drawable/ic_scroll_down"
                 android:backgroundTint="@color/major"
                 app:layout_constraintStart_toStartOf="parent"
@@ -125,14 +125,14 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="@dimen/dp_10"
             android:gravity="center">
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button_plus_subject"
                 android:layout_width="49dp"
                 android:layout_height="43dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginEnd="@dimen/dp_10"
                 android:background="@drawable/add_botton"
                 android:backgroundTint="@color/major"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
@@ -147,14 +147,14 @@
                 android:text="@string/subject"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="@dimen/sp_20"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button_show_more_subject"
                 android:layout_width="37dp"
                 android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="@dimen/dp_10"
                 android:background="@drawable/ic_scroll_down"
                 android:backgroundTint="@color/major"
                 app:layout_constraintStart_toStartOf="parent"
@@ -166,14 +166,14 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="@dimen/dp_10"
             android:gravity="center">
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button_back"
                 android:layout_width="49dp"
                 android:layout_height="43dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginEnd="@dimen/dp_10"
                 android:background="@drawable/add_botton"
                 android:backgroundTint="@color/major"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
@@ -188,14 +188,14 @@
                 android:text="@string/teacher"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="@dimen/sp_20"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button_show_more_teacher"
                 android:layout_width="37dp"
                 android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="@dimen/dp_10"
                 android:background="@drawable/ic_scroll_down"
                 android:backgroundTint="@color/major"
                 app:layout_constraintStart_toStartOf="parent"
@@ -208,8 +208,8 @@
 
     <ImageView
         android:id="@+id/imageView12"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="@dimen/zero_size"
+        android:layout_height="@dimen/zero_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

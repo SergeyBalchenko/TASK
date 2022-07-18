@@ -33,11 +33,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.6" />
+        app:layout_constraintGuide_percent="0.53" />
 
 
     <ImageView
-        android:id="@+id/shape"
+        android:id="@id/shape"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/shape"
@@ -50,13 +50,12 @@
         android:layout_height="50dp"
         android:background="@drawable/vector_back"
         android:backgroundTint="@color/major"
-        android:layout_marginEnd="10dp"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
         app:layout_constraintTop_toTopOf="@id/top_guideline"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@id/button_name_university"
+        android:id="@id/button_week_schedule"
         android:layout_width="232dp"
         android:layout_height="54dp"
         android:background="@drawable/btn_radius_10dp"
@@ -65,56 +64,56 @@
         android:text="@string/week_shedule"
         android:textAllCaps="false"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="@dimen/sp_20"
         app:layout_constraintStart_toEndOf="@id/button_back"
         app:layout_constraintTop_toTopOf="@id/top_guideline"
-        app:layout_constraintEnd_toEndOf="@id/end_guideline" />
-    <TextView
-        android:id="@+id/subject_text"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="12dp"
-        android:background="@color/major"
-        android:fontFamily="@font/poppins_bold"
-        android:padding="10dp"
-        android:text="@string/teacher"
-        android:textColor="@color/white"
-        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
-        app:layout_constraintStart_toStartOf="@id/start_guideline"
-        app:layout_constraintTop_toBottomOf="@id/button_name_university"
-        app:layout_constraintBottom_toTopOf="@id/bottom_guideline"
-        tools:ignore="TextContrastCheck" />
+        app:layout_constraintBottom_toTopOf="@id/table_layout_blank"/>
 
 
     <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:id="@+id/table_layout_blank"
+        android:layout_width="@dimen/zero_size"
+        android:layout_height="@dimen/zero_size"
         android:layout_gravity="center"
-        android:background="@color/grey_blank"
-        android:gravity="center"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="70dp"
+        android:background="@color/major"
+        android:layout_marginTop="@dimen/dp_20"
+        android:padding="@dimen/dp_20"
         app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
-        app:layout_constraintTop_toTopOf="@id/subject_text">
+        app:layout_constraintTop_toBottomOf="@id/button_week_schedule" >
+
+
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/subject_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/major"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/teacher"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_20" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grey_blank">
 
             <TextView
                 android:id="@+id/textPhoneNumber"
                 android:layout_width="wrap_content"
                 android:fontFamily="@font/poppins_bold"
-                android:padding="10dp"
+                android:padding="@dimen/dp_10"
                 android:text="@string/phone_number"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="@dimen/sp_14" />
 
             <EditText
                 android:id="@+id/editTextPhoneNumber"
@@ -122,11 +121,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/edittext_rounded_corners"
-                android:ems="10"
                 android:hint="@string/write_phone_number"
                 android:inputType="textPersonName"
-                android:shadowRadius="10"
-                android:textSize="14sp"
+                android:textSize="@dimen/sp_14"
                 app:layout_column="0"
                 app:layout_row="0" />
 
@@ -135,16 +132,16 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:layout_editor_absoluteX="53dp">
+            android:background="@color/grey_blank">
 
             <TextView
                 android:id="@+id/textTeacherName"
                 android:layout_width="wrap_content"
                 android:fontFamily="@font/poppins_bold"
-                android:padding="10dp"
+                android:padding="@dimen/dp_10"
                 android:text="@string/teacher_name"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="@dimen/sp_14" />
 
             <EditText
                 android:id="@+id/editTextTeacherName"
@@ -152,11 +149,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/edittext_rounded_corners"
-                android:ems="10"
                 android:hint="@string/write_name_teacher"
                 android:inputType="textPersonName"
-                android:shadowRadius="10"
-                android:textSize="14sp"
+                android:textSize="@dimen/sp_14"
                 app:layout_column="0"
                 app:layout_row="0" />
         </TableRow>
@@ -164,7 +159,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:layout_editor_absoluteX="129dp">
+            android:background="@color/grey_blank">
 
             <TextView
                 android:id="@+id/textAge"
@@ -186,29 +181,39 @@
                 android:inputType="textPersonName"
                 android:shadowRadius="10"
                 android:textSize="14sp"
-                app:layout_column="0"
-                app:layout_row="0"
                 tools:ignore="TouchTargetSizeCheck" />
 
         </TableRow>
 
-    </TableLayout>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
 
-    <Button
-        android:id="@+id/button_done"
-        android:layout_width="74dp"
-        android:layout_height="36dp"
-        android:layout_margin="20dp"
-        android:background="@drawable/roundstyle"
-        android:text="@string/done"
-        android:textColor="@color/black"
-        app:backgroundTint="@color/grey_blank"
-        app:layout_constraintBottom_toBottomOf="@+id/subject_text"
-        app:layout_constraintEnd_toEndOf="@id/subject_text"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@id/subject_text"
-        app:layout_constraintTop_toBottomOf="@id/tableLayout"
-        tools:ignore="TouchTargetSizeCheck" />
+            >
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/button_done"
+                android:layout_width="74dp"
+                android:layout_height="36dp"
+               android:layout_marginTop="@dimen/dp_20"
+                android:background="@drawable/roundstyle"
+                android:text="@string/done"
+                android:textColor="@color/black"
+                app:backgroundTint="@color/grey_blank"
+                tools:ignore="TouchTargetSizeCheck" />
+        </TableRow>
+
+    </TableLayout>
 
     <ImageView
         android:id="@+id/imageView37"
