@@ -29,7 +29,7 @@
         app:layout_constraintGuide_percent="0.18" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/center_guideline"
+        android:id="@+id/bottom_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -58,7 +58,7 @@
         app:layout_constraintEnd_toEndOf=""
         app:layout_constraintStart_toStartOf="@id/start_guideline"
         app:layout_constraintTop_toTopOf="@id/top_guideline"
-        app:layout_constraintBottom_toTopOf="@id/center_guideline"
+        app:layout_constraintBottom_toTopOf="@id/bottom_guideline"
        />
 
 

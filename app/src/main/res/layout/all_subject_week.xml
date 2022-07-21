@@ -53,6 +53,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_back"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:background="@drawable/vector_back"
+        android:backgroundTint="@color/major"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toTopOf="@id/top_guideline"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@id/button_week_schedule"
         android:layout_width="@dimen/dp_232"
         android:layout_height="@dimen/dp_54"
@@ -65,17 +75,9 @@
         android:textSize="@dimen/sp_20"
         app:layout_constraintTop_toTopOf="@id/top_guideline"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
-        app:layout_constraintEnd_toStartOf="@id/button_plus_subject"/>
+        app:layout_constraintStart_toEndOf="@id/button_back"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"/>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_plus_subject"
-        android:layout_width="@dimen/dp_50"
-        android:layout_height="@dimen/dp_50"
-        android:background="@drawable/add_botton"
-        android:backgroundTint="@color/major"
-        app:layout_constraintEnd_toEndOf="@id/end_guideline"
-        app:layout_constraintTop_toTopOf="@id/top_guideline"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <RelativeLayout
         android:id="@+id/recycler_wrapper_for_day_shedule"
@@ -119,13 +121,13 @@
             android:id="@+id/recycler_view_subject_in_week"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_below="@id/subject_day_week_text"
             android:background="@color/major"
             android:orientation="vertical"
-            android:padding="@dimen/dp_10"
+            android:padding="@dimen/dp_5"
             tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/fragment_view_conteiner_day_shedule"
-            tools:orientation="vertical"
-            android:layout_below="@id/subject_day_week_text"/>
+            tools:orientation="vertical" />
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
