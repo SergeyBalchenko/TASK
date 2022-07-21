@@ -47,9 +47,8 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:visibility="visible" />
 
-
     <ImageView
-        android:id="@+id/shape"
+        android:id="@id/shape"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/shape"
@@ -57,9 +56,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_teacher"
-        android:layout_width="195dp"
-        android:layout_height="43dp"
+        android:id="@id/button_teacher"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="@dimen/dp_40"
         android:layout_marginTop="@dimen/dp_20"
         android:background="@drawable/btn_radius_10dp"
         android:backgroundTint="@color/major"
@@ -74,9 +73,9 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_week_schedule"
-        android:layout_width="232dp"
-        android:layout_height="54dp"
+        android:id="@id/button_week_schedule"
+        android:layout_width="@dimen/dp_232"
+        android:layout_height="@dimen/dp_54"
         android:background="@drawable/btn_radius_10dp"
         android:backgroundTint="@color/major"
         android:fontFamily="@font/poppins_bold"
@@ -90,9 +89,9 @@
         app:layout_constraintTop_toTopOf="@id/top_guideline" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_plus"
-        android:layout_width="49dp"
-        android:layout_height="47dp"
+        android:id="@id/button_plus"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
         android:background="@drawable/add_botton"
         android:backgroundTint="@color/major"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
@@ -100,34 +99,27 @@
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_back"
-        android:layout_width="51dp"
-        android:layout_height="50dp"
+        android:id="@id/button_back"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
         android:background="@drawable/vector_back"
         android:backgroundTint="@color/major"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
         app:layout_constraintTop_toTopOf="@id/top_guideline"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-    <ScrollView
-        android:id="@+id/scroll_for_teacher"
-        android:layout_width="@dimen/zero_size"
-        android:layout_height="@dimen/zero_size"
-        android:layout_marginTop="@dimen/dp_20"
-        app:layout_constraintTop_toBottomOf="@id/button_teacher"
-        app:layout_constraintStart_toStartOf="@id/start_guideline"
-        app:layout_constraintEnd_toEndOf="@id/end_guideline"
-        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline">
-
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:paddingStart="@dimen/dp_10"
-            android:paddingEnd="@dimen/dp_10" >
+            android:layout_width="@dimen/zero_size"
+            android:layout_height="@dimen/zero_size"
+            android:padding="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_20"
+            app:layout_constraintTop_toBottomOf="@id/button_teacher"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintBottom_toBottomOf="@id/bottom_guideline" >
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_view"
+                android:id="@+id/recycler_view_subject"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:itemCount="7"
@@ -137,5 +129,4 @@
 
             </androidx.recyclerview.widget.RecyclerView>
         </LinearLayout>
-    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

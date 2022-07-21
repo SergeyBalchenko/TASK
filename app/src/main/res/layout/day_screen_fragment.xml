@@ -11,15 +11,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="16dp"
-        />
+        app:layout_constraintGuide_begin="16dp" />
     <androidx.constraintlayout.widget.Guideline
         android:id="@id/end_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="16dp"
-        />
+        app:layout_constraintGuide_end="16dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@id/top_guideline"
@@ -60,7 +58,7 @@
         app:layout_constraintStart_toStartOf="@id/start_guideline"
         app:layout_constraintTop_toTopOf="@id/top_guideline"
         app:layout_constraintEnd_toStartOf="@id/button_plus_subject"
-        app:layout_constraintBottom_toTopOf="@id/linearLayoutDayWeek"/>
+        app:layout_constraintBottom_toTopOf="@id/recycler_wrapper_for_day_shedule"/>
 
     <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_plus_subject"
@@ -70,64 +68,59 @@
             android:backgroundTint="@color/major"
             app:layout_constraintTop_toTopOf="@id/top_guideline"
             app:layout_constraintEnd_toEndOf="@id/end_guideline"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-            />
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-    <LinearLayout
-        android:id="@+id/linearLayoutDayWeek"
+    <RelativeLayout
+        android:id="@+id/recycler_wrapper_for_day_shedule"
         android:layout_width="@dimen/zero_size"
         android:layout_height="@dimen/zero_size"
-        android:background="@color/major"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
-        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        android:background="@color/major"
+        android:layout_marginTop="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@id/button_week_schedule"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
-        app:layout_constraintTop_toBottomOf="@+id/button_week_schedule"
-        app:layout_constraintVertical_bias="0.497">
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline" >
 
-        <TableRow
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/name_Day"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center">
+            android:fontFamily="@font/poppins_bold"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/dp_10"
+            android:text="@string/Monday"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_24" />
 
-            <TextView
-                android:id="@+id/name_Day"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_bold"
-                android:padding="@dimen/dp_10"
-                android:text="@string/Monday"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="@dimen/sp_24" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnUp_for_subject"
-                android:layout_width="@dimen/dp_40"
-                android:layout_height="@dimen/dp_40"
-                android:layout_marginStart="@dimen/dp_10"
-                android:background="@drawable/vector_higher"
-                android:backgroundTint="@color/white"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-        </TableRow>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@id/btnUp_for_subject"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_toEndOf="@id/name_Day"
+            android:background="@drawable/vector_higher"
+            android:backgroundTint="@color/white"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view_subject_in_week"
+            android:id="@id/recycler_view_subject_in_week"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_below="@id/name_Day"
             android:background="@color/major"
             android:padding="@dimen/dp_10"
             android:visibility="visible"
             tools:itemCount="2"
             tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/fragment_view_conteiner_day_shedule"
-            tools:orientation="vertical">
-        </androidx.recyclerview.widget.RecyclerView>
-
-    </LinearLayout>
+            tools:orientation="vertical" />
+    </RelativeLayout>
 
     <ImageView
-        android:id="@+id/graduation"
+        android:id="@id/graduation"
         android:layout_width="match_parent"
         android:layout_height="@dimen/zero_size"
         android:src="@drawable/ic_graduation_im"

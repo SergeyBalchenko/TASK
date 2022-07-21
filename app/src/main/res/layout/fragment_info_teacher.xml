@@ -11,102 +11,92 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="16dp"
-        />
+        app:layout_constraintGuide_begin="16dp"/>
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@id/end_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="16dp"
-        />
+        app:layout_constraintGuide_end="16dp"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@id/top_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.1" />
+        app:layout_constraintGuide_percent="0.1"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@id/bottom_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.85" />
+        app:layout_constraintGuide_percent="0.85"/>
 
     <ImageView
-        android:id="@+id/imageGraduation"
+        android:id="@id/image_graduation"
         android:layout_width="@dimen/zero_size"
         android:layout_height="@dimen/zero_size"
         android:src="@drawable/ic_graduation_im"
-        app:layout_constraintTop_toBottomOf="@id/liner_all_subject_of_teacher"
+        app:layout_constraintTop_toBottomOf="@id/recycler_wrapper_for_day_shedule"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"/>
 
-    <LinearLayout
-        android:id="@+id/liner_all_subject_of_teacher"
-        android:visibility="visible"
+    <RelativeLayout
+        android:id="@id/recycler_wrapper_for_day_shedule"
         android:layout_width="@dimen/zero_size"
         android:layout_height="@dimen/zero_size"
-        android:layout_marginTop="@dimen/dp_20"
-        android:background="@color/major"
         android:orientation="vertical"
+        android:background="@color/major"
+        android:layout_marginTop="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@id/button_week_schedule"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
-        app:layout_constraintTop_toBottomOf="@+id/button_week_schedule"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
         app:layout_constraintBottom_toBottomOf="@id/bottom_guideline">
 
-        <TableRow
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/card_teacher"
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/teacher_text"
+            android:background="@color/major"
+            android:padding="@dimen/dp_5"
+            android:visibility="visible"
+            tools:itemCount="10"
+            tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/fragment_view_info_teacher"
+            tools:orientation="vertical" />
+
+        <TextView
+            android:id="@+id/teacher_text"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center">
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/teacher"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_24" />
 
-            <TextView
-                android:id="@+id/teacherInfoText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_bold"
-                android:text="@string/teacher"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="@dimen/sp_24" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnUp_for_teacher"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_toEndOf="@id/teacher_text"
+            android:background="@drawable/vector_higher"
+            android:backgroundTint="@color/white"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+    </RelativeLayout>
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnUp_for_teacher"
-                android:layout_width="@dimen/dp_30"
-                android:layout_height="@dimen/dp_30"
-                android:layout_marginStart="@dimen/dp_10"
-                android:background="@drawable/vector_higher"
-                android:backgroundTint="@color/white"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-        </TableRow>
-
-        <ScrollView
-            android:id="@+id/scroll_teacher"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/cardTeacher"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/major"
-                android:padding="5dp"
-                android:visibility="visible"
-                tools:itemCount="10"
-                tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/fragment_view_info_teacher"
-                tools:orientation="vertical" />
-        </ScrollView>
-
-    </LinearLayout>
     <androidx.appcompat.widget.AppCompatButton
         android:id="@id/button_back"
-        android:layout_width="51dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
         android:background="@drawable/vector_back"
         android:backgroundTint="@color/major"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
@@ -115,8 +105,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@id/button_week_schedule"
-        android:layout_width="232dp"
-        android:layout_height="54dp"
+        android:layout_width="@dimen/dp_232"
+        android:layout_height="@dimen/dp_54"
         android:layout_gravity="center"
         android:background="@drawable/btn_radius_10dp"
         android:backgroundTint="@color/major"
@@ -131,8 +121,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@id/button_plus"
-        android:layout_width="51dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
         android:background="@drawable/add_botton"
         android:backgroundTint="@color/major"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
@@ -141,7 +131,7 @@
 
     <ImageView
         android:id="@id/shape"
-        android:layout_width="234dp"
+        android:layout_width="@dimen/dp_232"
         android:layout_height="wrap_content"
         android:src="@drawable/shape"
         app:layout_constraintStart_toStartOf="parent"

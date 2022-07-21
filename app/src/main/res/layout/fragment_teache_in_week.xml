@@ -47,66 +47,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/bottom_guideline" />
 
-    <LinearLayout
-        android:id="@+id/day_of_week_shedule"
-        android:visibility="visible"
-        android:layout_width="@dimen/zero_size"
-        android:layout_height="@dimen/zero_size"
-        android:layout_marginTop="@dimen/dp_20"
-        android:background="@color/major"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="@id/end_guideline"
-        app:layout_constraintStart_toStartOf="@id/start_guideline"
-        app:layout_constraintTop_toBottomOf="@+id/button_week_schedule"
-        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center">
-
-            <TextView
-                android:id="@+id/subject_of_teacher_in_week"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_bold"
-                android:padding="@dimen/dp_10"
-                android:text="@string/teacher_in_a_week"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="@dimen/sp_24" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnUp_day_week"
-                android:layout_width="@dimen/dp_30"
-                android:layout_height="@dimen/dp_30"
-                android:layout_marginStart="@dimen/dp_10"
-                android:background="@drawable/vector_higher"
-                android:backgroundTint="@color/white"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-        </TableRow>
-
-        <ScrollView
-            android:id="@+id/scroll_friday"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_view_subject_in_week"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/major"
-                android:padding="@dimen/dp_5"
-                android:visibility="visible"
-                tools:itemCount="5"
-                tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/fragment_view_teacher_week"
-                tools:orientation="vertical" />
-        </ScrollView>
-
-    </LinearLayout>
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_week_schedule"
         android:layout_width="232dp"
@@ -133,6 +73,55 @@
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
         />
+
+    <RelativeLayout
+        android:id="@id/recycler_wrapper_for_day_shedule"
+        android:layout_width="@dimen/zero_size"
+        android:layout_height="@dimen/zero_size"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@color/major"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/button_week_schedule">
+
+        <TextView
+            android:id="@+id/subject_of_teacher_in_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="@dimen/dp_10"
+            android:text="@string/teacher_in_a_week"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_24" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnUp_day_week"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_toEndOf="@id/subject_of_teacher_in_week"
+            android:background="@drawable/vector_higher"
+            android:backgroundTint="@color/white"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_subject_in_week"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/subject_of_teacher_in_week"
+            android:background="@color/major"
+            android:padding="@dimen/dp_5"
+            android:visibility="visible"
+            tools:itemCount="5"
+            tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/fragment_view_teacher_week"
+            tools:orientation="vertical" />
+    </RelativeLayout>
 
     <ImageView
         android:id="@+id/shape"

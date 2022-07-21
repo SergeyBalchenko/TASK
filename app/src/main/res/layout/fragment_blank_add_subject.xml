@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.91" />
+        app:layout_constraintGuide_percent="0.85" />
 
     <ImageView
         android:id="@id/graduation"
@@ -48,8 +48,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_back"
-        android:layout_width="51dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
         android:background="@drawable/vector_back"
         android:backgroundTint="@color/major"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
@@ -59,8 +59,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@id/button_week_schedule"
-        android:layout_width="232dp"
-        android:layout_height="54dp"
+        android:layout_width="@dimen/dp_232"
+        android:layout_height="@dimen/dp_54"
         android:layout_marginStart="@dimen/dp_100"
         android:layout_marginEnd="@dimen/dp_100"
         android:background="@drawable/btn_radius_10dp"
@@ -81,331 +81,315 @@
         android:layout_height="wrap_content"
         android:src="@drawable/shape"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-      />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/subject_text"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/recycler_wrapper_for_day_shedule"
         android:layout_width="@dimen/zero_size"
         android:layout_height="@dimen/zero_size"
         android:layout_marginTop="@dimen/dp_20"
         android:background="@color/major"
-        android:fontFamily="@font/poppins_bold"
-        android:padding="@dimen/dp_10"
-        android:text="@string/subject"
-        android:textColor="@color/white"
-        android:textSize="@dimen/sp_20"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
-        app:layout_constraintTop_toBottomOf="@+id/button_week_schedule"
-        tools:ignore="TextContrastCheck" />
+        app:layout_constraintTop_toBottomOf="@id/button_week_schedule"
+        >
 
-    <TableLayout
-        android:id="@+id/table_layout_form"
-        android:layout_width="@dimen/zero_size"
-        android:layout_height="@dimen/zero_size"
-        android:layout_gravity="center"
-        android:background="@color/grey_blank"
-        android:padding="@dimen/dp_10"
-       android:layout_marginTop="@dimen/dp_45"
-        android:layout_marginStart="@dimen/dp_20"
-        android:layout_marginEnd="@dimen/dp_20"
-        android:layout_marginBottom="@dimen/dp_100"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/subject_text"
-        app:layout_constraintEnd_toEndOf="@+id/subject_text"
-        app:layout_constraintStart_toStartOf="@id/subject_text"
-        app:layout_constraintTop_toTopOf="@+id/subject_text">
+        <TextView
+            android:id="@+id/teacher_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="false"
+            android:background="@color/major"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="@dimen/dp_10"
+            android:text="@string/subject"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextContrastCheck" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/subject_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/teacher_text"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="@dimen/dp_10"
+            android:text="@string/subject_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/normal_size_text"
+            app:layout_constraintBaseline_toBaselineOf="@id/edit_text_text_subject_name"
+            app:layout_constraintEnd_toStartOf="@id/edit_text_text_subject_name"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/teacher_text" />
 
-            <TextView
-                android:id="@+id/subject_name"
-                android:layout_width="wrap_content"
-                android:fontFamily="@font/poppins_bold"
-                android:padding="@dimen/dp_10"
-                android:text="@string/subject_name"
-                android:textColor="@color/black"
-                android:textSize="@dimen/normal_size_text" />
+        <EditText
+            android:id="@+id/edit_text_text_subject_name"
+            android:layout_width="@dimen/zero_size"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/teacher_text"
 
-            <EditText
-                android:id="@+id/edit_text_text_subject_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/edittext_rounded_corners"
-                android:hint="@string/write_name_subject"
-                android:inputType="textPersonName"
-                android:textSize="@dimen/normal_size_text"
-                app:layout_column="0"
-                app:layout_row="0" />
+            android:layout_toStartOf="@+id/image_bottom_show_more"
+            android:layout_toEndOf="@id/subject_name"
+            android:background="@drawable/edittext_rounded_corners"
+            android:hint="@string/write_name_subject"
+            android:inputType="textPersonName"
+            android:padding="@dimen/dp_10"
+            android:textSize="@dimen/normal_size_text"
+            app:layout_constraintEnd_toStartOf="@id/image_bottom_show_more"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@+id/subject_name"
+            app:layout_constraintTop_toBottomOf="@id/teacher_text"
+            tools:ignore="TouchTargetSizeCheck" />
 
-            <ImageView
-                android:id="@+id/image_bottom_show_more"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/dp_10"
-                android:src="@drawable/more_black" />
+        <ImageView
+            android:id="@+id/image_bottom_show_more"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_below="@id/teacher_text"
+            android:layout_margin="@dimen/dp_10"
+            android:src="@drawable/more_black"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_text_text_subject_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/edit_text_text_subject_name"
+            app:layout_constraintTop_toTopOf="@+id/edit_text_text_subject_name" />
 
-        </TableRow>
+        <TextView
+            android:id="@+id/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/subject_name"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="@dimen/dp_10"
+            android:text="@string/time"
+            android:textColor="@color/black"
+            android:textSize="@dimen/normal_size_text"
+            app:layout_constraintBaseline_toBaselineOf="@id/edit_text_text_time"
+            app:layout_constraintStart_toStartOf="@id/subject_name"
+            app:layout_constraintTop_toBottomOf="@+id/subject_name" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/edit_text_text_time"
+            android:layout_width="@dimen/zero_size"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_text_text_subject_name"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_toEndOf="@id/text_time"
+            android:background="@drawable/edittext_rounded_corners"
+            android:hint="@string/write_time"
+            android:inputType="textPersonName"
+            android:padding="@dimen/dp_10"
+            android:textSize="@dimen/normal_size_text"
+            app:layout_constraintEnd_toEndOf="@+id/edit_text_text_subject_name"
+            app:layout_constraintStart_toEndOf="@+id/subject_name"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_text_subject_name"
+            tools:ignore="TouchTargetSizeCheck" />
 
-            <TextView
-                android:id="@+id/text_time"
-                android:layout_width="wrap_content"
-                android:fontFamily="@font/poppins_bold"
-                android:padding="@dimen/dp_10"
-                android:text="@string/time"
-                android:textColor="@color/black"
-                android:textSize="@dimen/normal_size_text" />
+        <TextView
+            android:id="@+id/text_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="@dimen/dp_10"
+            android:text="@string/day"
+            android:textColor="@color/black"
+            android:textSize="@dimen/normal_size_text"
+            app:layout_constraintBaseline_toBaselineOf="@id/edit_text_day"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_time" />
 
-            <EditText
-                android:id="@+id/edit_text_text_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/edittext_rounded_corners"
-                android:hint="@string/write_time"
-                android:inputType="textPersonName"
-                android:textSize="@dimen/normal_size_text"
-                app:layout_column="0"
-                app:layout_row="0" />
+        <EditText
+            android:id="@+id/edit_text_day"
+            android:layout_width="@dimen/zero_size"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/edittext_rounded_corners"
+            android:hint="@string/write_day_of_week"
+            android:inputType="textPersonName"
+            android:padding="@dimen/dp_10"
+            android:textSize="@dimen/normal_size_text"
+            app:layout_constraintEnd_toEndOf="@id/edit_text_text_time"
+            app:layout_constraintStart_toStartOf="@+id/edit_text_text_time"
+            app:layout_constraintTop_toBottomOf="@id/edit_text_text_time"
+            tools:ignore="TouchTargetSizeCheck" />
 
-            <ImageView
-                android:id="@+id/image_bottom_more_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/dp_10"
-                android:src="@drawable/more_black" />
+        <ImageView
+            android:id="@+id/bottom_more_day"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_margin="@dimen/dp_10"
+            android:src="@drawable/more_black"
+            app:layout_constraintBottom_toBottomOf="@id/edit_text_day"
+            app:layout_constraintStart_toEndOf="@id/edit_text_day"
+            app:layout_constraintTop_toTopOf="@id/edit_text_day" />
 
-        </TableRow>
+        <TextView
+            android:id="@+id/text_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="@dimen/dp_10"
+            android:text="@string/Location_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/normal_size_text"
+            app:layout_constraintBaseline_toBaselineOf="@id/edit_text_location"
+            app:layout_constraintStart_toStartOf="@+id/text_day"
+            app:layout_constraintTop_toBottomOf="@+id/text_day" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/edit_text_location"
+            android:layout_width="@dimen/zero_size"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/edittext_rounded_corners"
+            android:hint="@string/write_name_location"
+            android:inputType="textPersonName"
+            android:padding="@dimen/dp_10"
+            android:textSize="@dimen/normal_size_text"
+            app:layout_constraintEnd_toEndOf="@+id/edit_text_day"
+            app:layout_constraintStart_toStartOf="@+id/edit_text_day"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_day"
+            tools:ignore="TouchTargetSizeCheck" />
 
-            <TextView
-                android:id="@+id/text_day"
-                android:layout_width="wrap_content"
-                android:fontFamily="@font/poppins_bold"
-                android:padding="@dimen/dp_10"
-                android:text="@string/day"
-                android:textColor="@color/black"
-                android:textSize="@dimen/normal_size_text" />
+        <TextView
+            android:id="@+id/text_classroom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="@dimen/dp_10"
+            android:text="@string/classroom_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/normal_size_text"
+            app:layout_constraintBaseline_toBaselineOf="@id/edit_text_classroom"
+            app:layout_constraintStart_toStartOf="@id/text_location"
+            app:layout_constraintTop_toBottomOf="@id/text_day" />
 
-            <EditText
-                android:id="@+id/edit_text_day"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/edittext_rounded_corners"
-                android:hint="@string/write_day_of_week"
-                android:inputType="textPersonName"
-                android:textSize="@dimen/normal_size_text"
-                app:layout_column="0"
-                app:layout_row="0" />
+        <EditText
+            android:id="@+id/edit_text_classroom"
+            android:layout_width="@dimen/zero_size"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/edittext_rounded_corners"
+            android:hint="@string/write_name_classroom"
+            android:inputType="textPersonName"
+            android:padding="@dimen/dp_10"
+            android:textSize="@dimen/normal_size_text"
+            app:layout_constraintEnd_toEndOf="@+id/edit_text_location"
+            app:layout_constraintStart_toStartOf="@+id/edit_text_location"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_location"
+            tools:ignore="TouchTargetSizeCheck" />
 
-            <ImageView
-                android:id="@+id/bottom_more_day"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/dp_10"
-                android:src="@drawable/more_black" />
+        <TextView
+            android:id="@+id/text_teacher_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="@dimen/dp_10"
+            android:text="@string/teacher_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/normal_size_text"
+            app:layout_constraintStart_toStartOf="@id/text_classroom"
+            app:layout_constraintTop_toBottomOf="@id/text_classroom" />
 
-        </TableRow>
+        <EditText
+            android:id="@+id/edit_text_teacher_name"
+            android:layout_width="@dimen/zero_size"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/edittext_rounded_corners"
+            android:hint="@string/write_name_teacher"
+            android:inputType="textPersonName"
+            android:padding="@dimen/dp_10"
+            android:textSize="@dimen/normal_size_text"
+            app:layout_constraintEnd_toEndOf="@+id/edit_text_classroom"
+            app:layout_constraintStart_toStartOf="@+id/edit_text_classroom"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_classroom"
+            tools:ignore="TouchTargetSizeCheck" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/bottom_more_teacher"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_margin="@dimen/dp_10"
+            android:src="@drawable/more_black"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_text_teacher_name"
+            app:layout_constraintStart_toEndOf="@+id/edit_text_teacher_name"
+            app:layout_constraintTop_toTopOf="@+id/edit_text_teacher_name" />
 
-            <TextView
-                android:id="@+id/text_location"
-                android:layout_width="wrap_content"
-                android:fontFamily="@font/poppins_bold"
-                android:padding="@dimen/dp_10"
-                android:text="@string/Location_name"
-                android:textColor="@color/black"
-                android:textSize="@dimen/normal_size_text" />
+        <TextView
+            android:id="@+id/text_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="@dimen/dp_10"
+            android:text="@string/age"
+            android:textColor="@color/black"
+            android:textSize="@dimen/normal_size_text"
+            app:layout_constraintBaseline_toBaselineOf="@id/edit_text_age"
+            app:layout_constraintStart_toStartOf="@+id/text_teacher_name"
+            app:layout_constraintTop_toBottomOf="@+id/text_teacher_name" />
 
-            <EditText
-                android:id="@+id/edit_text_location"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/edittext_rounded_corners"
-                android:hint="@string/write_name_location"
-                android:inputType="textPersonName"
-                android:textSize="@dimen/normal_size_text"
-                app:layout_column="0"
-                app:layout_row="0" />
+        <EditText
+            android:id="@+id/edit_text_age"
+            android:layout_width="@dimen/zero_size"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/edittext_rounded_corners"
+            android:hint="@string/write_age"
+            android:inputType="textPersonName"
+            android:padding="@dimen/dp_10"
+            android:textSize="@dimen/normal_size_text"
+            app:layout_constraintEnd_toEndOf="@+id/edit_text_teacher_name"
+            app:layout_constraintStart_toEndOf="@+id/text_teacher_name"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_teacher_name"
+            tools:ignore="TouchTargetSizeCheck" />
 
-            <ImageView
-                android:id="@+id/bottom_more_location"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/dp_10"
-                android:src="@drawable/more_black" />
+        <TextView
+            android:id="@+id/text_phone_number"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="@dimen/dp_10"
+            android:text="@string/phone_number"
+            android:textColor="@color/black"
+            android:textSize="@dimen/normal_size_text"
+            app:layout_constraintStart_toStartOf="@id/text_age"
+            app:layout_constraintTop_toBottomOf="@id/text_age" />
 
-        </TableRow>
+        <EditText
+            android:id="@+id/edit_text_phone_number"
+            android:layout_width="@dimen/zero_size"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/edittext_rounded_corners"
+            android:hint="@string/write_phone_number"
+            android:inputType="textPersonName"
+            android:padding="@dimen/dp_10"
+            android:textSize="@dimen/normal_size_text"
+            app:layout_constraintEnd_toEndOf="@+id/edit_text_age"
+            app:layout_constraintStart_toStartOf="@+id/edit_text_age"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_age"
+            tools:ignore="TouchTargetSizeCheck" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/text_classroom"
-                android:layout_width="wrap_content"
-                android:fontFamily="@font/poppins_bold"
-                android:padding="@dimen/dp_10"
-                android:text="@string/classroom_name"
-                android:textColor="@color/black"
-                android:textSize="@dimen/normal_size_text" />
-
-            <EditText
-                android:id="@+id/edit_text_classroom"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/edittext_rounded_corners"
-                android:hint="@string/write_name_classroom"
-                android:inputType="textPersonName"
-                android:textSize="@dimen/normal_size_text"
-                app:layout_column="0"
-                app:layout_row="0" />
-
-            <ImageView
-                android:id="@+id/bottom_more_classroom"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/dp_10"
-                android:src="@drawable/more_black" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/text_teacher_name"
-                android:layout_width="wrap_content"
-                android:fontFamily="@font/poppins_bold"
-                android:padding="@dimen/dp_10"
-                android:text="@string/teacher_name"
-                android:textColor="@color/black"
-                android:textSize="@dimen/normal_size_text" />
-
-            <EditText
-                android:id="@+id/edit_text_teacher_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/edittext_rounded_corners"
-                android:hint="@string/write_name_teacher"
-                android:inputType="textPersonName"
-                android:textSize="@dimen/normal_size_text"
-                app:layout_column="0"
-                app:layout_row="0" />
-
-            <ImageView
-                android:id="@+id/bottom_more_teacher"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/dp_10"
-                android:src="@drawable/more_black" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/text_age"
-                android:layout_width="wrap_content"
-                android:fontFamily="@font/poppins_bold"
-                android:padding="@dimen/dp_10"
-                android:text="@string/age"
-                android:textColor="@color/black"
-                android:textSize="@dimen/normal_size_text" />
-
-            <EditText
-                android:id="@+id/edit_text_age"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/edittext_rounded_corners"
-                android:hint="@string/write_age"
-                android:inputType="textPersonName"
-                android:textSize="@dimen/normal_size_text"
-                app:layout_column="0"
-                app:layout_row="0"
-                tools:ignore="TouchTargetSizeCheck" />
-
-            <ImageView
-                android:id="@+id/bottom_more_age"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/dp_10"
-                android:src="@drawable/more_black" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/text_phone_number"
-                android:layout_width="wrap_content"
-                android:fontFamily="@font/poppins_bold"
-                android:padding="@dimen/dp_10"
-                android:text="@string/phone_number"
-                android:textColor="@color/black"
-                android:textSize="@dimen/normal_size_text" />
-
-            <EditText
-                android:id="@+id/edit_text_phone_number"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/edittext_rounded_corners"
-                android:hint="@string/write_phone_number"
-                android:inputType="textPersonName"
-                android:textSize="@dimen/normal_size_text"
-                app:layout_column="0"
-                app:layout_row="0"
-                tools:ignore="TouchTargetSizeCheck" />
-
-            <ImageView
-                android:id="@+id/bottom_more_phone_number"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/dp_10"
-                android:src="@drawable/more_black" />
-        </TableRow>
-    </TableLayout>
-
-    <Button
-        android:id="@id/button_done"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_20"
-        android:background="@drawable/roundstyle"
-        android:text="@string/done"
-        android:textColor="@color/black"
-        app:backgroundTint="@color/grey_blank"
-        app:layout_constraintBottom_toBottomOf="@+id/subject_text"
-        app:layout_constraintEnd_toEndOf="@+id/table_layout_form"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@id/subject_text"
-        app:layout_constraintTop_toBottomOf="@+id/table_layout_form"
-        app:layout_constraintVertical_bias="0.218" />
+        <Button
+            android:id="@id/button_done"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@drawable/roundstyle"
+            android:text="@string/done"
+            android:textColor="@color/black"
+            app:backgroundTint="@color/grey_blank"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/edit_text_phone_number"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_phone_number" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

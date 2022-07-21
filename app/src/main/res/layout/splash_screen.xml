@@ -12,18 +12,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.65" />
+        app:layout_constraintGuide_percent="0.59" />
 
     <ImageView
         android:id="@+id/image_for_splash"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/zero_size"
+        android:layout_height="@dimen/zero_size"
         app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_undraw_high_five_re_jy71" />
 
     <ImageView
@@ -34,70 +32,45 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/shape" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bottom_guideline"
-        android:foregroundGravity="center">
-
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="5dp">
-
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/text_view1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:text="@string/choose_teacher"
                     android:fontFamily="@font/poppins_bold"
-                    android:textSize="16sp"
-                    android:textColor="@color/black"/>
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="5dp">
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/image_for_splash"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/text_view2"
+                    app:layout_constraintVertical_chainStyle="packed"/>
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/text_view2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:text="@string/choose_subject"
                     android:fontFamily="@font/poppins_bold"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/sp_16"
                     android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_view1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/text_view3"
                     />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="@dimen/dp_5">
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/text_view3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:text="@string/use_your_time"
                     android:fontFamily="@font/poppins_bold"
-                    android:textSize="16sp"
-                    android:textColor="@color/black"/>
-            </TableRow>
-
-        </TableLayout>
-
-    </androidx.cardview.widget.CardView>
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_view2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

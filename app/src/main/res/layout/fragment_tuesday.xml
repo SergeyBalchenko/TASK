@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="45dp" />
+        app:layout_constraintGuide_percent="0.1" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/bottom_guideline"
@@ -36,75 +36,12 @@
         app:layout_constraintGuide_percent="0.9" />
 
     <ImageView
-        android:id="@+id/graduation"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:src="@drawable/ic_graduation_im"
-        app:layout_constraintTop_toBottomOf="@id/day_of_week_shedule"
+        android:id="@+id/shape"
+        android:layout_width="234dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shape"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:visibility="visible" />
-
-    <LinearLayout
-        android:id="@+id/day_of_week_shedule"
-        android:visibility="visible"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="@dimen/dp_20"
-        android:background="@color/major"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="@id/end_guideline"
-        app:layout_constraintStart_toStartOf="@id/start_guideline"
-        app:layout_constraintTop_toBottomOf="@+id/button_week_schedule"
-        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center">
-
-            <TextView
-                android:id="@+id/day_of_week_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_bold"
-                android:padding="10dp"
-                android:text="@string/thursday"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnUp_day_week"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="10dp"
-                android:background="@drawable/vector_higher"
-                android:backgroundTint="@color/white"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-        </TableRow>
-
-        <ScrollView
-            android:id="@+id/scroll_friday"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_view_subject_in_week"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/major"
-                android:padding="5dp"
-                android:visibility="visible"
-                tools:itemCount="5"
-                tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/fragment_view_conteiner_day_shedule"
-                tools:orientation="vertical" />
-        </ScrollView>
-
-    </LinearLayout>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@id/button_week_schedule"
@@ -119,14 +56,68 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
-        app:layout_constraintTop_toTopOf="@id/top_guideline"
-        app:layout_constraintStart_toStartOf="@id/start_guideline"/>
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toTopOf="@id/top_guideline" />
+
+    <RelativeLayout
+        android:id="@id/recycler_wrapper_for_day_shedule"
+        android:layout_width="@dimen/zero_size"
+        android:layout_height="@dimen/zero_size"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@color/major"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/button_week_schedule">
+
+        <TextView
+            android:id="@id/day_of_week_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="10dp"
+            android:text="@string/thursday"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:layout_centerHorizontal="true"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@id/btnUp_day_week"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:background="@drawable/vector_higher"
+            android:backgroundTint="@color/white"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+            android:layout_toEndOf="@id/day_of_week_text"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@id/recycler_view_subject_in_week"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/day_of_week_text"
+            android:background="@color/major"
+            android:padding="5dp"
+            android:visibility="visible"
+            tools:itemCount="5"
+            tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/fragment_view_conteiner_day_shedule"
+            tools:orientation="vertical" >
+        </androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
 
     <ImageView
-        android:id="@+id/shape"
-        android:layout_width="234dp"
-        android:layout_height="wrap_content"
-        android:src="@drawable/shape"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@id/graduation"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_graduation_im"
+        app:layout_constraintTop_toBottomOf="@id/bottom_guideline"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:visibility="visible" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
