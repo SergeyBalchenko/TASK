@@ -10,8 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dp_10"
-        android:padding="@dimen/dp_10"
-        android:backgroundTint="@color/grey_blank">
+        android:backgroundTint="@color/grey_blank"
+        android:padding="@dimen/dp_10">
 
         <TableLayout
             android:layout_width="match_parent"
@@ -37,19 +37,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:ellipsize="end"
                     android:fontFamily="@font/poppins_bold"
                     android:text="@string/name_teacher"
-                    android:ellipsize="end"
                     android:textSize="@dimen/sp_14" />
 
                 <TextView
                     android:id="@+id/date"
-                    android:layout_width="113dp"
+                    android:layout_width="@dimen/zero_size"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:ellipsize="end"
                     android:fontFamily="@font/poppins_bold"
                     android:text="@string/date"
-                    android:ellipsize="end"
                     android:textSize="@dimen/sp_14" />
 
                 <ImageView
@@ -70,24 +70,25 @@
                 <TextView
                     android:id="@+id/name_campus"
                     android:layout_weight="1"
+                    android:ellipsize="end"
                     android:fontFamily="@font/poppins_bold"
                     android:text="@string/name_auditoria"
-                    android:ellipsize="end"
                     android:textSize="@dimen/sp_14" />
 
                 <TextView
                     android:id="@+id/name_auditoria"
                     android:layout_weight="1"
+                    android:ellipsize="end"
                     android:fontFamily="@font/poppins_bold"
                     android:text="@string/name_classroom"
-                    android:ellipsize="end"
                     android:textSize="@dimen/sp_14" />
+
                 <TextView
                     android:id="@+id/name_day_week"
                     android:layout_weight="1"
+                    android:ellipsize="end"
                     android:fontFamily="@font/poppins_bold"
                     android:text="@string/Monday"
-                    android:ellipsize="end"
                     android:textSize="@dimen/sp_14" />
             </TableRow>
         </TableLayout>

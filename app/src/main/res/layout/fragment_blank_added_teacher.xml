@@ -11,15 +11,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="16dp"
-        />
+        app:layout_constraintGuide_begin="16dp" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/end_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="16dp"
-        />
+        app:layout_constraintGuide_end="16dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/top_guideline"
@@ -65,10 +64,10 @@
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="@dimen/sp_20"
-        app:layout_constraintStart_toEndOf="@id/button_back"
-        app:layout_constraintTop_toTopOf="@id/top_guideline"
+        app:layout_constraintBottom_toTopOf="@id/recycler_wrapper_for_day_shedule"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
-        app:layout_constraintBottom_toTopOf="@id/recycler_wrapper_for_day_shedule"/>
+        app:layout_constraintStart_toEndOf="@id/button_back"
+        app:layout_constraintTop_toTopOf="@id/top_guideline" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/recycler_wrapper_for_day_shedule"
@@ -91,33 +90,33 @@
             android:text="@string/teacher"
             android:textColor="@color/white"
             android:textSize="@dimen/sp_20"
+            app:layout_constraintBottom_toTopOf="@id/text_teacher_name"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/text_teacher_name"
             tools:ignore="TextContrastCheck" />
 
         <TextView
             android:id="@+id/text_teacher_name"
-            android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_bold"
             android:padding="@dimen/dp_10"
             android:text="@string/teacher_name"
             android:textColor="@color/black"
             android:textSize="@dimen/sp_14"
             app:layout_constraintBaseline_toBaselineOf="@id/edit_text_teacher_name"
+            app:layout_constraintBottom_toTopOf="@id/text_phone_number"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/teacher_text"
-            app:layout_constraintBottom_toTopOf="@id/text_phone_number"/>
+            app:layout_constraintTop_toBottomOf="@id/teacher_text" />
 
         <EditText
             android:id="@+id/edit_text_teacher_name"
             android:layout_width="@dimen/zero_size"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_20"
             android:background="@drawable/edittext_rounded_corners"
             android:hint="@string/write_name_teacher"
             android:inputType="textPersonName"
-            android:layout_marginEnd="@dimen/dp_20"
             android:padding="@dimen/dp_10"
             android:textSize="@dimen/sp_14"
             app:layout_constraintBaseline_toBaselineOf="@id/text_teacher_name"
@@ -125,48 +124,47 @@
             app:layout_constraintStart_toEndOf="@id/text_teacher_name"
             tools:ignore="TouchTargetSizeCheck" />
 
-
         <TextView
             android:id="@+id/text_phone_number"
-            android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:fontFamily="@font/poppins_bold"
-            app:layout_constraintBaseline_toBaselineOf="@id/edit_text_phone_number"
-            android:padding="@dimen/dp_10"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_10"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="@dimen/dp_10"
             android:text="@string/phone_number"
             android:textColor="@color/black"
             android:textSize="@dimen/sp_14"
+            app:layout_constraintBaseline_toBaselineOf="@id/edit_text_phone_number"
             app:layout_constraintStart_toStartOf="@id/text_teacher_name"
-            app:layout_constraintTop_toBottomOf="@id/text_teacher_name"/>
+            app:layout_constraintTop_toBottomOf="@id/text_teacher_name" />
 
         <EditText
             android:id="@+id/edit_text_phone_number"
             android:layout_width="@dimen/zero_size"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
             android:background="@drawable/edittext_rounded_corners"
             android:hint="@string/write_phone_number"
-            android:layout_marginTop="@dimen/dp_10"
             android:inputType="textPersonName"
             android:padding="@dimen/dp_10"
             android:textSize="@dimen/sp_14"
             app:layout_constraintEnd_toEndOf="@id/edit_text_teacher_name"
-            app:layout_constraintStart_toStartOf="@+id/edit_text_teacher_name"
+            app:layout_constraintStart_toStartOf="@id/edit_text_teacher_name"
             app:layout_constraintTop_toBottomOf="@id/edit_text_teacher_name"
             tools:ignore="TouchTargetSizeCheck" />
 
         <TextView
-                android:id="@+id/text_age"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:fontFamily="@font/poppins_bold"
-                android:padding="@dimen/dp_10"
-                android:text="@string/age"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                app:layout_constraintBaseline_toBaselineOf="@id/edit_text_age"
-                app:layout_constraintStart_toStartOf="@id/text_phone_number"
-                app:layout_constraintTop_toBottomOf="@id/text_phone_number"/>
+            android:id="@+id/text_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="@dimen/dp_10"
+            android:text="@string/age"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/edit_text_age"
+            app:layout_constraintStart_toStartOf="@id/text_phone_number"
+            app:layout_constraintTop_toBottomOf="@id/text_phone_number" />
 
         <EditText
             android:id="@+id/edit_text_age"
@@ -183,19 +181,18 @@
             app:layout_constraintTop_toBottomOf="@id/edit_text_phone_number"
             tools:ignore="TouchTargetSizeCheck" />
 
-
         <Button
             android:id="@+id/button_done"
             android:layout_width="@dimen/dp_100"
             android:layout_height="@dimen/dp_40"
-            android:background="@drawable/roundstyle"
             android:layout_margin="@dimen/dp_10"
+            android:background="@drawable/roundstyle"
             android:text="@string/done"
             android:textColor="@color/black"
             app:backgroundTint="@color/grey_blank"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/edit_text_age"
-            app:layout_constraintTop_toBottomOf="@+id/edit_text_age"
+            app:layout_constraintTop_toBottomOf="@id/edit_text_age"
             tools:ignore="TouchTargetSizeCheck" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

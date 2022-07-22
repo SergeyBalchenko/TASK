@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="@dimen/dp_16"/>
+        app:layout_constraintGuide_begin="@dimen/dp_16" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@id/end_guideline"
@@ -48,9 +48,9 @@
         android:layout_height="@dimen/dp_50"
         android:background="@drawable/vector_back"
         android:backgroundTint="@color/major"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
-        app:layout_constraintTop_toTopOf="@id/top_guideline"/>
+        app:layout_constraintTop_toTopOf="@id/top_guideline"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@id/button_week_schedule"
@@ -72,13 +72,13 @@
         android:id="@+id/recycler_wrapper_for_day_shedule"
         android:layout_width="@dimen/zero_size"
         android:layout_height="@dimen/zero_size"
-        android:orientation="vertical"
-        android:background="@color/major"
         android:layout_marginTop="@dimen/dp_20"
-        app:layout_constraintTop_toBottomOf="@id/button_week_schedule"
-        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        android:background="@color/major"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
-        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline" >
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/button_week_schedule">
 
         <TextView
             android:id="@+id/text_subject"
@@ -125,8 +125,8 @@
             android:layout_height="@dimen/dp_40"
             android:layout_below="@id/edit_text_text_subject_name"
             android:layout_alignParentEnd="true"
-            android:background="@drawable/roundstyle"
             android:layout_margin="@dimen/dp_10"
+            android:background="@drawable/roundstyle"
             android:text="@string/done"
             android:textColor="@color/black"
             app:backgroundTint="@color/grey_blank"
@@ -139,9 +139,9 @@
         android:layout_width="@dimen/zero_size"
         android:layout_height="@dimen/zero_size"
         android:src="@drawable/blank_subjeck"
-        app:layout_constraintTop_toBottomOf="@id/recycler_wrapper_for_day_shedule"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recycler_wrapper_for_day_shedule" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

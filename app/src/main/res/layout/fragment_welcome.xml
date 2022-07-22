@@ -11,15 +11,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="16dp"
-        />
+        app:layout_constraintGuide_begin="@dimen/dp_16" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/end_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="16dp"
-        />
+        app:layout_constraintGuide_end="@dimen/dp_16" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/top_guideline"
@@ -37,13 +36,11 @@
 
     <ImageView
         android:id="@id/shape"
-        android:layout_width="234dp"
-        android:layout_height="152dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:src="@drawable/shape"
-        app:layout_constraintHorizontal_bias="0.029"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:layout_width="@dimen/zero_size"
@@ -54,13 +51,13 @@
         app:layout_constraintTop_toTopOf="@id/top_guideline"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
-        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
-        >
+        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline">
 
         <ImageView
             android:id="@+id/image_for_welcome"
-            android:layout_width="282dp"
-            android:layout_height="262dp"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/zero_size"
+            android:layout_weight="2"
             android:src="@drawable/undraw_education_f8ru" />
 
         <TextView
@@ -88,7 +85,6 @@
             android:id="@+id/text_view_second"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="1dp"
             android:fontFamily="@font/poppins_bold"
             android:text="@string/motivation_text"
             android:textColor="@color/grey_for_text"
@@ -96,13 +92,13 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/zero_size"
             android:layout_weight="1" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_do_it"
-            android:layout_width="232dp"
-            android:layout_height="54dp"
+            android:layout_width="@dimen/dp_232"
+            android:layout_height="@dimen/dp_54"
             android:layout_gravity="center"
             android:background="@drawable/btn_radius_10dp"
             android:backgroundTint="@color/major"

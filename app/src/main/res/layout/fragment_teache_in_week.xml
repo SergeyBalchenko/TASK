@@ -11,15 +11,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="16dp"
-        />
+        app:layout_constraintGuide_begin="@dimen/dp_16" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/end_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="16dp"
-        />
+        app:layout_constraintGuide_end="@dimen/dp_16" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/top_guideline"
@@ -36,7 +35,6 @@
         app:layout_constraintGuide_percent="0.88" />
 
 
-
     <ImageView
         android:id="@+id/graduation"
         android:layout_width="match_parent"
@@ -45,12 +43,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/bottom_guideline" />
+        app:layout_constraintTop_toTopOf="@id/bottom_guideline" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_week_schedule"
-        android:layout_width="232dp"
-        android:layout_height="54dp"
+        android:layout_width="@dimen/dp_232"
+        android:layout_height="@dimen/dp_54"
         android:background="@drawable/btn_radius_10dp"
         android:backgroundTint="@color/major"
         android:fontFamily="@font/poppins_bold"
@@ -58,21 +56,19 @@
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="@dimen/sp_20"
-        app:layout_constraintStart_toStartOf="@id/start_guideline"
-        app:layout_constraintTop_toTopOf="@id/top_guideline"
         app:layout_constraintEnd_toEndOf="@id/button_plus_subject"
-        />
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toTopOf="@id/top_guideline" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_plus_subject"
-        android:layout_width="51dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
         android:background="@drawable/add_botton"
         android:backgroundTint="@color/major"
-        app:layout_constraintTop_toTopOf="@id/top_guideline"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-        />
+        app:layout_constraintTop_toTopOf="@id/top_guideline"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <RelativeLayout
         android:id="@id/recycler_wrapper_for_day_shedule"
@@ -102,8 +98,8 @@
             android:id="@+id/btnUp_day_week"
             android:layout_width="@dimen/dp_30"
             android:layout_height="@dimen/dp_30"
-            android:layout_marginTop="@dimen/dp_10"
             android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
             android:layout_toEndOf="@id/subject_of_teacher_in_week"
             android:background="@drawable/vector_higher"
             android:backgroundTint="@color/white"
@@ -125,11 +121,10 @@
 
     <ImageView
         android:id="@+id/shape"
-        android:layout_width="234dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/shape"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

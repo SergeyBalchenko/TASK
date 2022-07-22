@@ -11,14 +11,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="16dp" />
+        app:layout_constraintGuide_begin="@dimen/dp_16" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/end_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="16dp" />
+        app:layout_constraintGuide_end="@dimen/dp_16" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/top_guideline"
@@ -56,8 +56,6 @@
         android:src="@drawable/girl_yoga"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="@id/center_guideline"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="-15dp"
         tools:visibility="visible" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -99,10 +97,10 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_subject"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="@dimen/dp_20"
+        android:layout_width="@dimen/zero_size"
+        android:layout_height="@dimen/zero_size"
         android:layout_marginStart="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_20"
         android:layout_marginEnd="@dimen/dp_50"
         android:orientation="vertical"
         android:padding="@dimen/dp_10"
@@ -113,9 +111,7 @@
         tools:itemCount="7"
         tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/choose_added_word"
-        tools:orientation="vertical">
-
-    </androidx.recyclerview.widget.RecyclerView>
+        tools:orientation="vertical"></androidx.recyclerview.widget.RecyclerView>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_week_schedule"

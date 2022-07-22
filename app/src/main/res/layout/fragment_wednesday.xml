@@ -11,15 +11,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="16dp"
-        />
+        app:layout_constraintGuide_begin="@dimen/dp_16" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/end_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="16dp"
-        />
+        app:layout_constraintGuide_end="@dimen/dp_16" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/top_guideline"
@@ -37,13 +36,13 @@
 
     <ImageView
         android:id="@+id/graduation"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="@dimen/zero_size"
+        android:layout_height="@dimen/zero_size"
         android:src="@drawable/ic_graduation_im"
-        app:layout_constraintTop_toBottomOf="@id/recycler_wrapper_for_day_shedule"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recycler_wrapper_for_day_shedule"
         tools:visibility="visible" />
 
     <RelativeLayout
@@ -62,8 +61,8 @@
             android:id="@+id/day_of_week_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_bold"
             android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins_bold"
             android:padding="@dimen/dp_10"
             android:text="@string/wednesday"
             android:textAlignment="center"
@@ -74,25 +73,25 @@
             android:id="@+id/btnUp_day_week"
             android:layout_width="@dimen/dp_30"
             android:layout_height="@dimen/dp_30"
-            android:layout_marginTop="@dimen/dp_10"
             android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
             android:layout_toEndOf="@id/day_of_week_text"
             android:background="@drawable/vector_higher"
             android:backgroundTint="@color/white"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_view_subject_in_week"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@id/day_of_week_text"
-                android:background="@color/major"
-                android:padding="@dimen/dp_5"
-                android:visibility="visible"
-                tools:itemCount="5"
-                tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/fragment_view_conteiner_day_shedule"
-                tools:orientation="vertical" />
+            android:id="@+id/recycler_view_subject_in_week"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/day_of_week_text"
+            android:background="@color/major"
+            android:padding="@dimen/dp_5"
+            android:visibility="visible"
+            tools:itemCount="5"
+            tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/fragment_view_conteiner_day_shedule"
+            tools:orientation="vertical" />
     </RelativeLayout>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -108,8 +107,8 @@
         android:textColor="@color/black"
         android:textSize="@dimen/sp_20"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
-        app:layout_constraintTop_toTopOf="@id/top_guideline"
-        app:layout_constraintStart_toStartOf="@id/start_guideline"/>
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toTopOf="@id/top_guideline" />
 
     <ImageView
         android:id="@+id/shape"

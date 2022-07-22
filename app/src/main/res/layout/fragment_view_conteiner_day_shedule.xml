@@ -1,95 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="presentation.viewDayShedule.ViewContainerDayShedule">
 
     <androidx.cardview.widget.CardView
-    android:id="@+id/card_info_subject"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="@dimen/dp_10"
-    android:padding="@dimen/dp_10"
-    app:cardBackgroundColor="@color/grey">
-
-    <TableLayout
+        android:id="@+id/card_info_subject"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_column="2"
-        android:layout_margin="@dimen/dp_5">
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:padding="@dimen/dp_10"
+        app:cardBackgroundColor="@color/grey">
 
-        <androidx.constraintlayout.widget.Barrier
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            app:barrierDirection="start"
-            app:constraint_referenced_ids="image_setting" />
-
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@id/name_subject"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:ellipsize="end"
-                android:fontFamily="@font/poppins_bold"
-                android:text="@string/name_subject"
-                android:textSize="@dimen/sp_14" />
-
-            <TextView
-                android:id="@id/name_teacher"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:fontFamily="@font/poppins_bold"
-                android:text="@string/name_teacher"
-                android:ellipsize="end"
-                android:textSize="@dimen/sp_14" />
-
-            <TextView
-                android:id="@id/date"
-                android:layout_width="113dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:fontFamily="@font/poppins_bold"
-                android:text="@string/date"
-                android:ellipsize="end"
-                android:textSize="@dimen/sp_14" />
-            <ImageView
-                android:id="@+id/setting_view_info"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:contentDescription="@string/hello_moto"
-                android:fontFamily="@font/poppins_bold"
-                android:src="@drawable/ic_more"
-                />
-
-        </TableRow>
-
-        <TableRow
+        <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_column="2"
+            android:layout_margin="@dimen/dp_5">
 
-            <TextView
-                android:id="@id/name_campus"
-                android:layout_weight="1"
-                android:ellipsize="end"
-                android:fontFamily="@font/poppins_bold"
-                android:text="@string/name_auditoria"
-                android:textSize="@dimen/sp_14" />
+            <androidx.constraintlayout.widget.Barrier
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:barrierDirection="start"
+                app:constraint_referenced_ids="image_setting" />
 
-            <TextView
-                android:id="@+id/name_auditoria"
-                android:layout_weight="1"
-                android:fontFamily="@font/poppins_bold"
-                android:text="@string/name_classroom"
-                android:ellipsize="end"
-                android:textSize="@dimen/sp_14" />
-        </TableRow>
-    </TableLayout>
-</androidx.cardview.widget.CardView>
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@id/name_subject"
+                    android:layout_height="@dimen/zero_size"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/name_subject"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@id/name_teacher"
+                    android:layout_width="@dimen/zero_size"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/name_teacher"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@id/date"
+                    android:layout_width="@dimen/zero_size"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/date"
+                    android:textSize="@dimen/sp_14" />
+
+                <ImageView
+                    android:id="@+id/setting_view_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:contentDescription="@string/hello_moto"
+                    android:fontFamily="@font/poppins_bold"
+                    android:src="@drawable/ic_more" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@id/name_campus"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/name_auditoria"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/name_auditoria"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/name_classroom"
+                    android:textSize="@dimen/sp_14" />
+            </TableRow>
+        </TableLayout>
+    </androidx.cardview.widget.CardView>
 </FrameLayout>

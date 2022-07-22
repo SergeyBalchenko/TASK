@@ -11,13 +11,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="16dp" />
+        app:layout_constraintGuide_begin="@dimen/dp_16" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@id/end_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="16dp" />
+        app:layout_constraintGuide_end="@dimen/dp_16" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@id/top_guideline"
@@ -44,50 +45,50 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_week_schedule"
-        android:layout_width="232dp"
-        android:layout_height="54dp"
+        android:layout_width="@dimen/dp_232"
+        android:layout_height="@dimen/dp_54"
+        android:layout_marginBottom="@dimen/dp_20"
         android:background="@drawable/btn_radius_10dp"
         android:backgroundTint="@color/major"
         android:fontFamily="@font/poppins_bold"
-        android:layout_marginBottom="@dimen/dp_20"
         android:text="@string/week_shedule"
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="@dimen/sp_20"
+        app:layout_constraintBottom_toTopOf="@id/recycler_wrapper_for_day_shedule"
+        app:layout_constraintEnd_toStartOf="@id/button_plus_subject"
         app:layout_constraintHorizontal_bias="0.648"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
-        app:layout_constraintTop_toTopOf="@id/top_guideline"
-        app:layout_constraintEnd_toStartOf="@id/button_plus_subject"
-        app:layout_constraintBottom_toTopOf="@id/recycler_wrapper_for_day_shedule"/>
+        app:layout_constraintTop_toTopOf="@id/top_guideline" />
 
     <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_plus_subject"
-            android:layout_width="51dp"
-            android:layout_height="50dp"
-            android:background="@drawable/add_botton"
-            android:backgroundTint="@color/major"
-            app:layout_constraintTop_toTopOf="@id/top_guideline"
-            app:layout_constraintEnd_toEndOf="@id/end_guideline"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        android:id="@+id/button_plus_subject"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:background="@drawable/add_botton"
+        android:backgroundTint="@color/major"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintTop_toTopOf="@id/top_guideline"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <RelativeLayout
         android:id="@+id/recycler_wrapper_for_day_shedule"
         android:layout_width="@dimen/zero_size"
         android:layout_height="@dimen/zero_size"
-        android:orientation="vertical"
-        android:background="@color/major"
         android:layout_marginTop="@dimen/dp_20"
-        app:layout_constraintTop_toBottomOf="@id/button_week_schedule"
-        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        android:background="@color/major"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
-        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline" >
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/button_week_schedule">
 
         <TextView
             android:id="@+id/name_Day"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_bold"
             android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins_bold"
             android:padding="@dimen/dp_10"
             android:text="@string/Monday"
             android:textAlignment="center"
@@ -98,8 +99,8 @@
             android:id="@id/btnUp_for_subject"
             android:layout_width="@dimen/dp_40"
             android:layout_height="@dimen/dp_40"
-            android:layout_marginTop="@dimen/dp_10"
             android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
             android:layout_toEndOf="@id/name_Day"
             android:background="@drawable/vector_higher"
             android:backgroundTint="@color/white"

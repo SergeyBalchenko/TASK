@@ -11,15 +11,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="16dp"
-        />
+        app:layout_constraintGuide_begin="@dimen/dp_16" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/end_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="16dp"
-        />
+        app:layout_constraintGuide_end="@dimen/dp_16" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/top_guideline"
@@ -45,8 +44,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@id/button_week_schedule"
-        android:layout_width="232dp"
-        android:layout_height="54dp"
+        android:layout_width="@dimen/dp_232"
+        android:layout_height="@dimen/dp_54"
         android:layout_gravity="center"
         android:background="@drawable/btn_radius_10dp"
         android:backgroundTint="@color/major"
@@ -61,8 +60,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@id/button_back"
-        android:layout_width="51dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
         android:background="@drawable/vector_back"
         android:backgroundTint="@color/major"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
@@ -73,20 +72,20 @@
         android:id="@+id/recycler_wrapper_for_day_shedule_monday"
         android:layout_width="@dimen/zero_size"
         android:layout_height="@dimen/zero_size"
-        android:orientation="vertical"
-        android:background="@color/major"
         android:layout_marginTop="@dimen/dp_10"
-        app:layout_constraintTop_toBottomOf="@id/button_week_schedule"
-        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        android:background="@color/major"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/recycler_wrapper_for_day_shedule_tuesday"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
-        app:layout_constraintBottom_toTopOf="@id/recycler_wrapper_for_day_shedule_tuesday">
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/button_week_schedule">
 
         <TextView
             android:id="@+id/textMonday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:fontFamily="@font/poppins_bold"
             android:text="@string/Monday"
             android:textColor="#FBF7F7"
@@ -96,10 +95,10 @@
             android:id="@+id/button_show_more_monday"
             android:layout_width="@dimen/dp_30"
             android:layout_height="@dimen/dp_30"
-            android:layout_marginEnd="@dimen/dp_10"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:layout_marginStart="@dimen/dp_5"
+            android:layout_marginEnd="@dimen/dp_10"
             android:background="@drawable/ic_scroll_down"
             android:backgroundTint="@color/white"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
@@ -109,20 +108,20 @@
         android:id="@+id/recycler_wrapper_for_day_shedule_tuesday"
         android:layout_width="@dimen/zero_size"
         android:layout_height="@dimen/zero_size"
-        android:orientation="vertical"
-        android:background="@color/major"
         android:layout_marginTop="@dimen/dp_10"
-        app:layout_constraintTop_toBottomOf="@id/recycler_wrapper_for_day_shedule_monday"
-        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        android:background="@color/major"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/recycler_wrapper_for_day_shedule_wednesday"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
-        app:layout_constraintBottom_toTopOf="@id/recycler_wrapper_for_day_shedule_wednesday">
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/recycler_wrapper_for_day_shedule_monday">
 
         <TextView
             android:id="@+id/text_tuesday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:fontFamily="@font/poppins_bold"
             android:text="@string/tuesday"
             android:textColor="@color/white"
@@ -132,9 +131,9 @@
             android:id="@+id/button_show_more_tuesday"
             android:layout_width="@dimen/dp_30"
             android:layout_height="@dimen/dp_30"
-            android:layout_marginEnd="@dimen/dp_10"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_10"
             android:background="@drawable/ic_scroll_down"
             android:backgroundTint="@color/white"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
@@ -144,20 +143,20 @@
         android:id="@+id/recycler_wrapper_for_day_shedule_wednesday"
         android:layout_width="@dimen/zero_size"
         android:layout_height="@dimen/zero_size"
-        android:orientation="vertical"
-        android:background="@color/major"
         android:layout_marginTop="@dimen/dp_10"
-        app:layout_constraintTop_toBottomOf="@id/recycler_wrapper_for_day_shedule_tuesday"
-        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        android:background="@color/major"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/recycler_wrapper_for_day_shedule_thursday"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
-        app:layout_constraintBottom_toTopOf="@id/recycler_wrapper_for_day_shedule_thursday">
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/recycler_wrapper_for_day_shedule_tuesday">
 
         <TextView
             android:id="@+id/text_wednesday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:fontFamily="@font/poppins_bold"
             android:text="@string/wednesday"
             android:textColor="@color/white"
@@ -167,9 +166,9 @@
             android:id="@+id/button_show_more_wednesday"
             android:layout_width="@dimen/dp_30"
             android:layout_height="@dimen/dp_30"
-            android:layout_marginEnd="@dimen/dp_10"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_10"
             android:background="@drawable/ic_scroll_down"
             android:backgroundTint="@color/white"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
@@ -179,20 +178,20 @@
         android:id="@+id/recycler_wrapper_for_day_shedule_thursday"
         android:layout_width="@dimen/zero_size"
         android:layout_height="@dimen/zero_size"
-        android:orientation="vertical"
-        android:background="@color/major"
         android:layout_marginTop="@dimen/dp_10"
-        app:layout_constraintTop_toBottomOf="@id/recycler_wrapper_for_day_shedule_wednesday"
-        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        android:background="@color/major"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/recycler_wrapper_for_day_shedule_friday"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
-        app:layout_constraintBottom_toTopOf="@id/recycler_wrapper_for_day_shedule_friday">
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/recycler_wrapper_for_day_shedule_wednesday">
 
         <TextView
             android:id="@+id/text_thursday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:fontFamily="@font/poppins_bold"
             android:text="@string/thursday"
             android:textColor="@color/white"
@@ -214,20 +213,20 @@
         android:id="@+id/recycler_wrapper_for_day_shedule_friday"
         android:layout_width="@dimen/zero_size"
         android:layout_height="@dimen/zero_size"
-        android:orientation="vertical"
-        android:background="@color/major"
         android:layout_marginTop="@dimen/dp_10"
-        app:layout_constraintTop_toBottomOf="@id/recycler_wrapper_for_day_shedule_thursday"
-        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        android:background="@color/major"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
-        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline">
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/recycler_wrapper_for_day_shedule_thursday">
 
         <TextView
             android:id="@+id/text_friday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:fontFamily="@font/poppins_bold"
             android:text="@string/friday"
             android:textColor="@color/white"
@@ -237,13 +236,12 @@
             android:id="@+id/button_show_more_friday"
             android:layout_width="@dimen/dp_30"
             android:layout_height="@dimen/dp_30"
-            android:layout_marginEnd="@dimen/dp_10"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_10"
             android:background="@drawable/ic_scroll_down"
             android:backgroundTint="@color/white"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
     </RelativeLayout>
 
     <ImageView
@@ -255,6 +253,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/bottom_guideline" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

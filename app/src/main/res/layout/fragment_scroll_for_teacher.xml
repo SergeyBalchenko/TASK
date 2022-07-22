@@ -11,15 +11,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="16dp"
-        />
+        app:layout_constraintGuide_begin="@dimen/dp_16" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/end_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="16dp"
-        />
+        app:layout_constraintGuide_end="@dimen/dp_16" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/top_guideline"
@@ -40,11 +39,10 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/zero_size"
         android:src="@drawable/ic_graduation_im"
-        app:layout_constraintTop_toBottomOf="@id/bottom_guideline"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottom_guideline"
         tools:visibility="visible" />
 
     <ImageView
@@ -69,7 +67,7 @@
         android:textSize="@dimen/sp_20"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
-        app:layout_constraintTop_toBottomOf="@+id/button_week_schedule"
+        app:layout_constraintTop_toBottomOf="@id/button_week_schedule"
         tools:ignore="TouchTargetSizeCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -84,7 +82,6 @@
         android:textColor="@color/white"
         android:textSize="@dimen/sp_20"
         app:layout_constraintEnd_toStartOf="@+id/button_plus"
-        app:layout_constraintHorizontal_bias="0.568"
         app:layout_constraintStart_toEndOf="@+id/button_back"
         app:layout_constraintTop_toTopOf="@id/top_guideline" />
 
@@ -108,25 +105,25 @@
         app:layout_constraintTop_toTopOf="@id/top_guideline"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-        <LinearLayout
-            android:layout_width="@dimen/zero_size"
-            android:layout_height="@dimen/zero_size"
-            android:padding="@dimen/dp_10"
-            android:layout_marginTop="@dimen/dp_20"
-            app:layout_constraintTop_toBottomOf="@id/button_teacher"
-            app:layout_constraintStart_toStartOf="@id/start_guideline"
-            app:layout_constraintEnd_toEndOf="@id/end_guideline"
-            app:layout_constraintBottom_toBottomOf="@id/bottom_guideline" >
+    <LinearLayout
+        android:layout_width="@dimen/zero_size"
+        android:layout_height="@dimen/zero_size"
+        android:layout_marginTop="@dimen/dp_20"
+        android:padding="@dimen/dp_10"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/button_teacher">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_view_subject"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:itemCount="7"
-                tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/choose_added_word"
-                tools:orientation="vertical">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:itemCount="7"
+            tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/choose_added_word"
+            tools:orientation="vertical">
 
-            </androidx.recyclerview.widget.RecyclerView>
-        </LinearLayout>
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
