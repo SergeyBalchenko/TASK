@@ -44,8 +44,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@id/button_week_schedule"
-        android:layout_width="232dp"
-        android:layout_height="54dp"
+        android:layout_width="@dimen/dp_232"
+        android:layout_height="@dimen/dp_50"
         android:layout_gravity="center"
         android:background="@drawable/btn_radius_10dp"
         android:backgroundTint="@color/major"

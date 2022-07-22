@@ -7,7 +7,4 @@ import androidx.fragment.app.Fragment
 import com.example.mytask.databinding.MainScreenBinding
 import com.example.mytask.presentation.main.MainFragment
 
-class ViewContainerDayShedule : Fragment() {
-
-
-}
+class ViewContainerDayShedule : Fragment()

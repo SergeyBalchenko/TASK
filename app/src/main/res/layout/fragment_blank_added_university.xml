@@ -127,7 +127,7 @@
             android:layout_below="@id/edit_text_text_university_name"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="@dimen/dp_10"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="@dimen/dp_10"
             android:layout_marginBottom="@dimen/dp_10"
             android:background="@drawable/roundstyle"
             android:text="@string/done"

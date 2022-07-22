@@ -34,7 +34,6 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.88" />
 
-
     <ImageView
         android:id="@+id/graduation"
         android:layout_width="match_parent"
