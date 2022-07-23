@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.welcome.WelcomeFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/dp_16" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/dp_16" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.18" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottom_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <ImageView
+        android:id="@id/shape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shape"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="@dimen/zero_size"
+        android:layout_height="@dimen/zero_size"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingStart="@dimen/dp_10"
+        app:layout_constraintTop_toTopOf="@id/top_guideline"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline">
+
+        <ImageView
+            android:id="@+id/image_for_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/zero_size"
+            android:layout_weight="2"
+            android:src="@drawable/undraw_education_f8ru" />
+
+        <TextView
+            android:id="@+id/text_view_major"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_10"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/shedule_day"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_20" />
+
+        <TextView
+            android:id="@+id/text_view_midle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/text_about"
+            android:textColor="@color/grey_for_text"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/text_view_second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/motivation_text"
+            android:textColor="@color/grey_for_text"
+            android:textSize="@dimen/sp_14" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero_size"
+            android:layout_weight="1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_do_it"
+            android:layout_width="@dimen/dp_232"
+            android:layout_height="@dimen/dp_54"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_radius_10dp"
+            android:backgroundTint="@color/major"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/do_it"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_20" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
