@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FragmentViewTeacherWeek"
+    android:background="@color/grey_blank"
+    android:padding="@dimen/dp_5"
+    android:layout_marginTop="@dimen/dp_10"
+    android:layout_marginBottom="@dimen/dp_10">
+
+                <TextView
+                    android:id="@+id/name_subject"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins_bold"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    android:text="@string/name_subject"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/name_teacher"/>
+
+                <TextView
+                    android:id="@+id/name_teacher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/name_teacher"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toEndOf="@id/name_subject"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/date"/>
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/date"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toEndOf="@id/name_teacher"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/image_setting"/>
+
+                <ImageView
+                    android:id="@+id/image_setting"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:contentDescription="@string/hello_moto"
+                    android:fontFamily="@font/poppins_bold"
+                    android:src="@drawable/ic_more"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/name_campus"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/name_auditoria"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/name_subject"
+                    app:layout_constraintEnd_toStartOf="@id/name_auditoria"/>
+
+                <TextView
+                    android:id="@+id/name_auditoria"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/name_classroom"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toEndOf="@id/name_campus"
+                    app:layout_constraintTop_toBottomOf="@id/name_teacher"
+                    app:layout_constraintEnd_toStartOf="@id/name_day_week"/>
+
+                <TextView
+                    android:id="@+id/name_day_week"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/Monday"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toEndOf="@id/name_auditoria"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/date"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

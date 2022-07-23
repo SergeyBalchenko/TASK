@@ -1,5 +1,7 @@
 package com.example.mytask;
 
+import com.example.mytask.domain.Calculator;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -74,6 +76,7 @@ public class CalculatorTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldReturnNumberSecondAdd() {
         Calculator calculator = new Calculator(99, 15);
@@ -83,6 +86,7 @@ public class CalculatorTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldReturnDivisionZero() {
         Calculator calculator = new Calculator(0, 0);
@@ -92,6 +96,7 @@ public class CalculatorTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldReturnMinFirstZeroDivision() {
         Calculator calculator = new Calculator(0, 2);
@@ -100,7 +105,9 @@ public class CalculatorTest {
         float actual = calculator.division();
 
         Assertions.assertEquals(expected, actual);
-    } @Test
+    }
+
+    @Test
     public void shouldReturnMinSecondZeroNumber() {
         Calculator calculator = new Calculator(1, 0);
 
@@ -109,6 +116,7 @@ public class CalculatorTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldReturnNumberFirstNegative() {
         Calculator calculator = new Calculator(1, -1);
@@ -118,6 +126,7 @@ public class CalculatorTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldReturnShortDivision() {
         Calculator calculator = new Calculator(4, 3);
@@ -127,6 +136,7 @@ public class CalculatorTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldReturnShortDivisionWithMinus() {
         Calculator calculator = new Calculator(3, -3);
@@ -136,33 +146,37 @@ public class CalculatorTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldReturnMultiplication() {
         Calculator calculator = new Calculator(3, 3);
 
-     int expected = 0;
+        int expected = 0;
         int actual = calculator.multiplication();
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldReturnMultiplicationMinus() {
         Calculator calculator = new Calculator(3, -1);
 
-       int expected = -3;
+        int expected = -3;
         float actual = calculator.multiplication();
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldReturnMultiplicationZero() {
         Calculator calculator = new Calculator(3, 0);
 
-       int expected = 0;
+        int expected = 0;
         float actual = calculator.multiplication();
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldReturnNumberSubtraction() {
         Calculator calculator = new Calculator(1, 3);
@@ -172,6 +186,7 @@ public class CalculatorTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldReturnNumberSubtractionMinus() {
         Calculator calculator = new Calculator(3, -1);
@@ -181,6 +196,7 @@ public class CalculatorTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldReturnNumberSubtractionZero() {
         Calculator calculator = new Calculator(1, 0);
