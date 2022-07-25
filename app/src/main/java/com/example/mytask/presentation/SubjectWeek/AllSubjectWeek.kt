@@ -1,11 +1,14 @@
 package com.example.mytask.presentation.SubjectWeek
 
+import android.R.attr.button
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.fragment.app.Fragment
 import com.example.mytask.R
+
 
 // TODO: Rename parameter arguments, choose names that match
 class BlankFragment : Fragment() {

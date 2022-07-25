@@ -7,8 +7,18 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.mytask.R
+import com.example.mytask.databinding.StartScreenBinding
 
 class StartScreen: Fragment() {
+    private lateinit var binding: StartScreenBinding
+
+    companion object {
+        val TAG = StartScreen::class.simpleName
+
+        fun newInstance(): StartScreen {
+            return  StartScreen()
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
