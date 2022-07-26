@@ -33,10 +33,11 @@ class WelcomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.primaryButton.setOnClickListener {
+        binding.buttonDoIt.setOnClickListener {
             openMainFragment()
         }
     }
+
 
     private fun openMainFragment() {
         parentFragmentManager.beginTransaction()

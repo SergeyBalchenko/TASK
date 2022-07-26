@@ -78,7 +78,7 @@
             android:layout_marginTop="@dimen/dp_10"
             android:fontFamily="@font/poppins_bold"
             android:text="@string/text_about"
-            android:textColor="@color/grey_for_text"
+            android:textColor="@color/grey_blank"
             android:textSize="@dimen/sp_14" />
 
         <TextView
@@ -87,13 +87,10 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_bold"
             android:text="@string/motivation_text"
-            android:textColor="@color/grey_for_text"
+            android:textColor="@color/grey_blank"
             android:textSize="@dimen/sp_14" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/zero_size"
-            android:layout_weight="1" />
+
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_do_it"
