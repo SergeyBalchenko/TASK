@@ -35,7 +35,7 @@
         app:layout_constraintGuide_percent="0.85" />
 
     <ImageView
-        android:id="@id/graduation"
+        android:id="@+id/graduation"
         android:layout_width="@dimen/zero_size"
         android:layout_height="@dimen/zero_size"
         android:src="@drawable/ic_graduation_im"
@@ -57,7 +57,7 @@
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@id/button_week_schedule"
+        android:id="@+id/button_week_schedule"
         android:layout_width="@dimen/dp_232"
         android:layout_height="@dimen/dp_54"
         android:layout_marginStart="@dimen/dp_100"
@@ -74,7 +74,7 @@
         app:layout_constraintTop_toTopOf="@id/top_guideline" />
 
     <ImageView
-        android:id="@id/shape"
+        android:id="@+id/shape"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/shape"
@@ -121,7 +121,7 @@
             app:layout_constraintEnd_toStartOf="@id/edit_text_text_subject_name"
             app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/teacher_text" />
+            app:layout_constraintTop_toBottomOf="@id/teacher_text" />
 
         <EditText
             android:id="@+id/edit_text_text_subject_name"
@@ -138,7 +138,7 @@
             android:textSize="@dimen/normal_size_text"
             app:layout_constraintEnd_toStartOf="@id/image_bottom_show_more"
             app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintStart_toEndOf="@+id/subject_name"
+            app:layout_constraintStart_toEndOf="@id/subject_name"
             app:layout_constraintTop_toBottomOf="@id/teacher_text"
             tools:ignore="TouchTargetSizeCheck" />
 
@@ -149,7 +149,7 @@
             android:layout_below="@id/teacher_text"
             android:layout_margin="@dimen/dp_10"
             android:src="@drawable/more_black"
-            app:layout_constraintBottom_toBottomOf="@+id/edit_text_text_subject_name"
+            app:layout_constraintBottom_toBottomOf="@id/edit_text_text_subject_name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/edit_text_text_subject_name"
             app:layout_constraintTop_toTopOf="@+id/edit_text_text_subject_name" />
@@ -182,8 +182,8 @@
             android:padding="@dimen/dp_10"
             android:textSize="@dimen/normal_size_text"
             app:layout_constraintEnd_toEndOf="@+id/edit_text_text_subject_name"
-            app:layout_constraintStart_toEndOf="@+id/subject_name"
-            app:layout_constraintTop_toBottomOf="@+id/edit_text_text_subject_name"
+            app:layout_constraintStart_toEndOf="@id/subject_name"
+            app:layout_constraintTop_toBottomOf="@id/edit_text_text_subject_name"
             tools:ignore="TouchTargetSizeCheck" />
 
         <TextView
@@ -210,7 +210,7 @@
             android:padding="@dimen/dp_10"
             android:textSize="@dimen/normal_size_text"
             app:layout_constraintEnd_toEndOf="@id/edit_text_text_time"
-            app:layout_constraintStart_toStartOf="@+id/edit_text_text_time"
+            app:layout_constraintStart_toStartOf="@id/edit_text_text_time"
             app:layout_constraintTop_toBottomOf="@id/edit_text_text_time"
             tools:ignore="TouchTargetSizeCheck" />
 
@@ -234,8 +234,8 @@
             android:textColor="@color/black"
             android:textSize="@dimen/normal_size_text"
             app:layout_constraintBaseline_toBaselineOf="@id/edit_text_location"
-            app:layout_constraintStart_toStartOf="@+id/text_day"
-            app:layout_constraintTop_toBottomOf="@+id/text_day" />
+            app:layout_constraintStart_toStartOf="@id/text_day"
+            app:layout_constraintTop_toBottomOf="@id/text_day" />
 
         <EditText
             android:id="@+id/edit_text_location"
@@ -247,9 +247,9 @@
             android:inputType="textPersonName"
             android:padding="@dimen/dp_10"
             android:textSize="@dimen/normal_size_text"
-            app:layout_constraintEnd_toEndOf="@+id/edit_text_day"
-            app:layout_constraintStart_toStartOf="@+id/edit_text_day"
-            app:layout_constraintTop_toBottomOf="@+id/edit_text_day"
+            app:layout_constraintEnd_toEndOf="@id/edit_text_day"
+            app:layout_constraintStart_toStartOf="@id/edit_text_day"
+            app:layout_constraintTop_toBottomOf="@id/edit_text_day"
             tools:ignore="TouchTargetSizeCheck" />
 
         <TextView
@@ -275,9 +275,9 @@
             android:inputType="textPersonName"
             android:padding="@dimen/dp_10"
             android:textSize="@dimen/normal_size_text"
-            app:layout_constraintEnd_toEndOf="@+id/edit_text_location"
-            app:layout_constraintStart_toStartOf="@+id/edit_text_location"
-            app:layout_constraintTop_toBottomOf="@+id/edit_text_location"
+            app:layout_constraintEnd_toEndOf="@id/edit_text_location"
+            app:layout_constraintStart_toStartOf="@id/edit_text_location"
+            app:layout_constraintTop_toBottomOf="@id/edit_text_location"
             tools:ignore="TouchTargetSizeCheck" />
 
         <TextView
@@ -302,9 +302,9 @@
             android:inputType="textPersonName"
             android:padding="@dimen/dp_10"
             android:textSize="@dimen/normal_size_text"
-            app:layout_constraintEnd_toEndOf="@+id/edit_text_classroom"
-            app:layout_constraintStart_toStartOf="@+id/edit_text_classroom"
-            app:layout_constraintTop_toBottomOf="@+id/edit_text_classroom"
+            app:layout_constraintEnd_toEndOf="@id/edit_text_classroom"
+            app:layout_constraintStart_toStartOf="@id/edit_text_classroom"
+            app:layout_constraintTop_toBottomOf="@id/edit_text_classroom"
             tools:ignore="TouchTargetSizeCheck" />
 
         <ImageView
@@ -313,9 +313,9 @@
             android:layout_height="@dimen/dp_30"
             android:layout_margin="@dimen/dp_10"
             android:src="@drawable/more_black"
-            app:layout_constraintBottom_toBottomOf="@+id/edit_text_teacher_name"
-            app:layout_constraintStart_toEndOf="@+id/edit_text_teacher_name"
-            app:layout_constraintTop_toTopOf="@+id/edit_text_teacher_name" />
+            app:layout_constraintBottom_toBottomOf="@id/edit_text_teacher_name"
+            app:layout_constraintStart_toEndOf="@id/edit_text_teacher_name"
+            app:layout_constraintTop_toTopOf="@id/edit_text_teacher_name" />
 
         <TextView
             android:id="@+id/text_age"
@@ -328,8 +328,8 @@
             android:textColor="@color/black"
             android:textSize="@dimen/normal_size_text"
             app:layout_constraintBaseline_toBaselineOf="@id/edit_text_age"
-            app:layout_constraintStart_toStartOf="@+id/text_teacher_name"
-            app:layout_constraintTop_toBottomOf="@+id/text_teacher_name" />
+            app:layout_constraintStart_toStartOf="@id/text_teacher_name"
+            app:layout_constraintTop_toBottomOf="@id/text_teacher_name" />
 
         <EditText
             android:id="@+id/edit_text_age"
@@ -341,9 +341,9 @@
             android:inputType="textPersonName"
             android:padding="@dimen/dp_10"
             android:textSize="@dimen/normal_size_text"
-            app:layout_constraintEnd_toEndOf="@+id/edit_text_teacher_name"
-            app:layout_constraintStart_toEndOf="@+id/text_teacher_name"
-            app:layout_constraintTop_toBottomOf="@+id/edit_text_teacher_name"
+            app:layout_constraintEnd_toEndOf="@id/edit_text_teacher_name"
+            app:layout_constraintStart_toEndOf="@id/text_teacher_name"
+            app:layout_constraintTop_toBottomOf="@id/edit_text_teacher_name"
             tools:ignore="TouchTargetSizeCheck" />
 
         <TextView
@@ -368,13 +368,13 @@
             android:inputType="textPersonName"
             android:padding="@dimen/dp_10"
             android:textSize="@dimen/normal_size_text"
-            app:layout_constraintEnd_toEndOf="@+id/edit_text_age"
-            app:layout_constraintStart_toStartOf="@+id/edit_text_age"
-            app:layout_constraintTop_toBottomOf="@+id/edit_text_age"
+            app:layout_constraintEnd_toEndOf="@id/edit_text_age"
+            app:layout_constraintStart_toStartOf="@id/edit_text_age"
+            app:layout_constraintTop_toBottomOf="@id/edit_text_age"
             tools:ignore="TouchTargetSizeCheck" />
 
         <Button
-            android:id="@id/button_done"
+            android:id="@+id/button_done"
             android:layout_width="@dimen/dp_100"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/dp_10"
@@ -383,8 +383,8 @@
             android:textColor="@color/black"
             app:backgroundTint="@color/grey_blank"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/edit_text_phone_number"
-            app:layout_constraintTop_toBottomOf="@+id/edit_text_phone_number" />
+            app:layout_constraintEnd_toEndOf="@id/edit_text_phone_number"
+            app:layout_constraintTop_toBottomOf="@id/edit_text_phone_number" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

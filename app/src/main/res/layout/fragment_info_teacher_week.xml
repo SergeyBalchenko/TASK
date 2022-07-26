@@ -7,28 +7,28 @@
     tools:context=".presentation.info_teacher_week.InfoTeacher">
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@id/start_guideline"
+        android:id="@+id/start_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="@dimen/dp_16" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@id/end_guideline"
+        android:id="@+id/end_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_end="@dimen/dp_16" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@id/top_guideline"
+        android:id="@+id/top_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.1" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@id/bottom_guideline"
+        android:id="@+id/bottom_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -69,7 +69,7 @@
         app:layout_constraintTop_toTopOf="@id/top_guideline" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@id/button_plus"
+        android:id="@+id/button_plus"
         android:layout_width="@dimen/dp_50"
         android:layout_height="@dimen/dp_50"
         android:background="@drawable/add_botton"

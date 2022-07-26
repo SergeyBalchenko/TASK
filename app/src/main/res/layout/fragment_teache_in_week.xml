@@ -70,7 +70,7 @@
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <RelativeLayout
-        android:id="@id/recycler_wrapper_for_day_shedule"
+        android:id="@+id/recycler_wrapper_for_day_shedule"
         android:layout_width="@dimen/zero_size"
         android:layout_height="@dimen/zero_size"
         android:layout_marginTop="@dimen/dp_20"

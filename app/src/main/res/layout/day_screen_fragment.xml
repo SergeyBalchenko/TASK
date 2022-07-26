@@ -7,35 +7,35 @@
     tools:context=".presentation.day_screen.DayScreenFragment">
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@id/start_guideline"
+        android:id="@+id/start_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="@dimen/dp_16" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@id/end_guideline"
+        android:id="@+id/end_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_end="@dimen/dp_16" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@id/top_guideline"
+        android:id="@+id/top_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.15" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@id/bottom_guideline"
+        android:id="@+id/bottom_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.88" />
 
     <ImageView
-        android:id="@id/shape"
+        android:id="@+id/shape"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/shape"
@@ -95,7 +95,7 @@
             android:textSize="@dimen/sp_24" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@id/btnUp_for_subject"
+            android:id="@+id/btnUp_for_subject"
             android:layout_width="@dimen/dp_40"
             android:layout_height="@dimen/dp_40"
             android:layout_marginStart="@dimen/dp_10"
@@ -106,7 +106,7 @@
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@id/recycler_view_subject_in_week"
+            android:id="@+id/recycler_view_subject_in_week"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/name_Day"
@@ -120,13 +120,13 @@
     </RelativeLayout>
 
     <ImageView
-        android:id="@id/graduation"
+        android:id="@+id/graduation"
         android:layout_width="match_parent"
         android:layout_height="@dimen/zero_size"
         android:src="@drawable/ic_graduation_im"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/bottom_guideline" />
+        app:layout_constraintTop_toTopOf="@id/bottom_guideline" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

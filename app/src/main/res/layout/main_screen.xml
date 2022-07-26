@@ -42,7 +42,7 @@
         app:layout_constraintGuide_percent="0.9" />
 
     <ImageView
-        android:id="@id/shape"
+        android:id="@+id/shape"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/shape"
@@ -55,7 +55,7 @@
         android:layout_height="@dimen/zero_size"
         android:src="@drawable/teacher_with_desc"
         app:layout_constraintBottom_toTopOf="@id/center_guideline"
-        app:layout_constraintEnd_toEndOf=""
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
         app:layout_constraintTop_toTopOf="@id/top_guideline" />
 

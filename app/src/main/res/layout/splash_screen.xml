@@ -25,7 +25,7 @@
         app:srcCompat="@drawable/ic_undraw_high_five_re_jy71" />
 
     <ImageView
-        android:id="@id/shape"
+        android:id="@+id/shape"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"

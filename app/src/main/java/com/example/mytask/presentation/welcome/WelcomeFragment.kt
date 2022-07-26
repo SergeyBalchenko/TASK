@@ -39,6 +39,7 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
         }
     }
 
+
     private fun openMainFragment() {
         parentFragmentManager.beginTransaction()
             .replace(R.id.container, MainFragment.newInstance(), MainFragment.TAG)

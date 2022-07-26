@@ -50,7 +50,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@id/graduation"
+        android:id="@+id/graduation"
         android:layout_width="match_parent"
         android:layout_height="@dimen/zero_size"
         android:src="@drawable/girl_yoga"
@@ -59,7 +59,7 @@
         tools:visibility="visible" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@id/button_plus"
+        android:id="@+id/button_plus"
         android:layout_width="@dimen/dp_50"
         android:layout_height="@dimen/dp_50"
         android:background="@drawable/add_botton"
@@ -69,7 +69,7 @@
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@id/button_collapse"
+        android:id="@+id/button_collapse"
         android:layout_width="@dimen/dp_40"
         android:layout_height="@dimen/dp_40"
         android:background="@drawable/vector_higher"
@@ -79,7 +79,7 @@
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@id/button_university"
+        android:id="@+id/button_university"
         android:layout_width="@dimen/dp_200"
         android:layout_height="@dimen/dp_50"
         android:layout_marginTop="@dimen/dp_20"
@@ -124,8 +124,8 @@
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="@dimen/sp_20"
-        app:layout_constraintEnd_toStartOf="@+id/button_plus"
-        app:layout_constraintStart_toEndOf="@+id/button_collapse"
+        app:layout_constraintEnd_toStartOf="@id/button_plus"
+        app:layout_constraintStart_toEndOf="@id/button_collapse"
         app:layout_constraintTop_toTopOf="@id/top_guideline" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

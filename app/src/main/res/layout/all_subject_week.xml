@@ -45,7 +45,7 @@
         app:layout_constraintTop_toTopOf="@+id/bottom_guideline" />
 
     <ImageView
-        android:id="@id/shape"
+        android:id="@+id/shape"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/shape"
@@ -63,7 +63,7 @@
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@id/button_week_schedule"
+        android:id="@+id/button_week_schedule"
         android:layout_width="@dimen/dp_232"
         android:layout_height="@dimen/dp_54"
         android:background="@drawable/btn_radius_10dp"
