@@ -43,7 +43,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@id/button_week_schedule"
+        android:id="@+id/button_week_schedule"
         android:layout_width="@dimen/dp_232"
         android:layout_height="@dimen/dp_50"
         android:layout_gravity="center"

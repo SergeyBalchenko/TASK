@@ -46,7 +46,7 @@
         tools:visibility="visible" />
 
     <RelativeLayout
-        android:id="@id/recycler_wrapper_for_day_shedule"
+        android:id="@+id/recycler_wrapper_for_day_shedule"
         android:layout_width="@dimen/zero_size"
         android:layout_height="@dimen/zero_size"
         android:layout_marginTop="@dimen/dp_20"
@@ -94,7 +94,7 @@
     </RelativeLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@id/button_week_schedule"
+        android:id="@+id/button_week_schedule"
         android:layout_width="@dimen/dp_232"
         android:layout_height="@dimen/dp_54"
         android:layout_gravity="center"

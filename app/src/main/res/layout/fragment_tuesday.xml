@@ -43,7 +43,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@id/button_week_schedule"
+        android:id="@+id/button_week_schedule"
         android:layout_width="@dimen/dp_232"
         android:layout_height="@dimen/dp_54"
         android:layout_gravity="center"
@@ -59,7 +59,7 @@
         app:layout_constraintTop_toTopOf="@id/top_guideline" />
 
     <RelativeLayout
-        android:id="@id/recycler_wrapper_for_day_shedule"
+        android:id="@+id/recycler_wrapper_for_day_shedule"
         android:layout_width="@dimen/zero_size"
         android:layout_height="@dimen/zero_size"
         android:layout_marginTop="@dimen/dp_20"
@@ -71,7 +71,7 @@
         app:layout_constraintTop_toBottomOf="@id/button_week_schedule">
 
         <TextView
-            android:id="@id/day_of_week_text"
+            android:id="@+id/day_of_week_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -83,7 +83,7 @@
             android:textSize="@dimen/sp_24" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@id/btnUp_day_week"
+            android:id="@+id/btnUp_day_week"
             android:layout_width="@dimen/dp_30"
             android:layout_height="@dimen/dp_30"
             android:layout_marginStart="@dimen/dp_10"
@@ -94,7 +94,7 @@
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@id/recycler_view_subject_in_week"
+            android:id="@+id/recycler_view_subject_in_week"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/day_of_week_text"
@@ -108,7 +108,7 @@
     </RelativeLayout>
 
     <ImageView
-        android:id="@id/graduation"
+        android:id="@+id/graduation"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:src="@drawable/ic_graduation_im"
