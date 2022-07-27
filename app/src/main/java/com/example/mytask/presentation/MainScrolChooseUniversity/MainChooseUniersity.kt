@@ -6,8 +6,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.mytask.R
+import com.example.mytask.databinding.FragmentMainChooseUniersityBinding
 
 class MainChooseUniersity : Fragment() {
+
+    private lateinit var binding: FragmentMainChooseUniersityBinding
+
+    companion object{
+        val TAG = MainChooseUniersity::class.simpleName
+
+        fun newInstance(): MainChooseUniersity {
+            return MainChooseUniersity()
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

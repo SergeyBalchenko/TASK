@@ -6,8 +6,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.mytask.R
+import com.example.mytask.databinding.FragmentBlankAddedUniversityBinding
 
 class BlankAddedUniversity : Fragment() {
+
+    private lateinit var binding: FragmentBlankAddedUniversityBinding
+
+    companion object {
+        val TAG = BlankAddedUniversity::class.simpleName
+
+        fun newInstance(): BlankAddedUniversity{
+            return BlankAddedUniversity()
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

@@ -6,8 +6,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.mytask.R
+import com.example.mytask.databinding.FragmentScrollForSubjectBinding
 
 class ScrollForSubject : Fragment() {
+
+    private  lateinit var binding: FragmentScrollForSubjectBinding
+
+    companion object {
+        val TAG = ScrollForSubject::class.simpleName
+
+        fun newInstance(): ScrollForSubject {
+            return ScrollForSubject()
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
