@@ -42,7 +42,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bottom_guideline"
+        app:layout_constraintTop_toBottomOf="@id/recycler_wrapper_for_day_shedule"
         tools:visibility="visible" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -73,6 +73,7 @@
         app:layout_constraintStart_toEndOf="@id/button_back"
         app:layout_constraintTop_toTopOf="@id/top_guideline" />
 
+
     <ImageView
         android:id="@+id/shape"
         android:layout_width="wrap_content"
@@ -80,7 +81,6 @@
         android:src="@drawable/shape"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/recycler_wrapper_for_day_shedule"
@@ -91,7 +91,8 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
-        app:layout_constraintTop_toBottomOf="@id/button_week_schedule">
+        app:layout_constraintTop_toBottomOf="@id/button_week_schedule"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_guideline">
 
         <TextView
             android:id="@+id/teacher_text"
