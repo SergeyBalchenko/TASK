@@ -60,8 +60,6 @@
         android:id="@+id/button_week_schedule"
         android:layout_width="@dimen/dp_232"
         android:layout_height="@dimen/dp_54"
-        android:layout_marginStart="@dimen/dp_100"
-        android:layout_marginEnd="@dimen/dp_100"
         android:background="@drawable/btn_radius_10dp"
         android:backgroundTint="@color/major"
         android:fontFamily="@font/poppins_bold"
@@ -85,7 +83,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/recycler_wrapper_for_day_shedule"
         android:layout_width="@dimen/zero_size"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/zero_size"
         android:layout_marginTop="@dimen/dp_20"
         android:background="@color/major"
         android:orientation="vertical"

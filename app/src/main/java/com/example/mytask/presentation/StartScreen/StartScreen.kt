@@ -54,6 +54,9 @@ class StartScreen: Fragment() {
         binding.buttonShowMoreFriday.setOnClickListener {
             openFragmentFriday()
         }
+        binding.buttonBack.setOnClickListener{
+            openMainFragment()
+        }
     }
 
     private fun openDayScreenFragment() {
@@ -84,6 +87,12 @@ class StartScreen: Fragment() {
         parentFragmentManager.beginTransaction()
             .replace(R.id.container, FragmentFriday.newInstance(), FragmentFriday.TAG)
             .addToBackStack(FragmentFriday.TAG)
+            .commit()
+    }
+    private fun openMainFragment() {
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.container, MainFragment.newInstance(), MainFragment.TAG)
+            .addToBackStack(MainFragment.TAG)
             .commit()
     }
 }
