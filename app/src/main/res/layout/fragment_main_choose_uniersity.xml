@@ -47,7 +47,8 @@
         android:layout_height="wrap_content"
         android:src="@drawable/shape"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/hello_moto"/>
 
     <ImageView
         android:id="@+id/graduation"
@@ -56,7 +57,8 @@
         android:src="@drawable/girl_yoga"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="@id/center_guideline"
-        tools:visibility="visible" />
+        tools:visibility="visible"
+        android:contentDescription="@string/name_teacher"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_plus"
@@ -69,10 +71,10 @@
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_collapse"
-        android:layout_width="@dimen/dp_40"
-        android:layout_height="@dimen/dp_40"
-        android:background="@drawable/vector_higher"
+        android:id="@+id/button_back"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:background="@drawable/vector_back"
         android:backgroundTint="@color/major"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
         app:layout_constraintTop_toTopOf="@id/top_guideline"
@@ -111,7 +113,7 @@
         tools:itemCount="7"
         tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/choose_added_word"
-        tools:orientation="vertical"></androidx.recyclerview.widget.RecyclerView>
+        tools:orientation="vertical"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_week_schedule"
@@ -125,7 +127,7 @@
         android:textColor="@color/white"
         android:textSize="@dimen/sp_20"
         app:layout_constraintEnd_toStartOf="@id/button_plus"
-        app:layout_constraintStart_toEndOf="@id/button_collapse"
+        app:layout_constraintStart_toEndOf="@id/button_back"
         app:layout_constraintTop_toTopOf="@id/top_guideline" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

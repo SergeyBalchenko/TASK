@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.mytask.R
 import com.example.mytask.databinding.FragmentMainChooseUniersityBinding
+import com.example.mytask.presentation.main.MainFragment
 
 class MainChooseUniersity : Fragment() {
 
@@ -21,10 +22,26 @@ class MainChooseUniersity : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main_choose_uniersity, container, false)
+        binding = FragmentMainChooseUniersityBinding.inflate(inflater , container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.buttonBack.setOnClickListener{
+            openMainScreen()
+        }
+    }
+    private fun openMainScreen(){
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.container, MainFragment.newInstance(), MainFragment.TAG)
+            .addToBackStack(MainFragment.TAG)
+            .commit()
     }
 }
