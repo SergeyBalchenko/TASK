@@ -7,13 +7,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.mytask.R
 import com.example.mytask.databinding.MainScreenBinding
-import com.example.mytask.presentation.MainScrolChooseUniversity.MainScrolChooseUniversity.MainChooseUniersity
-import com.example.mytask.presentation.StartScreen.StartScreen
-import com.example.mytask.presentation.blank_adde_university.BlankAddedUniversity
-import com.example.mytask.presentation.blank_added_teacher.BlankAddedTeacher
-import com.example.mytask.presentation.blank_for_add_subject.BlankAddSubject
-import com.example.mytask.presentation.scrollForSubject.ScrollForSubject
-import com.example.mytask.presentation.scroll_for_teacher.ScrollForTeacher
+import com.example.mytask.presentation.mainScrolChooseUniversity.MainScrolChooseUniversity.MainChooseUniersityFragment
+import com.example.mytask.presentation.StartScreen.StartScreenFragment
+import com.example.mytask.presentation.blankAddeUniversity.BlankAddedUniversityFragment
+import com.example.mytask.presentation.blankAddedTeacher.BlankAddedTeacherFragment
+import com.example.mytask.presentation.blankForAddSubject.BlankAddSubjectFragment
+import com.example.mytask.presentation.scrollForSubject.ScrollForSubjectFragment
+import com.example.mytask.presentation.scrollForTeacher.ScrollForTeacherFragment
 
 class MainFragment: Fragment() {
 
@@ -64,43 +64,43 @@ class MainFragment: Fragment() {
 
     private fun openStartScreen() {
         parentFragmentManager.beginTransaction()
-            .replace(R.id.container, StartScreen.newInstance(), StartScreen.TAG)
+            .replace(R.id.container, StartScreenFragment.newInstance(), StartScreenFragment.TAG)
             .addToBackStack(TAG)
             .commit()
     }
     private fun openMainChooseUniversity(){
         parentFragmentManager.beginTransaction()
-            .replace(R.id.container, MainChooseUniersity.newInstance(), MainChooseUniersity.TAG)
+            .replace(R.id.container, MainChooseUniersityFragment.newInstance(), MainChooseUniersityFragment.TAG)
             .addToBackStack(TAG)
             .commit()
     }
     private fun openBlankAddedUniversity(){
         parentFragmentManager.beginTransaction()
-            .replace(R.id.container, BlankAddedUniversity.newInstance(), BlankAddedUniversity.TAG)
+            .replace(R.id.container, BlankAddedUniversityFragment.newInstance(), BlankAddedUniversityFragment.TAG)
             .addToBackStack(TAG)
             .commit()
     }
     private fun openScrollForTeacher() {
         parentFragmentManager.beginTransaction()
-            .replace(R.id.container, ScrollForTeacher.newInstance(), ScrollForTeacher.TAG)
+            .replace(R.id.container, ScrollForTeacherFragment.newInstance(), ScrollForTeacherFragment.TAG)
             .addToBackStack(TAG)
             .commit()
     }
     private fun openBlankAddedTeacher() {
         parentFragmentManager.beginTransaction()
-            .replace(R.id.container, BlankAddedTeacher.newInstance(), BlankAddedTeacher.TAG)
+            .replace(R.id.container, BlankAddedTeacherFragment.newInstance(), BlankAddedTeacherFragment.TAG)
             .addToBackStack(TAG)
             .commit()
     }
     private fun openBlankAddSubject() {
         parentFragmentManager.beginTransaction()
-            .replace(R.id.container, BlankAddSubject.newInstance(), BlankAddSubject.TAG)
+            .replace(R.id.container, BlankAddSubjectFragment.newInstance(), BlankAddSubjectFragment.TAG)
             .addToBackStack(TAG)
             .commit()
     }
     private fun openScrollForSubject() {
         parentFragmentManager.beginTransaction()
-            .replace(R.id.container, ScrollForSubject.newInstance(), ScrollForSubject.TAG)
+            .replace(R.id.container, ScrollForSubjectFragment.newInstance(), ScrollForSubjectFragment.TAG)
             .addToBackStack(TAG)
             .commit()
     }

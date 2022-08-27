@@ -4,26 +4,24 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.mytask.R
-import com.example.mytask.databinding.MainScreenBinding
 import com.example.mytask.databinding.StartScreenBinding
-import com.example.mytask.presentation.day_screen.DayScreenFragment
-import com.example.mytask.presentation.friday.FragmentFriday
+import com.example.mytask.presentation.dayScreen.DayScreenFragment
+import com.example.mytask.presentation.friday.FridayFragment
 import com.example.mytask.presentation.main.MainFragment
-import com.example.mytask.presentation.thursday.FragmentThursday
-import com.example.mytask.presentation.tuesday.FragmentTuesday
-import com.example.mytask.presentation.wednesday.FragmentWednesday
+import com.example.mytask.presentation.thursday.ThursdayFragment
+import com.example.mytask.presentation.tuesday.TuesdayFragment
+import com.example.mytask.presentation.wednesday.WednesdayFragment
 
-class StartScreen: Fragment() {
+class StartScreenFragment: Fragment() {
     private lateinit var binding: StartScreenBinding
 
     companion object {
-        val TAG = StartScreen::class.simpleName
+        val TAG = StartScreenFragment::class.simpleName
 
-        fun newInstance(): StartScreen {
-            return StartScreen()
+        fun newInstance(): StartScreenFragment {
+            return StartScreenFragment()
         }
     }
 
@@ -67,26 +65,26 @@ class StartScreen: Fragment() {
     }
     private fun openFragmentWednesday() {
         parentFragmentManager.beginTransaction()
-            .replace(R.id.container, FragmentWednesday.newInstance(), FragmentWednesday.TAG)
-            .addToBackStack(FragmentWednesday.TAG)
+            .replace(R.id.container, WednesdayFragment.newInstance(), WednesdayFragment.TAG)
+            .addToBackStack(WednesdayFragment.TAG)
             .commit()
     }
     private fun openFragmentThursday() {
         parentFragmentManager.beginTransaction()
-            .replace(R.id.container, FragmentThursday.newInstance(), FragmentThursday.TAG)
-            .addToBackStack(FragmentThursday.TAG)
+            .replace(R.id.container, ThursdayFragment.newInstance(), ThursdayFragment.TAG)
+            .addToBackStack(ThursdayFragment.TAG)
             .commit()
     }
     private fun openFragmentTuesday() {
         parentFragmentManager.beginTransaction()
-            .replace(R.id.container, FragmentTuesday.newInstance(), FragmentTuesday.TAG)
-            .addToBackStack(FragmentTuesday.TAG)
+            .replace(R.id.container, TuesdayFragment.newInstance(), TuesdayFragment.TAG)
+            .addToBackStack(TuesdayFragment.TAG)
             .commit()
     }
     private fun openFragmentFriday() {
         parentFragmentManager.beginTransaction()
-            .replace(R.id.container, FragmentFriday.newInstance(), FragmentFriday.TAG)
-            .addToBackStack(FragmentFriday.TAG)
+            .replace(R.id.container, FridayFragment.newInstance(), FridayFragment.TAG)
+            .addToBackStack(FridayFragment.TAG)
             .commit()
     }
     private fun openMainFragment() {

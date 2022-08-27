@@ -1,4 +1,4 @@
-package com.example.mytask.presentation.scroll_for_teacher
+package com.example.mytask.presentation.blankAddeUniversity
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,18 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.mytask.R
-import com.example.mytask.databinding.FragmentScrollForTeacherBinding
+import com.example.mytask.databinding.FragmentBlankAddedUniversityBinding
 import com.example.mytask.presentation.main.MainFragment
 
-class ScrollForTeacher : Fragment() {
+class BlankAddedUniversityFragment : Fragment() {
 
-    private  lateinit var binding: FragmentScrollForTeacherBinding
+    private lateinit var binding: FragmentBlankAddedUniversityBinding
 
     companion object {
-        val TAG = ScrollForTeacher::class.simpleName
+        val TAG = BlankAddedUniversityFragment::class.simpleName
 
-        fun newInstance(): ScrollForTeacher {
-            return ScrollForTeacher ()
+        fun newInstance(): BlankAddedUniversityFragment{
+            return BlankAddedUniversityFragment()
         }
     }
 
@@ -26,10 +26,9 @@ class ScrollForTeacher : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-       binding = FragmentScrollForTeacherBinding.inflate(inflater, container, false)
+        binding = FragmentBlankAddedUniversityBinding.inflate(inflater, container, false)
         return binding.root
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 

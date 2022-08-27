@@ -1,4 +1,4 @@
-package com.example.mytask.presentation.blank_for_add_subject
+package com.example.mytask.presentation.scrollForSubject
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,18 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.mytask.R
-import com.example.mytask.databinding.FragmentBlankAddSubjectBinding
+import com.example.mytask.databinding.FragmentScrollForSubjectBinding
 import com.example.mytask.presentation.main.MainFragment
 
-class BlankAddSubject : Fragment() {
+class ScrollForSubjectFragment : Fragment() {
 
-    private lateinit var binding: FragmentBlankAddSubjectBinding
+    private  lateinit var binding: FragmentScrollForSubjectBinding
 
     companion object {
-        val TAG = BlankAddSubject::class.simpleName
+        val TAG = ScrollForSubjectFragment::class.simpleName
 
-        fun newInstance(): BlankAddSubject {
-            return BlankAddSubject()
+        fun newInstance(): ScrollForSubjectFragment {
+            return ScrollForSubjectFragment()
         }
     }
 
@@ -26,15 +26,16 @@ class BlankAddSubject : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        binding = FragmentBlankAddSubjectBinding.inflate(inflater, container, false)
-        return binding.root}
+        binding = FragmentScrollForSubjectBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonBack.setOnClickListener {
-            openMainScreen()
-        }
+    binding.buttonBack.setOnClickListener{
+        openMainScreen()
+    }
     }
     private fun openMainScreen(){
         parentFragmentManager.beginTransaction()

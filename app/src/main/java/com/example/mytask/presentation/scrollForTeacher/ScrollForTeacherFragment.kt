@@ -1,23 +1,23 @@
-package com.example.mytask.presentation.blank_added_teacher
+package com.example.mytask.presentation.scrollForTeacher
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import com.example.mytask.R
-import com.example.mytask.databinding.FragmentBlankAddedTeacherBinding
+import com.example.mytask.databinding.FragmentScrollForTeacherBinding
 import com.example.mytask.presentation.main.MainFragment
 
-class BlankAddedTeacher : Fragment() {
+class ScrollForTeacherFragment : Fragment() {
 
-    private lateinit var binding: FragmentBlankAddedTeacherBinding
+    private  lateinit var binding: FragmentScrollForTeacherBinding
 
     companion object {
-        val TAG = BlankAddedTeacher::class.simpleName
+        val TAG = ScrollForTeacherFragment::class.simpleName
 
-        fun newInstance(): BlankAddedTeacher {
-            return BlankAddedTeacher()
+        fun newInstance(): ScrollForTeacherFragment {
+            return ScrollForTeacherFragment ()
         }
     }
 
@@ -26,8 +26,10 @@ class BlankAddedTeacher : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        binding = FragmentBlankAddedTeacherBinding.inflate(inflater, container, false)
-        return binding.root}
+       binding = FragmentScrollForTeacherBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -41,4 +43,4 @@ class BlankAddedTeacher : Fragment() {
             .addToBackStack(MainFragment.TAG)
             .commit()
     }
-    }
+}

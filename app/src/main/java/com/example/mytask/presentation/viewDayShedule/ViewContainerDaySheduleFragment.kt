@@ -8,7 +8,7 @@ import com.example.mytask.R
 import com.example.mytask.databinding.MainScreenBinding
 import com.example.mytask.presentation.main.MainFragment
 
-class ViewContainerDayShedule : Fragment() {
+class ViewContainerDaySheduleFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

@@ -1,4 +1,4 @@
-package com.example.mytask.presentation.tuesday
+package com.example.mytask.presentation.friday
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,19 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.mytask.R
-import com.example.mytask.databinding.FragmentTuesdayBinding
-import com.example.mytask.databinding.FragmentWednesdayBinding
-import com.example.mytask.presentation.StartScreen.StartScreen
-import com.example.mytask.presentation.blank_for_add_subject.BlankAddSubject
+import com.example.mytask.databinding.FragmentFridayBinding
+import com.example.mytask.presentation.StartScreen.StartScreenFragment
+import com.example.mytask.presentation.blankForAddSubject.BlankAddSubjectFragment
 
-class FragmentTuesday : Fragment() {
-    private  lateinit var binding: FragmentTuesdayBinding
+class FridayFragment : Fragment() {
+    private lateinit var binding: FragmentFridayBinding
 
     companion object {
-        val TAG = FragmentTuesday::class.simpleName
+        val TAG = FridayFragment::class.simpleName
 
-        fun  newInstance(): FragmentTuesday {
-            return FragmentTuesday()
+        fun newInstance(): FridayFragment {
+            return FridayFragment()
         }
     }
 
@@ -27,7 +26,7 @@ class FragmentTuesday : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentTuesdayBinding.inflate(inflater, container, false)
+        binding = FragmentFridayBinding.inflate(inflater, container, false)
         return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -42,14 +41,14 @@ class FragmentTuesday : Fragment() {
     }
     private fun openStartScreen(){
         parentFragmentManager.beginTransaction()
-            .replace(R.id.container, StartScreen.newInstance(), StartScreen.TAG)
-            .addToBackStack(StartScreen.TAG)
+            .replace(R.id.container, StartScreenFragment.newInstance(), StartScreenFragment.TAG)
+            .addToBackStack(StartScreenFragment.TAG)
             .commit()
     }
     private fun openBlankAddSubject(){
         parentFragmentManager.beginTransaction()
-            .replace(R.id.container, BlankAddSubject.newInstance(), BlankAddSubject.TAG)
-            .addToBackStack(BlankAddSubject.TAG)
+            .replace(R.id.container, BlankAddSubjectFragment.newInstance(), BlankAddSubjectFragment.TAG)
+            .addToBackStack(BlankAddSubjectFragment.TAG)
             .commit()
     }
 }

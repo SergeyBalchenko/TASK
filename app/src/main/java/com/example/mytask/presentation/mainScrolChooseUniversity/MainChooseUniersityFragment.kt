@@ -1,4 +1,4 @@
-package com.example.mytask.presentation.MainScrolChooseUniversity.MainScrolChooseUniversity
+package com.example.mytask.presentation.mainScrolChooseUniversity.MainScrolChooseUniversity
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,15 +9,15 @@ import com.example.mytask.R
 import com.example.mytask.databinding.FragmentMainChooseUniersityBinding
 import com.example.mytask.presentation.main.MainFragment
 
-class MainChooseUniersity : Fragment() {
+class MainChooseUniersityFragment : Fragment() {
 
     private lateinit var binding: FragmentMainChooseUniersityBinding
 
     companion object{
-        val TAG = MainChooseUniersity::class.simpleName
+        val TAG = MainChooseUniersityFragment::class.simpleName
 
-        fun newInstance(): MainChooseUniersity {
-            return MainChooseUniersity()
+        fun newInstance(): MainChooseUniersityFragment {
+            return MainChooseUniersityFragment()
         }
     }
 

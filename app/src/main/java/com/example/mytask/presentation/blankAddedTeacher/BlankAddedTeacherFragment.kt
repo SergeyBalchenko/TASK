@@ -1,23 +1,23 @@
-package com.example.mytask.presentation.scrollForSubject
+package com.example.mytask.presentation.blankAddedTeacher
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.example.mytask.R
-import com.example.mytask.databinding.FragmentScrollForSubjectBinding
+import com.example.mytask.databinding.FragmentBlankAddedTeacherBinding
 import com.example.mytask.presentation.main.MainFragment
 
-class ScrollForSubject : Fragment() {
+class BlankAddedTeacherFragment : Fragment() {
 
-    private  lateinit var binding: FragmentScrollForSubjectBinding
+    private lateinit var binding: FragmentBlankAddedTeacherBinding
 
     companion object {
-        val TAG = ScrollForSubject::class.simpleName
+        val TAG = BlankAddedTeacherFragment::class.simpleName
 
-        fun newInstance(): ScrollForSubject {
-            return ScrollForSubject()
+        fun newInstance(): BlankAddedTeacherFragment {
+            return BlankAddedTeacherFragment()
         }
     }
 
@@ -26,16 +26,14 @@ class ScrollForSubject : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        binding = FragmentScrollForSubjectBinding.inflate(inflater, container, false)
-        return binding.root
-    }
-
+        binding = FragmentBlankAddedTeacherBinding.inflate(inflater, container, false)
+        return binding.root}
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-    binding.buttonBack.setOnClickListener{
-        openMainScreen()
-    }
+        binding.buttonBack.setOnClickListener {
+            openMainScreen()
+        }
     }
     private fun openMainScreen(){
         parentFragmentManager.beginTransaction()
@@ -43,4 +41,4 @@ class ScrollForSubject : Fragment() {
             .addToBackStack(MainFragment.TAG)
             .commit()
     }
-}
+    }
