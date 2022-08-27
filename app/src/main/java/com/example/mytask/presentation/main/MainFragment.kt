@@ -12,7 +12,6 @@ import com.example.mytask.presentation.StartScreen.StartScreen
 import com.example.mytask.presentation.blank_adde_university.BlankAddedUniversity
 import com.example.mytask.presentation.blank_added_teacher.BlankAddedTeacher
 import com.example.mytask.presentation.blank_for_add_subject.BlankAddSubject
-import com.example.mytask.presentation.main.MainFragment.Companion.TAG
 import com.example.mytask.presentation.scrollForSubject.ScrollForSubject
 import com.example.mytask.presentation.scroll_for_teacher.ScrollForTeacher
 
@@ -105,5 +104,4 @@ class MainFragment: Fragment() {
             .addToBackStack(TAG)
             .commit()
     }
-
 }
