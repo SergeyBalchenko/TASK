@@ -45,7 +45,7 @@
         app:layout_constraintTop_toTopOf="@+id/bottom_guideline" />
 
     <ImageView
-        android:id="@id/shape"
+        android:id="@+id/shape"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/shape"
@@ -53,7 +53,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_back"
+        android:id="@+id/button_add_teacher"
         android:layout_width="@dimen/dp_50"
         android:layout_height="@dimen/dp_50"
         android:background="@drawable/vector_back"
@@ -63,7 +63,7 @@
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@id/button_week_schedule"
+        android:id="@+id/button_week_schedule"
         android:layout_width="@dimen/dp_232"
         android:layout_height="@dimen/dp_54"
         android:background="@drawable/btn_radius_10dp"
@@ -74,7 +74,7 @@
         android:textColor="@color/black"
         android:textSize="@dimen/sp_20"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
-        app:layout_constraintStart_toEndOf="@id/button_back"
+        app:layout_constraintStart_toEndOf="@id/button_add_teacher"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
         app:layout_constraintTop_toTopOf="@id/top_guideline" />
 

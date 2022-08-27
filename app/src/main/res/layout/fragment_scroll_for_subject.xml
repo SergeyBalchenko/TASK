@@ -7,35 +7,35 @@
     tools:context=".presentation.scrollForSubject.ScrollForSubject">
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@id/start_guideline"
+        android:id="@+id/start_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="@dimen/dp_16" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@id/end_guideline"
+        android:id="@+id/end_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_end="@dimen/dp_16" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@id/top_guideline"
+        android:id="@+id/top_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.15" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@id/bottom_guideline"
+        android:id="@+id/bottom_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.9" />
 
     <ImageView
-        android:id="@id/graduation"
+        android:id="@+id/graduation"
         android:layout_width="match_parent"
         android:layout_height="@dimen/zero_size"
         android:src="@drawable/ic_graduation_im"
@@ -46,7 +46,7 @@
         tools:visibility="visible" />
 
     <ImageView
-        android:id="@id/shape"
+        android:id="@+id/shape"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/shape"
@@ -54,7 +54,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@id/button_subject"
+        android:id="@+id/button_subject"
         android:layout_width="@dimen/dp_200"
         android:layout_height="@dimen/dp_50"
         android:layout_marginTop="@dimen/dp_20"
@@ -71,7 +71,7 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@id/button_week_schedule"
+        android:id="@+id/button_week_schedule"
         android:layout_width="@dimen/dp_232"
         android:layout_height="@dimen/dp_54"
         android:background="@drawable/btn_radius_10dp"
@@ -87,7 +87,7 @@
         app:layout_constraintTop_toTopOf="@id/top_guideline" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@id/button_plus"
+        android:id="@+id/button_plus"
         android:layout_width="@dimen/dp_50"
         android:layout_height="@dimen/dp_50"
         android:background="@drawable/add_botton"
@@ -97,7 +97,7 @@
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@id/button_back"
+        android:id="@+id/button_back"
         android:layout_width="@dimen/dp_50"
         android:layout_height="@dimen/dp_50"
         android:background="@drawable/vector_back"

@@ -6,27 +6,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.mytask.R
+import com.example.mytask.databinding.DayScreenFragmentBinding
+import com.example.mytask.databinding.FragmentWednesdayBinding
+import com.example.mytask.presentation.StartScreen.StartScreen
+import com.example.mytask.presentation.blank_for_add_subject.BlankAddSubject
+import com.example.mytask.presentation.day_screen.DayScreenFragment
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [FragmentWednesday.newInstance] factory method to
- * create an instance of this fragment.
- */
 class FragmentWednesday : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private lateinit var binding: FragmentWednesdayBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+    companion object {
+        val TAG = FragmentWednesday::class.simpleName
+
+        fun newInstance(): FragmentWednesday {
+            return FragmentWednesday()
         }
     }
 
@@ -35,26 +28,30 @@ class FragmentWednesday : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_wednesday, container, false)
+        binding = FragmentWednesdayBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment FragmentWednesday.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            FragmentWednesday().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.btnUpDayWeek.setOnClickListener {
+            openStartScreen()
+        }
+        binding.buttonPlusSubject.setOnClickListener {
+            openBlankAddSubject()
+        }
+    }
+    private fun openStartScreen(){
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.container, StartScreen.newInstance(), StartScreen.TAG)
+            .addToBackStack(StartScreen.TAG)
+            .commit()
+    }
+    private fun openBlankAddSubject(){
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.container, BlankAddSubject.newInstance(), BlankAddSubject.TAG)
+            .addToBackStack(BlankAddSubject.TAG)
+            .commit()
     }
 }

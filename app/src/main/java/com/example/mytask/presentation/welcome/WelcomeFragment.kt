@@ -5,11 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.viewbinding.ViewBinding
 import com.example.mytask.R
 import com.example.mytask.databinding.FragmentWelcomeBinding
 import com.example.mytask.presentation.main.MainFragment
 
-class WelcomeFragment : Fragment() {
+class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
 
     private lateinit var binding: FragmentWelcomeBinding
 
@@ -33,10 +34,11 @@ class WelcomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.primaryButton.setOnClickListener {
+        binding.buttonDoIt.setOnClickListener {
             openMainFragment()
         }
     }
+
 
     private fun openMainFragment() {
         parentFragmentManager.beginTransaction()

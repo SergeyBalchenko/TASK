@@ -7,35 +7,35 @@
     tools:context=".presentation.blank_adde_university.BlankAddedUniversity">
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@id/start_guideline"
+        android:id="@+id/start_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="@dimen/dp_16" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@id/end_guideline"
+        android:id="@+id/end_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_end="@dimen/dp_16" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@id/top_guideline"
+        android:id="@+id/top_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.1" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@id/bottom_guideline"
+        android:id="@+id/bottom_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.43" />
 
     <ImageView
-        android:id="@id/shape"
+        android:id="@+id/shape"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/shape"
@@ -43,7 +43,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@id/button_back"
+        android:id="@+id/button_back"
         android:layout_width="@dimen/dp_50"
         android:layout_height="@dimen/dp_50"
         android:background="@drawable/vector_back"
@@ -53,7 +53,7 @@
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@id/button_week_schedule"
+        android:id="@+id/button_week_schedule"
         android:layout_width="@dimen/dp_232"
         android:layout_height="@dimen/dp_54"
         android:layout_gravity="center"
@@ -121,7 +121,7 @@
             tools:ignore="TouchTargetSizeCheck" />
 
         <Button
-            android:id="@id/button_done"
+            android:id="@+id/button_done"
             android:layout_width="@dimen/dp_100"
             android:layout_height="@dimen/dp_40"
             android:layout_below="@id/edit_text_text_university_name"
