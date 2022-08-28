@@ -90,7 +90,7 @@
             android:visibility="visible"
             tools:itemCount="5"
             tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/fragment_view_conteiner_day_shedule"
+            tools:listitem="@layout/fragment_view_day_shedule"
             tools:orientation="vertical" />
     </RelativeLayout>
 
