@@ -32,17 +32,14 @@ class ThursdayFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnUpDayWeek.setOnClickListener {
-            openStartScreen()
+            popBack()
         }
         binding.buttonPlusSubject.setOnClickListener {
             openBlankAddSubject()
         }
     }
-    private fun openStartScreen(){
-        parentFragmentManager.beginTransaction()
-            .replace(R.id.container, StartScreenFragment.newInstance(), StartScreenFragment.TAG)
-            .addToBackStack(StartScreenFragment.TAG)
-            .commit()
+    private fun popBack(){
+        parentFragmentManager.popBackStack()
     }
     private fun openBlankAddSubject(){
         parentFragmentManager.beginTransaction()

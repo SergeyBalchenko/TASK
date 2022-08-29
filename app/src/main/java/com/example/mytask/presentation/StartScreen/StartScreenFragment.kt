@@ -53,7 +53,7 @@ class StartScreenFragment: Fragment() {
             openFragmentFriday()
         }
         binding.buttonBack.setOnClickListener{
-            openMainFragment()
+            popBack()
         }
     }
 
@@ -87,10 +87,8 @@ class StartScreenFragment: Fragment() {
             .addToBackStack(FridayFragment.TAG)
             .commit()
     }
-    private fun openMainFragment() {
-        parentFragmentManager.beginTransaction()
-            .replace(R.id.container, MainFragment.newInstance(), MainFragment.TAG)
-            .addToBackStack(MainFragment.TAG)
-            .commit()
+    private fun popBack() {
+        parentFragmentManager.popBackStack()
+
     }
 }

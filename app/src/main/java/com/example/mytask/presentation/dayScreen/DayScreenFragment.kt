@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.mytask.R
 import com.example.mytask.databinding.DayScreenFragmentBinding
-import com.example.mytask.presentation.StartScreen.StartScreenFragment
 import com.example.mytask.presentation.blankForAddSubject.BlankAddSubjectFragment
 
 
@@ -34,17 +33,14 @@ class DayScreenFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnUpForSubject.setOnClickListener {
-            openStartScreen()
+            popBack()
         }
         binding.buttonPlusSubject.setOnClickListener {
             openBlankAddSubject()
         }
     }
-    private fun openStartScreen(){
-        parentFragmentManager.beginTransaction()
-            .replace(R.id.container,StartScreenFragment.newInstance(), StartScreenFragment.TAG)
-            .addToBackStack(StartScreenFragment.TAG)
-            .commit()
+    private fun popBack() {
+        parentFragmentManager.popBackStack()
     }
     private fun openBlankAddSubject(){
         parentFragmentManager.beginTransaction()

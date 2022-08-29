@@ -5,9 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.mytask.R
 import com.example.mytask.databinding.FragmentBlankAddedTeacherBinding
-import com.example.mytask.presentation.main.MainFragment
 
 class BlankAddedTeacherFragment : Fragment() {
 
@@ -32,13 +30,10 @@ class BlankAddedTeacherFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonBack.setOnClickListener {
-            openMainScreen()
+            popBack()
         }
     }
-    private fun openMainScreen(){
-        parentFragmentManager.beginTransaction()
-            .replace(R.id.container, MainFragment.newInstance(), MainFragment.TAG)
-            .addToBackStack(MainFragment.TAG)
-            .commit()
+    private fun popBack(){
+        parentFragmentManager.popBackStack()
     }
     }
