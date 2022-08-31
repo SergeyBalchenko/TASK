@@ -9,8 +9,6 @@ import com.example.mytask.databinding.FragmentViewDaySheduleBinding
 
 class ViewDaySheduleFragment : Fragment() {
 
-    private val viewDaySheduleViewModel = ViewModelProvider(this).get(ViewDaySheduleViewModel::class.java)
-
     private lateinit var binding: FragmentViewDaySheduleBinding
 
     override fun onCreateView(
@@ -18,6 +16,9 @@ class ViewDaySheduleFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentViewDaySheduleBinding.inflate(inflater,container,false)
+
+        val viewDaySheduleViewModel = ViewModelProvider(this).get(ViewDaySheduleViewModel::class.java)
+
         return  binding.root
     }
 }

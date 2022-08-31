@@ -10,8 +10,6 @@ import com.example.mytask.databinding.FragmentBlankAddedUniversityBinding
 
 class BlankAddedUniversityFragment : Fragment() {
 
-    private val blankAddedUniversityViewModel = ViewModelProvider(this).get(BlankAddedUniversityViewModel::class.java)
-
     private lateinit var binding: FragmentBlankAddedUniversityBinding
 
     companion object {
@@ -28,8 +26,11 @@ class BlankAddedUniversityFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         binding = FragmentBlankAddedUniversityBinding.inflate(inflater, container, false)
+        val blankAddedUniversityViewModel = ViewModelProvider(this).get(BlankAddedUniversityViewModel::class.java)
+
         return binding.root
-    }
+     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 

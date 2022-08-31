@@ -11,8 +11,6 @@ import com.example.mytask.databinding.FragmentScrollForSubjectBinding
 
 class ScrollForSubjectFragment : Fragment() {
 
-    private val scrollForSubjectViewModel = ViewModelProvider(this).get(ScrollForSubjectViewModel::class.java)
-
     private lateinit var binding: FragmentScrollForSubjectBinding
 
     companion object {
@@ -29,6 +27,9 @@ class ScrollForSubjectFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         binding = FragmentScrollForSubjectBinding.inflate(inflater, container, false)
+
+        val scrollForSubjectViewModel = ViewModelProvider(this).get(ScrollForSubjectViewModel::class.java)
+
         return binding.root
     }
 

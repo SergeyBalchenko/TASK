@@ -11,8 +11,6 @@ import com.example.mytask.presentation.blankForAddSubject.BlankAddedSubjectViewM
 
 class BlankAddedSubject : Fragment() {
 
-    private val blankAddedSubject = ViewModelProvider(this).get(BlankAddedSubjectViewModel::class.java)
-
     private lateinit var binding: FragmentInfoTeacherBinding
 
     override fun onCreateView(
@@ -21,6 +19,8 @@ class BlankAddedSubject : Fragment() {
     ): View {
         binding = FragmentInfoTeacherBinding.inflate(inflater,container,false)
         // Inflate the layout for this fragment
+        val blankAddedSubject = ViewModelProvider(this).get(BlankAddedSubjectViewModel::class.java)
+
         return binding.root
     }
 }

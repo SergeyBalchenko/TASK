@@ -23,13 +23,6 @@ import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
-    private  val mainViewModel = ViewModelProvider(this).get(MainActyvityViewModel::class.java)
-
-    private val activityViewModel by viewModels<MainViewModel> {
-        ViewModelProvider.AndroidViewModelFactory(
-            application
-        )
-    }
     lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,6 +34,8 @@ class MainActivity : AppCompatActivity() {
             .replace(R.id.container, WelcomeFragment.newInstance(), WelcomeFragment.TAG)
             .addToBackStack(null)
             .commit()
+
+        val mainViewModel = ViewModelProvider(this).get(MainActyvityViewModel::class.java)
 
         createDbSettings()
     }

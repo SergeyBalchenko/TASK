@@ -10,8 +10,6 @@ import com.example.mytask.databinding.AllSubjectWeekBinding
 
 class AllSubjectWeekFragment : Fragment() {
 
-    private val allSubjectWeekViewModel = ViewModelProvider(this).get(AllSubjectWeekViewModel::class.java)
-
     private lateinit var binding: AllSubjectWeekBinding
 
     override fun onCreateView(
@@ -19,6 +17,9 @@ class AllSubjectWeekFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = AllSubjectWeekBinding.inflate(inflater, container, false)
+
+        val allSubjectWeekViewModel = ViewModelProvider(this).get(AllSubjectWeekViewModel::class.java)
+
         return binding.root
     }
 }

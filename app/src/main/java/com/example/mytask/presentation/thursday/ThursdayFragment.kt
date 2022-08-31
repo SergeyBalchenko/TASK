@@ -13,8 +13,6 @@ import com.example.mytask.presentation.blankForAddSubject.BlankAddSubjectFragmen
 
 class ThursdayFragment : Fragment() {
 
-    private val thursdayViewModel = ViewModelProvider(this).get(ThursdayViewModel::class.java)
-
     private lateinit var binding: FragmentThursdayBinding
 
     companion object {
@@ -30,6 +28,9 @@ class ThursdayFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentThursdayBinding.inflate(inflater, container, false)
+
+        val thursdayViewModel = ViewModelProvider(this).get(ThursdayViewModel::class.java)
+
         return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

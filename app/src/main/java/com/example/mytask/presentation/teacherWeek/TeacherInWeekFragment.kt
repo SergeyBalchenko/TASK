@@ -10,8 +10,6 @@ import com.example.mytask.databinding.FragmentTeacherInWeekBinding
 
 class TeacherInWeekFragment : Fragment() {
 
-    private val teacherInWeekViewModel = ViewModelProvider(this).get(TeacherInWeekViewModel::class.java)
-
     private lateinit var binding: FragmentTeacherInWeekBinding
 
     override fun onCreateView(
@@ -19,6 +17,9 @@ class TeacherInWeekFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentTeacherInWeekBinding.inflate(inflater,container,false)
+
+        val teacherInWeekViewModel = ViewModelProvider(this).get(TeacherInWeekViewModel::class.java)
+
         return binding.root
     }
 }

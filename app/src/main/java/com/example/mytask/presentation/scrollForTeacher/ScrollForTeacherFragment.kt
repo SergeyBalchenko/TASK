@@ -9,7 +9,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.mytask.databinding.FragmentScrollForTeacherBinding
 
 class ScrollForTeacherFragment : Fragment() {
-    private val scrollForTeacherViewModel = ViewModelProvider(this).get(ScrollForTeacherViewModel::class.java)
 
     private lateinit var binding: FragmentScrollForTeacherBinding
 
@@ -27,6 +26,9 @@ class ScrollForTeacherFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         binding = FragmentScrollForTeacherBinding.inflate(inflater, container, false)
+
+        val scrollForTeacherViewModel = ViewModelProvider(this).get(ScrollForTeacherViewModel::class.java)
+
         return binding.root
     }
 

@@ -18,7 +18,6 @@ import com.example.mytask.presentation.scrollForTeacher.ScrollForTeacherFragment
 
 class MainFragment: Fragment() {
 
-    private val mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
     private lateinit var binding: MainScreenBinding
 
     companion object {
@@ -35,6 +34,9 @@ class MainFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = MainScreenBinding.inflate(inflater, container, false)
+
+        val mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+
         return binding.root
     }
 

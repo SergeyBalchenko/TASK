@@ -10,8 +10,6 @@ import com.example.mytask.databinding.FragmentBlankAddSubjectBinding
 
 class BlankAddSubjectFragment : Fragment() {
 
-    private val blankAddedSubjectViewModel = ViewModelProvider(this).get(BlankAddedSubjectViewModel::class.java)
-
     private lateinit var binding: FragmentBlankAddSubjectBinding
 
     companion object {
@@ -28,6 +26,9 @@ class BlankAddSubjectFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         binding = FragmentBlankAddSubjectBinding.inflate(inflater, container, false)
+
+        val blankAddedSubjectViewModel = ViewModelProvider(this).get(BlankAddedSubjectViewModel::class.java)
+
         return binding.root}
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

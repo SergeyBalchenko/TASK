@@ -12,8 +12,6 @@ import com.example.mytask.presentation.main.MainFragment
 
 class WelcomeFragment : Fragment() {
 
-    private val wednesdayViewModel = ViewModelProvider(this).get(WelcomeViewModel::class.java)
-
     private lateinit var binding: FragmentWelcomeBinding
 
     companion object {
@@ -30,6 +28,9 @@ class WelcomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentWelcomeBinding.inflate(inflater, container, false)
+
+        val wednesdayViewModel = ViewModelProvider(this).get(WelcomeViewModel::class.java)
+
         return binding.root
     }
 

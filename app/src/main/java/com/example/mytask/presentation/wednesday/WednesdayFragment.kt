@@ -12,8 +12,6 @@ import com.example.mytask.presentation.blankForAddSubject.BlankAddSubjectFragmen
 
 class WednesdayFragment : Fragment() {
 
-    private val wednesdayViewModel = ViewModelProvider(this).get(WednesdayViewModel::class.java)
-
     private lateinit var binding: FragmentWednesdayBinding
 
     companion object {
@@ -30,6 +28,9 @@ class WednesdayFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         binding = FragmentWednesdayBinding.inflate(inflater, container, false)
+
+        val wednesdayViewModel = ViewModelProvider(this).get(WednesdayViewModel::class.java)
+
         return binding.root
 
     }

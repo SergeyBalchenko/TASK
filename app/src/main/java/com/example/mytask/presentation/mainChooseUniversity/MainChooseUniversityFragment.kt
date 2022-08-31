@@ -10,7 +10,6 @@ import com.example.mytask.databinding.FragmentMainChooseUniersityBinding
 import com.example.mytask.presentation.mainChooseUniversity.MainChooseUniversityViewModel
 
 class MainChooseUniversityFragment : Fragment() {
-    private val mainChooseUniersityViewModule = ViewModelProvider(this).get(MainChooseUniversityViewModel::class.java)
 
     private lateinit var binding: FragmentMainChooseUniersityBinding
 
@@ -29,6 +28,9 @@ class MainChooseUniversityFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         binding = FragmentMainChooseUniersityBinding.inflate(inflater, container, false)
+
+        val mainChooseUniersityViewModule = ViewModelProvider(this).get(MainChooseUniversityViewModel::class.java)
+
         return binding.root
     }
 

@@ -11,7 +11,6 @@ import com.example.mytask.presentation.info_teacher.InfoTeacherViewModel
 
 class InfoTeacher : Fragment() {
 
-    private  val infoTeacherViewModel = ViewModelProvider(this).get(InfoTeacherViewModel::class.java)
     private lateinit var binding: FragmentViewTeacherWeekBinding
 
     override fun onCreateView(
@@ -19,6 +18,8 @@ class InfoTeacher : Fragment() {
         savedInstanceState: Bundle?
     ): View {
        binding = FragmentViewTeacherWeekBinding.inflate(inflater,container,false)
+
+        val infoTeacherViewModel = ViewModelProvider(this).get(InfoTeacherViewModel::class.java)
 
         return binding.root
     }

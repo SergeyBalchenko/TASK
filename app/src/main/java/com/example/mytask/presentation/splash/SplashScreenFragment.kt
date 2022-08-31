@@ -12,8 +12,6 @@ import com.example.mytask.databinding.SplashScreenBinding
 @SuppressLint("CustomSplashScreen")
 class SplashScreenFragment : Fragment() {
 
-    private val splashScreenViewModel = ViewModelProvider(this).get(SplashScreenViewModel::class.java)
-
     private lateinit var binding: SplashScreenBinding
 
     override fun onCreateView(
@@ -21,6 +19,9 @@ class SplashScreenFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = SplashScreenBinding.inflate(inflater,container,false)
+
+        val splashScreenViewModel = ViewModelProvider(this).get(SplashScreenViewModel::class.java)
+
 
         return binding.root
     }

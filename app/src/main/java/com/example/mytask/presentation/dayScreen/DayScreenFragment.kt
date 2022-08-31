@@ -13,8 +13,6 @@ import com.example.mytask.presentation.blankForAddSubject.BlankAddSubjectFragmen
 class DayScreenFragment : Fragment() {
     private lateinit var binding: DayScreenFragmentBinding
 
-    private val dayScreenViewModel = ViewModelProvider(this).get(DayScreenViewModel::class.java)
-
     companion object {
         val TAG = DayScreenFragment::class.simpleName
 
@@ -29,6 +27,9 @@ class DayScreenFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = DayScreenFragmentBinding.inflate(inflater, container, false)
+
+        val dayScreenViewModel = ViewModelProvider(this).get(DayScreenViewModel::class.java)
+
         return binding.root
     }
 

@@ -10,8 +10,6 @@ import com.example.mytask.databinding.FragmentBlankAddedTeacherBinding
 
 class BlankAddedTeacherFragment : Fragment() {
 
-    private val blankAddedUniversityViewModel = ViewModelProvider(this).get(BlankAddedTeacherViewModel::class.java)
-
     private lateinit var binding: FragmentBlankAddedTeacherBinding
 
     companion object {
@@ -28,8 +26,13 @@ class BlankAddedTeacherFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         binding = FragmentBlankAddedTeacherBinding.inflate(inflater, container, false)
+
+        val blankAddedUniversityViewModel =
+            ViewModelProvider(this).get(BlankAddedTeacherViewModel::class.java)
+
         return binding.root}
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonBack.setOnClickListener {
