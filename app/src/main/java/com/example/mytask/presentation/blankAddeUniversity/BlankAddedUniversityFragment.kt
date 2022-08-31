@@ -5,9 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
 import com.example.mytask.databinding.FragmentBlankAddedUniversityBinding
 
 class BlankAddedUniversityFragment : Fragment() {
+
+    private val blankAddedUniversityViewModel = ViewModelProvider(this).get(BlankAddedUniversityViewModel::class.java)
 
     private lateinit var binding: FragmentBlankAddedUniversityBinding
 

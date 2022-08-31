@@ -5,12 +5,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
 import com.example.mytask.R
 import com.example.mytask.databinding.FragmentThursdayBinding
 import com.example.mytask.presentation.StartScreen.StartScreenFragment
 import com.example.mytask.presentation.blankForAddSubject.BlankAddSubjectFragment
 
 class ThursdayFragment : Fragment() {
+
+    private val thursdayViewModel = ViewModelProvider(this).get(ThursdayViewModel::class.java)
+
     private lateinit var binding: FragmentThursdayBinding
 
     companion object {

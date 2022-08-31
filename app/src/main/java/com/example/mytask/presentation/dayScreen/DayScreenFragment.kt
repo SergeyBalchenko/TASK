@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.example.mytask.R
 import com.example.mytask.databinding.DayScreenFragmentBinding
 import com.example.mytask.presentation.blankForAddSubject.BlankAddSubjectFragment
@@ -11,6 +12,8 @@ import com.example.mytask.presentation.blankForAddSubject.BlankAddSubjectFragmen
 
 class DayScreenFragment : Fragment() {
     private lateinit var binding: DayScreenFragmentBinding
+
+    private val dayScreenViewModel = ViewModelProvider(this).get(DayScreenViewModel::class.java)
 
     companion object {
         val TAG = DayScreenFragment::class.simpleName

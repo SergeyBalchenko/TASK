@@ -1,14 +1,18 @@
 package com.example.mytask.presentation.splash
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.example.mytask.databinding.SplashScreenBinding
 
-class SplashScreenFragment  : Fragment() {
+@SuppressLint("CustomSplashScreen")
+class SplashScreenFragment : Fragment() {
+
+    private val splashScreenViewModel = ViewModelProvider(this).get(SplashScreenViewModel::class.java)
 
     private lateinit var binding: SplashScreenBinding
 

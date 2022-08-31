@@ -5,9 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelStore
 import com.example.mytask.databinding.FragmentScrollForSubjectBinding
 
 class ScrollForSubjectFragment : Fragment() {
+
+    private val scrollForSubjectViewModel = ViewModelProvider(this).get(ScrollForSubjectViewModel::class.java)
 
     private lateinit var binding: FragmentScrollForSubjectBinding
 

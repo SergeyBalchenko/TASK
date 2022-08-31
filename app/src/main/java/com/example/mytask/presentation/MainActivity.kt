@@ -1,7 +1,12 @@
 package com.example.mytask.presentation
 
 import android.os.Bundle
+import android.view.View
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.example.mytask.R
 import com.example.mytask.data.db.UniversityDatabase
@@ -12,11 +17,19 @@ import com.example.mytask.data.entities.University
 import com.example.mytask.data.entities.relations.ClassroomSubjectCrossRef
 import com.example.mytask.data.entities.relations.TeacherSubjectCrossRef
 import com.example.mytask.databinding.ActivityMainBinding
+import com.example.mytask.presentation.main.MainViewModel
 import com.example.mytask.presentation.welcome.WelcomeFragment
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
+    private  val mainViewModel = ViewModelProvider(this).get(MainActyvityViewModel::class.java)
+
+    private val activityViewModel by viewModels<MainViewModel> {
+        ViewModelProvider.AndroidViewModelFactory(
+            application
+        )
+    }
     lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,6 +43,11 @@ class MainActivity : AppCompatActivity() {
             .commit()
 
         createDbSettings()
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
     private fun createDbSettings() {
