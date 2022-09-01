@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.example.mytask.databinding.FragmentBlankAddedTeacherBinding
 
 class BlankAddedTeacherFragment : Fragment() {
@@ -24,8 +25,13 @@ class BlankAddedTeacherFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentBlankAddedTeacherBinding.inflate(inflater, container, false)
+
+        val blankAddedUniversityViewModel =
+            ViewModelProvider(this).get(BlankAddedTeacherViewModel::class.java)
+
         return binding.root}
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonBack.setOnClickListener {

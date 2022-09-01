@@ -1,16 +1,17 @@
 package com.example.mytask.presentation.wednesday
-
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
 import com.example.mytask.R
 import com.example.mytask.databinding.FragmentWednesdayBinding
 import com.example.mytask.presentation.StartScreen.StartScreenFragment
 import com.example.mytask.presentation.blankForAddSubject.BlankAddSubjectFragment
 
 class WednesdayFragment : Fragment() {
+
     private lateinit var binding: FragmentWednesdayBinding
 
     companion object {
@@ -26,7 +27,11 @@ class WednesdayFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentWednesdayBinding.inflate(inflater, container, false)
+
+        val wednesdayViewModel = ViewModelProvider(this).get(WednesdayViewModel::class.java)
+
         return binding.root
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

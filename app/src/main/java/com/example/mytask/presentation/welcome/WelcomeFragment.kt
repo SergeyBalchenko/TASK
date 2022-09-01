@@ -5,12 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.viewbinding.ViewBinding
+import androidx.lifecycle.ViewModelProvider
 import com.example.mytask.R
 import com.example.mytask.databinding.FragmentWelcomeBinding
 import com.example.mytask.presentation.main.MainFragment
 
-class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
+class WelcomeFragment : Fragment() {
 
     private lateinit var binding: FragmentWelcomeBinding
 
@@ -28,6 +28,9 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentWelcomeBinding.inflate(inflater, container, false)
+
+        val wednesdayViewModel = ViewModelProvider(this).get(WelcomeViewModel::class.java)
+
         return binding.root
     }
 

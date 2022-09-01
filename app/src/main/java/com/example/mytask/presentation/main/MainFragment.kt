@@ -5,9 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.example.mytask.R
 import com.example.mytask.databinding.MainScreenBinding
-import com.example.mytask.presentation.mainScrolChooseUniversity.MainScrolChooseUniversity.MainChooseUniersityFragment
+import com.example.mytask.presentation.mainChooseUniversity.MainScrolChooseUniversity.MainChooseUniversityFragment
 import com.example.mytask.presentation.StartScreen.StartScreenFragment
 import com.example.mytask.presentation.blankAddeUniversity.BlankAddedUniversityFragment
 import com.example.mytask.presentation.blankAddedTeacher.BlankAddedTeacherFragment
@@ -33,6 +34,9 @@ class MainFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = MainScreenBinding.inflate(inflater, container, false)
+
+        val mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+
         return binding.root
     }
 
@@ -70,7 +74,7 @@ class MainFragment: Fragment() {
     }
     private fun openMainChooseUniversity(){
         parentFragmentManager.beginTransaction()
-            .replace(R.id.container, MainChooseUniersityFragment.newInstance(), MainChooseUniersityFragment.TAG)
+            .replace(R.id.container, MainChooseUniversityFragment.newInstance(), MainChooseUniversityFragment.TAG)
             .addToBackStack(TAG)
             .commit()
     }
