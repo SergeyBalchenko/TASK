@@ -1,4 +1,4 @@
-package com.example.mytask
+package com.example.mytask.presentation.recyclerView
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.mytask.databinding.FragmentViewTeacherWeekBinding
 
-class FragmentViewTeacherWeek : Fragment() {
+class fragmentViewTeacherWeek : Fragment() {
 
     private lateinit var binding: FragmentViewTeacherWeekBinding
 

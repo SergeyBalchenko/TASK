@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context="presentation.viewDayShedule.ViewDaySheduleFragment"
+    tools:context=".presentation.recyclerView.viewDayShedule.ViewDaySheduleFragment"
     android:background="@color/grey_blank"
     android:padding="@dimen/dp_5"
     android:layout_marginTop="@dimen/dp_10"

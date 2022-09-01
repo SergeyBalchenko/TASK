@@ -7,7 +7,7 @@
     android:background="@color/grey_blank"
     android:layout_marginTop="@dimen/dp_10"
     android:padding="@dimen/dp_5"
-    tools:context=".fragment_view_info_teacher">
+    tools:context=".presentation.recyclerView.fragment_view_info_teacher">
 
     <TextView
         android:id="@+id/name_teacher"

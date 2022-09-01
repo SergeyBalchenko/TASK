@@ -1,4 +1,4 @@
-package com.example.mytask.presentation.viewDayShedule
+package com.example.mytask.presentation.recyclerView.viewDayShedule
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
