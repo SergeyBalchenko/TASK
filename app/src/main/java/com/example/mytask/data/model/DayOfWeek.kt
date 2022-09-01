@@ -1,5 +1,8 @@
 package com.example.mytask.data.model
 
-public class DayOfWeek {
 
+class DayOfWeek {
+//    val id : Long,
+//    val name :String,
+//    val age : String
 }

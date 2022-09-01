@@ -5,12 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
 import com.example.mytask.R
 import com.example.mytask.databinding.FragmentTuesdayBinding
 import com.example.mytask.presentation.StartScreen.StartScreenFragment
 import com.example.mytask.presentation.blankForAddSubject.BlankAddSubjectFragment
 
 class TuesdayFragment : Fragment() {
+
     private  lateinit var binding: FragmentTuesdayBinding
 
     companion object {
@@ -26,6 +28,9 @@ class TuesdayFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentTuesdayBinding.inflate(inflater, container, false)
+
+        val tuesdayViewModel = ViewModelProvider(this).get(TuesdayViewModel::class.java)
+
         return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

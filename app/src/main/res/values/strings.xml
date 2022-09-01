@@ -27,6 +27,8 @@
     <string name="hello_moto">Hello Motherfucker</string>
     <string name="delete">Delete</string>
     <string name="remove">Remove</string>
+    <string name="move_up">Move Up</string>
+    <string name="move_down">Move Down</string>
     <string name="subject">Subject</string>
     <string name="teacher">Teacher</string>
     <string name="teacher_week">Teacher in a week</string>

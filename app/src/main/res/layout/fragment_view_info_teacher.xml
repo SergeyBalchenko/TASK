@@ -7,7 +7,7 @@
     android:background="@color/grey_blank"
     android:layout_marginTop="@dimen/dp_10"
     android:padding="@dimen/dp_5"
-    tools:context=".fragment_view_info_teacher">
+    tools:context=".presentation.recyclerView.fragment_view_info_teacher">
 
     <TextView
         android:id="@+id/name_teacher"
@@ -18,13 +18,13 @@
         android:text="@string/name_teacher"
         android:textColor="@color/black"
         android:textSize="@dimen/sp_14"
-        app:layout_constraintEnd_toStartOf="@id/name_auditoria"
+        app:layout_constraintEnd_toStartOf="@id/teacher_phone_number"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/name_auditoria"
+        android:id="@+id/teacher_phone_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ellipsize="end"
@@ -47,7 +47,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/name_campus"
+        android:id="@+id/teacher_age"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ellipsize="end"
@@ -70,8 +70,8 @@
         android:textAllCaps="false"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/name_campus"
-        app:layout_constraintTop_toTopOf="@id/name_campus"
+        app:layout_constraintStart_toEndOf="@id/teacher_age"
+        app:layout_constraintTop_toTopOf="@id/teacher_age"
         tools:ignore="TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

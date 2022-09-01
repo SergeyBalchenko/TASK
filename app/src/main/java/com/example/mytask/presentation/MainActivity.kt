@@ -2,6 +2,7 @@ package com.example.mytask.presentation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.example.mytask.R
 import com.example.mytask.data.db.UniversityDatabase
@@ -17,19 +18,29 @@ import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityMainBinding
+   private lateinit var binding: ActivityMainBinding
+   private lateinit var adapter: UsersAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        adapter = UsersAdapter()
+
         supportFragmentManager.beginTransaction()
             .replace(R.id.container, WelcomeFragment.newInstance(), WelcomeFragment.TAG)
             .addToBackStack(null)
             .commit()
 
+        val mainViewModel = ViewModelProvider(this).get(MainActyvityViewModel::class.java)
+
         createDbSettings()
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
     private fun createDbSettings() {

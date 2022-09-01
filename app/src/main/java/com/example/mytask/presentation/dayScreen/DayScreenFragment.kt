@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.example.mytask.R
 import com.example.mytask.databinding.DayScreenFragmentBinding
 import com.example.mytask.presentation.blankForAddSubject.BlankAddSubjectFragment
@@ -26,6 +27,9 @@ class DayScreenFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = DayScreenFragmentBinding.inflate(inflater, container, false)
+
+        val dayScreenViewModel = ViewModelProvider(this).get(DayScreenViewModel::class.java)
+
         return binding.root
     }
 
