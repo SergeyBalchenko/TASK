@@ -59,7 +59,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/name_campus"
+                    android:id="@+id/teacher_age"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:ellipsize="end"
@@ -69,17 +69,17 @@
                     app:layout_constraintHorizontal_chainStyle="spread"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/name_subject"
-                    app:layout_constraintEnd_toStartOf="@id/name_auditoria"/>
+                    app:layout_constraintEnd_toStartOf="@id/teacher_phone_number"/>
 
                 <TextView
-                    android:id="@+id/name_auditoria"
+                    android:id="@+id/teacher_phone_number"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:ellipsize="end"
                     android:fontFamily="@font/poppins_bold"
                     android:text="@string/name_classroom"
                     android:textSize="@dimen/sp_14"
-                    app:layout_constraintStart_toEndOf="@id/name_campus"
+                    app:layout_constraintStart_toEndOf="@id/teacher_age"
                     app:layout_constraintTop_toBottomOf="@id/name_teacher"
                     app:layout_constraintEnd_toStartOf="@id/name_day_week"/>
 
@@ -91,7 +91,7 @@
                     android:fontFamily="@font/poppins_bold"
                     android:text="@string/Monday"
                     android:textSize="@dimen/sp_14"
-                    app:layout_constraintStart_toEndOf="@id/name_auditoria"
+                    app:layout_constraintStart_toEndOf="@id/teacher_phone_number"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/date"/>
 
