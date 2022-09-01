@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="presentation.SubjectWeek.BlankFragment">
+    tools:context="presentation.subjectWeek.BlankFragment">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/start_guideline"
@@ -125,7 +125,7 @@
             android:orientation="vertical"
             android:padding="@dimen/dp_5"
             tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/fragment_view_conteiner_day_shedule"
+            tools:listitem="@layout/fragment_view_day_shedule"
             tools:orientation="vertical" />
     </RelativeLayout>
 

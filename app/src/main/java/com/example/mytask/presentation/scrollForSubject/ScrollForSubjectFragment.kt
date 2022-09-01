@@ -5,19 +5,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.mytask.R
 import com.example.mytask.databinding.FragmentScrollForSubjectBinding
-import com.example.mytask.presentation.main.MainFragment
 
-class ScrollForSubject : Fragment() {
+class ScrollForSubjectFragment : Fragment() {
 
-    private  lateinit var binding: FragmentScrollForSubjectBinding
+    private lateinit var binding: FragmentScrollForSubjectBinding
 
     companion object {
-        val TAG = ScrollForSubject::class.simpleName
+        val TAG = ScrollForSubjectFragment::class.simpleName
 
-        fun newInstance(): ScrollForSubject {
-            return ScrollForSubject()
+        fun newInstance(): ScrollForSubjectFragment {
+            return ScrollForSubjectFragment()
         }
     }
 
@@ -25,7 +23,6 @@ class ScrollForSubject : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
         binding = FragmentScrollForSubjectBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -33,14 +30,12 @@ class ScrollForSubject : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-    binding.buttonBack.setOnClickListener{
-        openMainScreen()
+        binding.buttonBack.setOnClickListener {
+            popBack()
+        }
     }
-    }
-    private fun openMainScreen(){
-        parentFragmentManager.beginTransaction()
-            .replace(R.id.container, MainFragment.newInstance(), MainFragment.TAG)
-            .addToBackStack(MainFragment.TAG)
-            .commit()
+
+    private fun popBack() {
+        parentFragmentManager.popBackStack()
     }
 }

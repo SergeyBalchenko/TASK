@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.scroll_for_teacher.ScrollForTeacher">
+    tools:context=".presentation.scrollForTeacher.ScrollForTeacherFragment">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/start_guideline"

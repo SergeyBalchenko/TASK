@@ -7,26 +7,24 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.mytask.R
 import com.example.mytask.databinding.FragmentTuesdayBinding
-import com.example.mytask.databinding.FragmentWednesdayBinding
-import com.example.mytask.presentation.StartScreen.StartScreen
-import com.example.mytask.presentation.blank_for_add_subject.BlankAddSubject
+import com.example.mytask.presentation.StartScreen.StartScreenFragment
+import com.example.mytask.presentation.blankForAddSubject.BlankAddSubjectFragment
 
-class FragmentTuesday : Fragment() {
+class TuesdayFragment : Fragment() {
     private  lateinit var binding: FragmentTuesdayBinding
 
     companion object {
-        val TAG = FragmentTuesday::class.simpleName
+        val TAG = TuesdayFragment::class.simpleName
 
-        fun  newInstance(): FragmentTuesday {
-            return FragmentTuesday()
+        fun  newInstance(): TuesdayFragment {
+            return TuesdayFragment()
         }
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
+    ): View {
         binding = FragmentTuesdayBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -34,22 +32,19 @@ class FragmentTuesday : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnUpDayWeek.setOnClickListener {
-            openStartScreen()
+            popBack()
         }
         binding.buttonPlusSubject.setOnClickListener {
             openBlankAddSubject()
         }
     }
-    private fun openStartScreen(){
-        parentFragmentManager.beginTransaction()
-            .replace(R.id.container, StartScreen.newInstance(), StartScreen.TAG)
-            .addToBackStack(StartScreen.TAG)
-            .commit()
+    private fun popBack(){
+        parentFragmentManager.popBackStack()
     }
     private fun openBlankAddSubject(){
         parentFragmentManager.beginTransaction()
-            .replace(R.id.container, BlankAddSubject.newInstance(), BlankAddSubject.TAG)
-            .addToBackStack(BlankAddSubject.TAG)
+            .replace(R.id.container, BlankAddSubjectFragment.newInstance(), BlankAddSubjectFragment.TAG)
+            .addToBackStack(BlankAddSubjectFragment.TAG)
             .commit()
     }
 }

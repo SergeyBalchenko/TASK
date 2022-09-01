@@ -6,28 +6,25 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.mytask.R
-import com.example.mytask.databinding.DayScreenFragmentBinding
 import com.example.mytask.databinding.FragmentWednesdayBinding
-import com.example.mytask.presentation.StartScreen.StartScreen
-import com.example.mytask.presentation.blank_for_add_subject.BlankAddSubject
-import com.example.mytask.presentation.day_screen.DayScreenFragment
+import com.example.mytask.presentation.StartScreen.StartScreenFragment
+import com.example.mytask.presentation.blankForAddSubject.BlankAddSubjectFragment
 
-class FragmentWednesday : Fragment() {
+class WednesdayFragment : Fragment() {
     private lateinit var binding: FragmentWednesdayBinding
 
     companion object {
-        val TAG = FragmentWednesday::class.simpleName
+        val TAG = WednesdayFragment::class.simpleName
 
-        fun newInstance(): FragmentWednesday {
-            return FragmentWednesday()
+        fun newInstance(): WednesdayFragment {
+            return WednesdayFragment()
         }
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
+    ): View {
         binding = FragmentWednesdayBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -36,22 +33,19 @@ class FragmentWednesday : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnUpDayWeek.setOnClickListener {
-            openStartScreen()
+            popBack()
         }
         binding.buttonPlusSubject.setOnClickListener {
             openBlankAddSubject()
         }
     }
-    private fun openStartScreen(){
-        parentFragmentManager.beginTransaction()
-            .replace(R.id.container, StartScreen.newInstance(), StartScreen.TAG)
-            .addToBackStack(StartScreen.TAG)
-            .commit()
+    private fun popBack(){
+        parentFragmentManager.popBackStack()
     }
     private fun openBlankAddSubject(){
         parentFragmentManager.beginTransaction()
-            .replace(R.id.container, BlankAddSubject.newInstance(), BlankAddSubject.TAG)
-            .addToBackStack(BlankAddSubject.TAG)
+            .replace(R.id.container, BlankAddSubjectFragment.newInstance(), BlankAddSubjectFragment.TAG)
+            .addToBackStack(BlankAddSubjectFragment.TAG)
             .commit()
     }
 }

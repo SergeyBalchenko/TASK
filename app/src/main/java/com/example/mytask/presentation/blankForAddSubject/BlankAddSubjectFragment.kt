@@ -1,23 +1,21 @@
-package com.example.mytask.presentation.blank_for_add_subject
+package com.example.mytask.presentation.blankForAddSubject
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.mytask.R
 import com.example.mytask.databinding.FragmentBlankAddSubjectBinding
-import com.example.mytask.presentation.main.MainFragment
 
-class BlankAddSubject : Fragment() {
+class BlankAddSubjectFragment : Fragment() {
 
     private lateinit var binding: FragmentBlankAddSubjectBinding
 
     companion object {
-        val TAG = BlankAddSubject::class.simpleName
+        val TAG = BlankAddSubjectFragment::class.simpleName
 
-        fun newInstance(): BlankAddSubject {
-            return BlankAddSubject()
+        fun newInstance(): BlankAddSubjectFragment {
+            return BlankAddSubjectFragment()
         }
     }
 
@@ -25,7 +23,6 @@ class BlankAddSubject : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
         binding = FragmentBlankAddSubjectBinding.inflate(inflater, container, false)
         return binding.root}
 
@@ -33,13 +30,10 @@ class BlankAddSubject : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonBack.setOnClickListener {
-            openMainScreen()
+            popBack()
         }
     }
-    private fun openMainScreen(){
-        parentFragmentManager.beginTransaction()
-            .replace(R.id.container, MainFragment.newInstance(), MainFragment.TAG)
-            .addToBackStack(MainFragment.TAG)
-            .commit()
+    private fun popBack(){
+        parentFragmentManager.popBackStack()
     }
 }

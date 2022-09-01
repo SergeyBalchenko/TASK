@@ -1,19 +1,20 @@
-package com.example.mytask.presentation.blank_add_subject
+package com.example.mytask.presentation.blankAddSubject
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.mytask.R
+import com.example.mytask.databinding.FragmentInfoTeacherBinding
 
 class BlankAdededSubject : Fragment() {
+    private lateinit var binding: FragmentInfoTeacherBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_blank_adeded_subject, container, false)
+    ): View {
+        binding = FragmentInfoTeacherBinding.inflate(inflater,container,false)
+        return binding.root
     }
 }
