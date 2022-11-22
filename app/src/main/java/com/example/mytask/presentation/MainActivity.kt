@@ -26,7 +26,15 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        adapter = UsersAdapter()
+        adapter = UsersAdapter(
+            listOf(
+                Teacher("Serega", "066", 10),
+                Teacher("Serega", "066", 10),
+                Teacher("Serega", "066", 10),
+                Teacher("Serega", "066", 10),
+                Teacher("Serega", "066", 10),
+            )
+        )
 
         supportFragmentManager.beginTransaction()
             .replace(R.id.container, WelcomeFragment.newInstance(), WelcomeFragment.TAG)

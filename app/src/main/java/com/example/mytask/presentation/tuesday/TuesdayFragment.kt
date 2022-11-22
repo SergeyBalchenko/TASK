@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import com.example.mytask.R
 import com.example.mytask.databinding.FragmentTuesdayBinding
-import com.example.mytask.presentation.StartScreen.StartScreenFragment
 import com.example.mytask.presentation.blankForAddSubject.BlankAddSubjectFragment
 
 class TuesdayFragment : Fragment() {

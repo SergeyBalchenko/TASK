@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.mytask.R
 import com.example.mytask.databinding.MainScreenBinding
 import com.example.mytask.presentation.mainChooseUniversity.MainScrolChooseUniversity.MainChooseUniversityFragment
-import com.example.mytask.presentation.StartScreen.StartScreenFragment
+import com.example.mytask.presentation.startScreen.StartScreenFragment
 import com.example.mytask.presentation.blankAddeUniversity.BlankAddedUniversityFragment
 import com.example.mytask.presentation.blankAddedTeacher.BlankAddedTeacherFragment
 import com.example.mytask.presentation.blankForAddSubject.BlankAddSubjectFragment

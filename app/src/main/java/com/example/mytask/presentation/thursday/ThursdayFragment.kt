@@ -7,8 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import com.example.mytask.R
+import com.example.mytask.data.entities.Teacher
 import com.example.mytask.databinding.FragmentThursdayBinding
-import com.example.mytask.presentation.StartScreen.StartScreenFragment
+import com.example.mytask.presentation.UsersAdapter
 import com.example.mytask.presentation.blankForAddSubject.BlankAddSubjectFragment
 
 class ThursdayFragment : Fragment() {
@@ -42,6 +43,18 @@ class ThursdayFragment : Fragment() {
         binding.buttonPlusSubject.setOnClickListener {
             openBlankAddSubject()
         }
+
+        val adapter = UsersAdapter(
+            listOf(
+                Teacher("Serega", "066", 10),
+                Teacher("Serega", "066", 10),
+                Teacher("Serega", "066", 10),
+                Teacher("Serega", "066", 10),
+                Teacher("Serega", "066", 10),
+            )
+        )
+
+        binding.recyclerViewSubjectInWeek.adapter = adapter
     }
     private fun popBack(){
         parentFragmentManager.popBackStack()

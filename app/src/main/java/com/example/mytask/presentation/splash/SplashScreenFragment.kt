@@ -22,7 +22,6 @@ class SplashScreenFragment : Fragment() {
 
         val splashScreenViewModel = ViewModelProvider(this).get(SplashScreenViewModel::class.java)
 
-
         return binding.root
     }
 }

@@ -1,4 +1,4 @@
-package com.example.mytask.presentation.StartScreen
+package com.example.mytask.presentation.startScreen
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,16 +11,11 @@ import com.example.mytask.databinding.StartScreenBinding
 import com.example.mytask.presentation.dayScreen.DayScreenFragment
 import com.example.mytask.presentation.friday.FridayFragment
 import com.example.mytask.presentation.main.MainFragment
-import com.example.mytask.presentation.main.MainFragment.Companion.newInstance
-import com.example.mytask.presentation.startScreen.StartScreenViewModel
 import com.example.mytask.presentation.thursday.ThursdayFragment
 import com.example.mytask.presentation.tuesday.TuesdayFragment
 import com.example.mytask.presentation.wednesday.WednesdayFragment
 
 class StartScreenFragment: Fragment() {
-
-    private val startScreenViewModel = ViewModelProvider(this).get(StartScreenViewModel::class.java)
-
     private lateinit var binding: StartScreenBinding
 
     companion object {
@@ -37,6 +32,9 @@ class StartScreenFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = StartScreenBinding.inflate(inflater, container, false)
+
+    val startScreenViewModel = ViewModelProvider(this).get(StartScreenViewModel::class.java)
+
         return binding.root
     }
 
