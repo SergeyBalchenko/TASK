@@ -1,17 +1,18 @@
-package com.example.mytask.data
+package com.example.mytask.data.repository
 
-import com.example.mytask.data.di.AppModule
-import com.example.mytask.data.model.HourlyUnits
+import com.example.mytask.data.api.WeatherApi
 import com.example.mytask.data.model.Weather
-import com.example.mytask.data.model.WeatherList
+import com.example.mytask.domain.repository.WeatherRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-class Repository {
+class WeatherRepositoryRemote(
+    private val weatherApi: WeatherApi
+) : WeatherRepository {
 
-    suspend fun getTempo(): Result<Weather> = withContext(Dispatchers.IO) {
+    override suspend fun getWeather(): Result<Weather> = withContext(Dispatchers.IO) {
         try {
-            val result = AppModule.api.getTemperature(44.0,49.0)
+            val result = weatherApi.getTemperature(44.0, 49.0)
             if (result.isSuccessful) {
                 val mainModel = result.body()!!
                 return@withContext Result.success(mainModel)

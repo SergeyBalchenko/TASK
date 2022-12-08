@@ -1,4 +1,4 @@
-package com.example.mytask.presentation.blankAddeUniversity
+package com.example.mytask.presentation.blankAddedUniversity
 
 import androidx.lifecycle.ViewModel
 

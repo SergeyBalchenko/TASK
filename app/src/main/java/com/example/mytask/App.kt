@@ -1,14 +1,17 @@
 package com.example.mytask
 
 import android.app.Application
-import com.example.mytask.data.app.DaggerAppComponent
+import com.example.mytask.di.AppComponent
+import com.example.mytask.di.DaggerAppComponent
 
-class App: Application() {
+class App : Application() {
 
-    val appComponent = DaggerAppComponent.create()
+    lateinit var appComponent: AppComponent
 
     override fun onCreate() {
         super.onCreate()
-
+        appComponent = DaggerAppComponent.builder()
+            .context(this)
+            .build()
     }
 }

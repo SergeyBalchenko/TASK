@@ -8,17 +8,18 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.mytask.App
 import com.example.mytask.R
-import com.example.mytask.data.model.HourlyUnits
 import com.example.mytask.data.model.Weather
 import com.example.mytask.databinding.MainScreenBinding
 import com.example.mytask.presentation.mainChooseUniversity.MainScrolChooseUniversity.MainChooseUniversityFragment
 import com.example.mytask.presentation.startScreen.StartScreenFragment
-import com.example.mytask.presentation.blankAddeUniversity.BlankAddedUniversityFragment
+import com.example.mytask.presentation.blankAddedUniversity.BlankAddedUniversityFragment
 import com.example.mytask.presentation.blankAddedTeacher.BlankAddedTeacherFragment
 import com.example.mytask.presentation.blankForAddSubject.BlankAddSubjectFragment
 import com.example.mytask.presentation.scrollForSubject.ScrollForSubjectFragment
 import com.example.mytask.presentation.scrollForTeacher.ScrollForTeacherFragment
+import javax.inject.Inject
 
 class MainFragment : Fragment() {
 
@@ -28,12 +29,21 @@ class MainFragment : Fragment() {
 
     private lateinit var viewModel: MainViewModel
 
+    @Inject
+    lateinit var viewModelFactory: MainViewModelFactory
+
     companion object {
         val TAG = MainFragment::class.simpleName
 
         fun newInstance(): MainFragment {
             return MainFragment()
         }
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        viewModel = ViewModelProvider(this, viewModelFactory)[MainViewModel::class.java]
+        (requireActivity().application as App).appComponent.inject(this)
     }
 
     override fun onCreateView(

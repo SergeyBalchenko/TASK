@@ -1,4 +1,4 @@
-package com.example.mytask.presentation.blankAddeUniversity
+package com.example.mytask.presentation.blankAddedUniversity
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

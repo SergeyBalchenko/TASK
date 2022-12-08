@@ -19,7 +19,8 @@ class BlankAddedSubjectViewModel(
 
     fun addSubject(subject: String) {
         val subjectData = Subject(
-            subjectName = subject
+            subjectName = subject,
+            "TEST"
         )
         viewModelScope.launch {
             addSubjectUseCase.invoke(subjectData).fold(
