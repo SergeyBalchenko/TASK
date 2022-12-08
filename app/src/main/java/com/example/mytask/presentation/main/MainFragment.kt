@@ -12,6 +12,7 @@ import com.example.mytask.App
 import com.example.mytask.R
 import com.example.mytask.data.model.Weather
 import com.example.mytask.databinding.MainScreenBinding
+import com.example.mytask.presentation.blankAddSubject.BlankAddedSubjectFragment
 import com.example.mytask.presentation.mainChooseUniversity.MainScrolChooseUniversity.MainChooseUniversityFragment
 import com.example.mytask.presentation.startScreen.StartScreenFragment
 import com.example.mytask.presentation.blankAddedUniversity.BlankAddedUniversityFragment
@@ -42,8 +43,8 @@ class MainFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProvider(this, viewModelFactory)[MainViewModel::class.java]
         (requireActivity().application as App).appComponent.inject(this)
+        viewModel = ViewModelProvider(this, viewModelFactory)[MainViewModel::class.java]
     }
 
     override fun onCreateView(
@@ -152,8 +153,8 @@ class MainFragment : Fragment() {
         parentFragmentManager.beginTransaction()
             .replace(
                 R.id.container,
-                BlankAddSubjectFragment.newInstance(),
-                BlankAddSubjectFragment.TAG
+                BlankAddedSubjectFragment.newInstance(),
+                BlankAddedSubjectFragment.TAG
             )
             .addToBackStack(TAG)
             .commit()

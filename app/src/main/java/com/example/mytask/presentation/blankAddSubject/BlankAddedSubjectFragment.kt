@@ -24,6 +24,12 @@ class BlankAddedSubjectFragment : Fragment() {
     @Inject
     lateinit var viewModelFactory: BlankAddedSubjectViewModelFactory
 
+    companion object {
+
+        val TAG = BlankAddedSubjectFragment::class.simpleName
+        fun newInstance() = BlankAddedSubjectFragment()
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -34,8 +40,8 @@ class BlankAddedSubjectFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProvider(this, viewModelFactory)[BlankAddedSubjectViewModel::class.java]
         (requireActivity().application as App).appComponent.inject(this)
+        viewModel = ViewModelProvider(this, viewModelFactory)[BlankAddedSubjectViewModel::class.java]
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
