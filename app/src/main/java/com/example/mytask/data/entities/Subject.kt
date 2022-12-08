@@ -8,6 +8,4 @@ data class Subject (
 
     @PrimaryKey(autoGenerate = false)
     val subjectName: String,
-
-    val universityName: String
 )

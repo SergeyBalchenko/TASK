@@ -110,7 +110,7 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch {
             classroom.forEach { classroomDao.insertClassroom(it) }
             university.forEach { dao.insertUniversity(it) }
-            subjects.forEach { subjectDao.insertSubject(it) }
+            subjects.forEach { subjectDao.insert(it) }
             teacher.forEach { teacherDao.insertTeacher(it) }
             teacherSubjectCrossRef.forEach { sWtDao.insertTeacherSubjectCrossRef(it) }
             classroomSubjectCrossRef.forEach { cWsDao.insertClassroomSubjectCrossRef(it) }

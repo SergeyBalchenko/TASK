@@ -1,6 +1,6 @@
 package com.example.mytask;
 
-import com.example.mytask.domain.Calculator;
+import com.example.mytask.domain.model.Calculator;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

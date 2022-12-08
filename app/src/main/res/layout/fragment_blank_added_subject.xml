@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.blankAddSubject.BlankAddedSubject">
+    tools:context=".presentation.blankAddSubject.BlankAddedSubjectFragment">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/start_guideline"
@@ -120,14 +120,14 @@
             tools:ignore="TouchTargetSizeCheck" />
 
         <Button
-            android:id="@+id/button_done"
+            android:id="@+id/addButton"
             android:layout_width="@dimen/dp_100"
             android:layout_height="@dimen/dp_40"
             android:layout_below="@id/edit_text_text_subject_name"
             android:layout_alignParentEnd="true"
             android:layout_margin="@dimen/dp_10"
             android:background="@drawable/roundstyle"
-            android:text="@string/done"
+            android:text="@string/add"
             android:textColor="@color/black"
             app:backgroundTint="@color/grey_blank"
             tools:ignore="TouchTargetSizeCheck" />

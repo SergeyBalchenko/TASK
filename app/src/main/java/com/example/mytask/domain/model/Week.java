@@ -1,4 +1,4 @@
-package com.example.mytask.domain;
+package com.example.mytask.domain.model;
 
 public enum Week {
     MONDAY,TUESDAY,WEDNESDAY,THURSDAY,FRIDAY,SATURDAY,SUNDAY

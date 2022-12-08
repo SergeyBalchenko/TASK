@@ -1,4 +1,4 @@
-package com.example.mytask.domain;
+package com.example.mytask.domain.model;
 
 class Subject {
 

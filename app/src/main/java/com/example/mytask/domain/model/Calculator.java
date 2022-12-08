@@ -1,4 +1,4 @@
-package com.example.mytask.domain;
+package com.example.mytask.domain.model;
 
 public class Calculator {
 
