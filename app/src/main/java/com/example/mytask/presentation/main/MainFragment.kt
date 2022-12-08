@@ -65,23 +65,14 @@ class MainFragment : Fragment() {
         binding.buttonWeekSchedule.setOnClickListener {
             openStartScreen()
         }
-        binding.buttonShowMoreUniversity.setOnClickListener {
-            openMainChooseUniversity()
-        }
         binding.buttonPlusUniversity.setOnClickListener {
             openBlankAddedUniversity()
-        }
-        binding.buttonShowMoreTeacher.setOnClickListener {
-            openScrollForTeacher()
         }
         binding.buttonAddTeacher.setOnClickListener {
             openBlankAddedTeacher()
         }
         binding.buttonPlusSubject.setOnClickListener {
             openBlankAddSubject()
-        }
-        binding.buttonShowMoreSubject.setOnClickListener {
-            openScrollForSubject()
         }
 
         viewModel.myMonewy.observe(viewLifecycleOwner) { mainModel ->
