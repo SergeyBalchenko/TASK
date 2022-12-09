@@ -1,6 +1,7 @@
 package com.example.mytask.data.dao
 
 import androidx.room.*
+import com.example.mytask.data.entities.Subject
 import com.example.mytask.data.entities.Teacher
 import com.example.mytask.data.entities.relations.TeacherWithSubject
 
@@ -13,4 +14,7 @@ interface TeacherDao {
     @Transaction
     @Query("SELECT * FROM teacher WHERE teacherName = :teacherName")
     suspend fun getSubjectsOfTeacher(teacherName: String): List<TeacherWithSubject>
+    @Query("SELECT * FROM Teacher")
+    suspend fun get(): List<Teacher>
+
 }

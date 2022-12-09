@@ -182,12 +182,12 @@
             tools:ignore="TouchTargetSizeCheck" />
 
         <Button
-            android:id="@+id/button_done"
+            android:id="@+id/button_add"
             android:layout_width="@dimen/dp_100"
             android:layout_height="@dimen/dp_40"
             android:layout_margin="@dimen/dp_10"
             android:background="@drawable/roundstyle"
-            android:text="@string/done"
+            android:text="@string/add"
             android:textColor="@color/black"
             app:backgroundTint="@color/grey_blank"
             app:layout_constraintBottom_toBottomOf="parent"

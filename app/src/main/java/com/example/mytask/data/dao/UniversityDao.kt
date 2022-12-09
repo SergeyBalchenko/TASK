@@ -10,6 +10,9 @@ interface UniversityDao{
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertUniversity(university: University)
 
+    @Query("SELECT * FROM University")
+    suspend fun get(): List<University>
+
     @Transaction
     @Query("SELECT * FROM university WHERE universityName = :universityName")
     suspend fun getUniversityWithSubject(universityName: String): List<UniversityWithSubject>

@@ -17,7 +17,6 @@ import com.example.mytask.presentation.mainChooseUniversity.MainScrolChooseUnive
 import com.example.mytask.presentation.startScreen.StartScreenFragment
 import com.example.mytask.presentation.blankAddedUniversity.BlankAddedUniversityFragment
 import com.example.mytask.presentation.blankAddedTeacher.BlankAddedTeacherFragment
-import com.example.mytask.presentation.blankForAddSubject.BlankAddSubjectFragment
 import com.example.mytask.presentation.scrollForSubject.ScrollForSubjectFragment
 import com.example.mytask.presentation.scrollForTeacher.ScrollForTeacherFragment
 import javax.inject.Inject
@@ -75,7 +74,7 @@ class MainFragment : Fragment() {
             openBlankAddSubject()
         }
 
-        viewModel.myMonewy.observe(viewLifecycleOwner) { mainModel ->
+        viewModel.myTemp.observe(viewLifecycleOwner) { mainModel ->
             binding.tvTemperarure.text = "${mainModel.hourly.temperature_2m[12]}°C"
         }
 
@@ -96,17 +95,6 @@ class MainFragment : Fragment() {
             .commit()
     }
 
-    private fun openMainChooseUniversity() {
-        parentFragmentManager.beginTransaction()
-            .replace(
-                R.id.container,
-                MainChooseUniversityFragment.newInstance(),
-                MainChooseUniversityFragment.TAG
-            )
-            .addToBackStack(TAG)
-            .commit()
-    }
-
     private fun openBlankAddedUniversity() {
         parentFragmentManager.beginTransaction()
             .replace(
@@ -118,16 +106,6 @@ class MainFragment : Fragment() {
             .commit()
     }
 
-    private fun openScrollForTeacher() {
-        parentFragmentManager.beginTransaction()
-            .replace(
-                R.id.container,
-                ScrollForTeacherFragment.newInstance(),
-                ScrollForTeacherFragment.TAG
-            )
-            .addToBackStack(TAG)
-            .commit()
-    }
 
     private fun openBlankAddedTeacher() {
         parentFragmentManager.beginTransaction()
@@ -151,16 +129,6 @@ class MainFragment : Fragment() {
             .commit()
     }
 
-    private fun openScrollForSubject() {
-        parentFragmentManager.beginTransaction()
-            .replace(
-                R.id.container,
-                ScrollForSubjectFragment.newInstance(),
-                ScrollForSubjectFragment.TAG
-            )
-            .addToBackStack(TAG)
-            .commit()
-    }
 
     @SuppressLint("NotifyDataSetChanged")
     fun setList(list: List<Weather>) {

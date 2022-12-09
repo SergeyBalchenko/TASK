@@ -7,6 +7,8 @@ import com.example.mytask.di.module.RoomModule
 import com.example.mytask.di.module.UseCaseModule
 import com.example.mytask.presentation.MainActivity
 import com.example.mytask.presentation.blankAddSubject.BlankAddedSubjectFragment
+import com.example.mytask.presentation.blankAddedTeacher.BlankAddedTeacherFragment
+import com.example.mytask.presentation.blankAddedUniversity.BlankAddedUniversityFragment
 import com.example.mytask.presentation.main.MainFragment
 import dagger.BindsInstance
 import dagger.Component
@@ -36,4 +38,6 @@ interface AppComponent {
 
     fun inject(fragment: BlankAddedSubjectFragment)
     fun inject(fragment: MainFragment)
+    fun inject(fragment: BlankAddedUniversityFragment)
+    fun inject(fragment: BlankAddedTeacherFragment)
 }

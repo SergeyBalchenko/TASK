@@ -15,7 +15,7 @@ class MainViewModel(
 ) : ViewModel() {
 
     private val _myMonewy: MutableLiveData<Weather> = MutableLiveData()
-    val myMonewy: LiveData<Weather> get() = _myMonewy
+    val myTemp: LiveData<Weather> get() = _myMonewy
 
     private val _errors = MutableLiveData<String>()
     val errors: LiveData<String> get() = _errors

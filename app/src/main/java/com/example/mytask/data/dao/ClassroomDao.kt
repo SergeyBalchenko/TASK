@@ -11,6 +11,9 @@ interface ClassroomDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertClassroom(classroom: Classroom)
 
+    @Query("SELECT * FROM Classroom")
+    suspend fun getClassroom(): List<Classroom>
+
     @Transaction
     @Query("SELECT * FROM classroom WHERE classroomName =:classroomName")
     suspend fun getClassroomWithSubject(classroomName: String): List<ClassroomWithSubject>
@@ -18,4 +21,6 @@ interface ClassroomDao {
     @Transaction
     @Query("SELECT * FROM subject WHERE subjectName = :subjectName")
     suspend fun getTeacherOfSubject(subjectName: String): List<SubjectWithClassroom>
+
+
 }

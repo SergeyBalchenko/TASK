@@ -23,7 +23,6 @@ class BlankAddedSubjectFragment : Fragment() {
 
     @Inject
     lateinit var viewModelFactory: BlankAddedSubjectViewModelFactory
-
     companion object {
 
         val TAG = BlankAddedSubjectFragment::class.simpleName
@@ -61,7 +60,8 @@ class BlankAddedSubjectFragment : Fragment() {
                 parentFragmentManager.popBackStack()
             }
             is Effect.ErrorAdded -> {
-                Toast.makeText(requireActivity(), "Can't add a subject", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireActivity(), "Can't add a subject", Toast.LENGTH_SHORT)
+                    .show()
             }
         }
     }
