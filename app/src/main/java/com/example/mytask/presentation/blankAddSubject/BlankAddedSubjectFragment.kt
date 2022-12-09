@@ -47,6 +47,10 @@ class BlankAddedSubjectFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setupClickListeners()
 
+        binding.buttonBack.setOnClickListener{
+            popBack()
+        }
+
         viewLifecycleOwner.lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.effects.onEach(::handleUiEvent).launchIn(this)
@@ -71,5 +75,8 @@ class BlankAddedSubjectFragment : Fragment() {
             val subject = binding.editTextTextSubjectName.text.toString()
             viewModel.addSubject(subject)
         }
+    }
+    private  fun popBack(){
+        parentFragmentManager.popBackStack()
     }
 }

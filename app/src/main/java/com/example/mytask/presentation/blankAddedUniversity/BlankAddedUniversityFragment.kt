@@ -50,6 +50,10 @@ class BlankAddedUniversityFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setupClickListeners()
 
+        binding.buttonBack.setOnClickListener{
+            popBack()
+        }
+
         viewLifecycleOwner.lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.effects.onEach(::handleUiEvent).launchIn(this)
@@ -75,5 +79,8 @@ class BlankAddedUniversityFragment : Fragment() {
             val university = binding.editTextTextUniversityName.text.toString()
             viewModel.addUniversity(university)
         }
+    }
+    private fun popBack(){
+        parentFragmentManager.popBackStack()
     }
 }

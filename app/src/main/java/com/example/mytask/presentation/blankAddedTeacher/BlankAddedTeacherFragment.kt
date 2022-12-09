@@ -52,6 +52,10 @@ class BlankAddedTeacherFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setupClickListeners()
 
+        binding.buttonBack.setOnClickListener{
+            popBack()
+        }
+
         viewLifecycleOwner.lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.effects.onEach(::handleUiEvent).launchIn(this)
@@ -80,5 +84,8 @@ class BlankAddedTeacherFragment : Fragment() {
 
             viewModel.addTeacher(teacherPhone, teacherAge, teacherName)
         }
+    }
+    private fun popBack(){
+        parentFragmentManager.popBackStack()
     }
 }
