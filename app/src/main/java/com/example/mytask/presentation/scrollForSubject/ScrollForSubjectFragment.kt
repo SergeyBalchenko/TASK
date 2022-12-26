@@ -27,7 +27,9 @@ class ScrollForSubjectFragment : Fragment() {
     companion object {
         val TAG = ScrollForSubjectFragment::class.simpleName
 
-        fun newInstance() = ScrollForSubjectFragment
+        fun newInstance(): ScrollForSubjectFragment {
+            return ScrollForSubjectFragment()
+        }
     }
 
     override fun onCreateView(

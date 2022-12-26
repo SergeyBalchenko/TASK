@@ -10,6 +10,7 @@ import com.example.mytask.presentation.blankAddSubject.BlankAddedSubjectFragment
 import com.example.mytask.data.api.blankAddedTeacher.BlankAddedTeacherFragment
 import com.example.mytask.presentation.blankAddedUniversity.BlankAddedUniversityFragment
 import com.example.mytask.presentation.main.MainFragment
+import com.example.mytask.presentation.scrollForTeacher.ScrollForTeacherFragment
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
@@ -40,4 +41,5 @@ interface AppComponent {
     fun inject(fragment: MainFragment)
     fun inject(fragment: BlankAddedUniversityFragment)
     fun inject(fragment: BlankAddedTeacherFragment)
+    fun inject(fragment: ScrollForTeacherFragment)
 }

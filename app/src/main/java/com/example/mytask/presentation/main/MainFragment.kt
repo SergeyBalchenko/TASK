@@ -119,8 +119,8 @@ class MainFragment : Fragment() {
         parentFragmentManager.beginTransaction()
             .replace(
                 R.id.container,
-                ScrollForSubjectFragment.newInstance(),
-                StartScreenFragment.TAG
+                ScrollForTeacherFragment.newInstance(),
+                ScrollForTeacherFragment.TAG
             )
             .addToBackStack(TAG)
             .commit()
@@ -131,7 +131,7 @@ class MainFragment : Fragment() {
             .replace(
                 R.id.container,
                 ScrollForSubjectFragment.newInstance(),
-                StartScreenFragment.TAG
+                ScrollForSubjectFragment.TAG
             )
             .addToBackStack(TAG)
             .commit()
@@ -142,7 +142,7 @@ class MainFragment : Fragment() {
             .replace(
                 R.id.container,
                 ScrollForAuditoriumFragment.newInstance(),
-                StartScreenFragment.TAG
+                ScrollForAuditoriumFragment.TAG
             )
             .addToBackStack(TAG)
             .commit()

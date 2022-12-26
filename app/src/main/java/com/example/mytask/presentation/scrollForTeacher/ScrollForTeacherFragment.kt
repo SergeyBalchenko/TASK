@@ -1,28 +1,31 @@
 package com.example.mytask.presentation.scrollForTeacher
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import com.example.mytask.App
 import com.example.mytask.databinding.FragmentScrollForTeacherBinding
-import kotlinx.coroutines.flow.forEach
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 class ScrollForTeacherFragment : Fragment() {
 
     private lateinit var binding: FragmentScrollForTeacherBinding
 
-    // TODO: подключишь viewModel
     private lateinit var viewModel: ScrollForTeacherViewModel
 
     private lateinit var adapter: TeacherListAdapter
+
+    @Inject
+    lateinit var viewModelFactory: ScrollForTeacherViewModelFactory
 
     companion object {
         val TAG = ScrollForTeacherFragment::class.simpleName
@@ -32,20 +35,25 @@ class ScrollForTeacherFragment : Fragment() {
         }
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        diSetup()
+        viewModel = ViewModelProvider(this, viewModelFactory)[ScrollForTeacherViewModel::class.java]
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentScrollForTeacherBinding.inflate(inflater, container, false)
-
-        val scrollForTeacherViewModel =
-            ViewModelProvider(this).get(ScrollForTeacherViewModel::class.java)
-
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        adapter = TeacherListAdapter()
+        binding.teacherRecyclerView.adapter = adapter
 
         binding.buttonBack.setOnClickListener {
             popBack()
@@ -56,6 +64,10 @@ class ScrollForTeacherFragment : Fragment() {
                 viewModel.viewState.onEach(::handleUiState).launchIn(this)
             }
         }
+    }
+
+    private fun diSetup() {
+        (requireActivity().application as App).appComponent.inject(this)
     }
 
     private fun handleUiState(viewState: ViewState) {

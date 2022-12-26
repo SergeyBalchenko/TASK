@@ -45,7 +45,7 @@ class UseCaseModule {
     fun  provideGetTeacherUseCase(
         universityRepository: UniversityRepository
     ): GetTeacherUseCase {
-        return  GetTeacherUseCase(
+        return GetTeacherUseCase(
             universityRepository
         )
     }
