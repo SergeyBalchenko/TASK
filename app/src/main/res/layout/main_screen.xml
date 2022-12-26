@@ -97,7 +97,7 @@
         app:layout_constraintTop_toBottomOf="@id/image_for_main" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_plus_university"
+        android:id="@+id/button_plus_auditorium"
         android:layout_width="@dimen/dp_40"
         android:layout_height="@dimen/dp_40"
         android:layout_marginTop="@dimen/dp_20"
@@ -109,18 +109,18 @@
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_university"
+        android:id="@+id/button_auditorium"
         android:layout_width="@dimen/dp_200"
         android:layout_height="@dimen/dp_40"
         android:layout_marginTop="@dimen/dp_20"
         android:background="@drawable/btn_radius_10dp"
         android:backgroundTint="@color/major"
         android:fontFamily="@font/poppins_bold"
-        android:text="@string/university"
+        android:text="@string/auditorium"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="@dimen/sp_20"
-        app:layout_constraintStart_toEndOf="@id/button_plus_university"
+        app:layout_constraintStart_toEndOf="@id/button_plus_auditorium"
         app:layout_constraintTop_toBottomOf="@id/button_week_schedule"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
         tools:ignore="TouchTargetSizeCheck" />
@@ -134,7 +134,7 @@
         android:background="@drawable/add_botton"
         android:backgroundTint="@color/major"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
-        app:layout_constraintTop_toBottomOf="@id/button_plus_university"
+        app:layout_constraintTop_toBottomOf="@id/button_plus_auditorium"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -150,7 +150,7 @@
         android:textColor="@color/white"
         android:textSize="@dimen/sp_20"
         app:layout_constraintStart_toEndOf="@id/button_plus_subject"
-        app:layout_constraintTop_toBottomOf="@id/button_university"
+        app:layout_constraintTop_toBottomOf="@id/button_auditorium"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
         tools:ignore="TouchTargetSizeCheck" />
 

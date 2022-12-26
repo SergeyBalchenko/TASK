@@ -65,7 +65,7 @@
         android:layout_height="wrap_content"
         android:ellipsize="end"
         android:fontFamily="@font/poppins_bold"
-        android:text="@string/name_auditoria"
+        android:text="@string/name_auditorium"
         android:textSize="@dimen/sp_14"
         app:layout_constraintEnd_toStartOf="@id/teacher_phone_number"
         app:layout_constraintHorizontal_chainStyle="spread"

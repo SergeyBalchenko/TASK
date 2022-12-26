@@ -18,7 +18,9 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class BlankAddedSubjectFragment : Fragment() {
+
     private lateinit var binding: FragmentBlankAddedSubjectBinding
+
     private lateinit var viewModel: BlankAddedSubjectViewModel
 
     @Inject

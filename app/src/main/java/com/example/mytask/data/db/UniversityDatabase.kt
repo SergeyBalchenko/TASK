@@ -18,7 +18,8 @@ import com.example.mytask.data.dao.*
         ClassroomSubjectCrossRef::class,
         TeacherSubjectCrossRef::class
     ],
-    version = 2
+    version = 1,
+    exportSchema = false
 )
 abstract class UniversityDatabase : RoomDatabase() {
 

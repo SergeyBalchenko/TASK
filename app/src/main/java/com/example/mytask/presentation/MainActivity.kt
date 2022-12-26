@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
 
    private lateinit var binding: ActivityMainBinding
    private lateinit var adapter: UsersAdapter
+   private lateinit var mainViewModel: MainActyvityViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,13 +42,13 @@ class MainActivity : AppCompatActivity() {
             .addToBackStack(null)
             .commit()
 
-        val mainViewModel = ViewModelProvider(this).get(MainActyvityViewModel::class.java)
+         mainViewModel = ViewModelProvider(this).get(MainActyvityViewModel::class.java)
 
         createDbSettings()
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
+        onBackPressedDispatcher.onBackPressed()
         return true
     }
 
@@ -61,15 +62,11 @@ class MainActivity : AppCompatActivity() {
         val cWsDao = UniversityDatabase.getInstance(this).cWsDao
 
         val classroom = listOf(
-            Classroom("Mike Litoris", "Jake Wharton School"),
-            Classroom("Jack Goff", "Kotlin School"),
-            Classroom("Chris P. Chicken", "JetBrains School")
+            Classroom("Mike Litoris"),
+            Classroom("Jack Goff"),
+            Classroom("Chris P. Chicken")
         )
-        val university = listOf(
-            University("Jake Wharton School"),
-            University("Kotlin School"),
-            University("JetBrains School")
-        )
+
         val subjects = listOf(
             Subject("Dating for programmers", "ONPU"),
             Subject("Avoiding depression", "Mechnikov"),
@@ -109,7 +106,6 @@ class MainActivity : AppCompatActivity() {
 
         lifecycleScope.launch {
             classroom.forEach { classroomDao.insertClassroom(it) }
-            university.forEach { dao.insertUniversity(it) }
             subjects.forEach { subjectDao.insert(it) }
             teacher.forEach { teacherDao.insertTeacher(it) }
             teacherSubjectCrossRef.forEach { sWtDao.insertTeacherSubjectCrossRef(it) }

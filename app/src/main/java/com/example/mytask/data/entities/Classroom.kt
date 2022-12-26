@@ -4,11 +4,8 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 @Entity
-data class Classroom (
+data class Classroom(
 
     @PrimaryKey(autoGenerate = false)
-    val classroomName: String,
-
-    @ColumnInfo
-    val  locationName: String
+    val classroomName: String
 )

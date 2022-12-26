@@ -11,7 +11,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.example.mytask.App
-import com.example.mytask.databinding.FragmentBlankAddedUniversityBinding
+import com.example.mytask.databinding.FragmentBlankAddedAuditoriumBinding
+import com.example.mytask.databinding.FragmentScrollForAuditiriumBinding
 import com.example.mytask.presentation.blankAddSubject.Effect
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
@@ -20,8 +21,8 @@ import javax.inject.Inject
 
 class BlankAddedUniversityFragment : Fragment() {
 
-    private lateinit var binding: FragmentBlankAddedUniversityBinding
-    private lateinit var viewModel: BlankAddedUniversityViewModel
+    private lateinit var binding: FragmentBlankAddedAuditoriumBinding
+    private lateinit var viewModel: BlankAddedAuditoriumViewModel
 
     @Inject
     lateinit var viewModelFactory: BlankAddedUniversityViewModelFactory
@@ -35,7 +36,7 @@ class BlankAddedUniversityFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentBlankAddedUniversityBinding.inflate(inflater, container, false)
+        binding = FragmentBlankAddedAuditoriumBinding.inflate(inflater, container, false)
 
         return binding.root
     }
@@ -43,7 +44,7 @@ class BlankAddedUniversityFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         (requireActivity().application as App).appComponent.inject(this)
-        viewModel = ViewModelProvider(this, viewModelFactory)[BlankAddedUniversityViewModel::class.java]
+        viewModel = ViewModelProvider(this, viewModelFactory)[BlankAddedAuditoriumViewModel::class.java]
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -68,7 +69,7 @@ class BlankAddedUniversityFragment : Fragment() {
             }
 
             is Effect.ErrorAdded -> {
-                Toast.makeText(requireActivity(), "Can't add a University", Toast.LENGTH_SHORT)
+                Toast.makeText(requireActivity(), "Can't add a Classroom", Toast.LENGTH_SHORT)
                     .show()
             }
         }
@@ -76,8 +77,8 @@ class BlankAddedUniversityFragment : Fragment() {
 
     private fun setupClickListeners() {
         binding.buttonAdd.setOnClickListener {
-            val university = binding.editTextTextUniversityName.text.toString()
-            viewModel.addUniversity(university)
+            val auditorium = binding.editTextTextAuditoriumName.text.toString()
+            viewModel.addUniversity(auditorium)
         }
     }
     private fun popBack(){

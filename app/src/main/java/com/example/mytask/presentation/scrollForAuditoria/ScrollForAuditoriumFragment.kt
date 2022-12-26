@@ -9,26 +9,25 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import com.example.mytask.databinding.FragmentScrollForAuditiriumBinding
 import com.example.mytask.databinding.FragmentScrollForTeacherBinding
-import kotlinx.coroutines.flow.forEach
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 
-class ScrollForTeacherFragment : Fragment() {
+class ScrollForAuditoriumFragment : Fragment() {
 
-    private lateinit var binding: FragmentScrollForTeacherBinding
+    private lateinit var binding: FragmentScrollForAuditiriumBinding
 
-    // TODO: подключишь viewModel
-    private lateinit var viewModel: ScrollForTeacherViewModel
+    private lateinit var viewModel: ScrollForAuditoriumViewModel
 
-    private lateinit var adapter: TeacherListAdapter
+    private lateinit var adapter: AuditoriumListAdapter
 
     companion object {
-        val TAG = ScrollForTeacherFragment::class.simpleName
+        val TAG = ScrollForAuditoriumFragment::class.simpleName
 
-        fun newInstance(): ScrollForTeacherFragment {
-            return ScrollForTeacherFragment()
+        fun newInstance(): ScrollForAuditoriumFragment {
+            return ScrollForAuditoriumFragment()
         }
     }
 
@@ -36,10 +35,9 @@ class ScrollForTeacherFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentScrollForTeacherBinding.inflate(inflater, container, false)
+        binding = FragmentScrollForAuditiriumBinding.inflate(inflater, container, false)
 
-        val scrollForTeacherViewModel =
-            ViewModelProvider(this).get(ScrollForTeacherViewModel::class.java)
+        val scrollForAuditoriumViewModel = ViewModelProvider(this).get(ScrollForAuditoriumViewModel::class.java)
 
         return binding.root
     }
@@ -58,7 +56,7 @@ class ScrollForTeacherFragment : Fragment() {
         }
     }
 
-    private fun handleUiState(viewState: ViewState) {
+    private fun handleUiState(viewState: ViewStateAudit) {
         if (viewState.loading) {
             // TODO: create progressBar
         }
@@ -68,7 +66,7 @@ class ScrollForTeacherFragment : Fragment() {
 
         if (viewState.loading.not() && viewState.error.not()) {
             binding.teacherRecyclerView.visibility = View.VISIBLE
-            adapter.submitList(viewState.teachers)
+            adapter.submitList(viewState.classroomName)
         }
     }
 

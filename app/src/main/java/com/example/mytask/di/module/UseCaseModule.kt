@@ -2,13 +2,13 @@ package com.example.mytask.di.module
 
 import com.example.mytask.domain.repository.UniversityRepository
 import com.example.mytask.domain.repository.WeatherRepository
+import com.example.mytask.domain.usecase.AddClassroomUseCase
 import com.example.mytask.domain.usecase.AddSubjectUseCase
 import com.example.mytask.domain.usecase.AddTeacherUseCase
-import com.example.mytask.domain.usecase.AddUniversityUseCase
+import com.example.mytask.domain.usecase.GetClassroomUsesCase
 import com.example.mytask.domain.usecase.GetSubjectsUseCase
 import com.example.mytask.domain.usecase.GetTeacherUseCase
 import com.example.mytask.domain.usecase.GetTemperatureUseCase
-import com.example.mytask.domain.usecase.GetUniversityUsesCase
 import dagger.Module
 import dagger.Provides
 
@@ -18,8 +18,8 @@ class UseCaseModule {
     @Provides
     fun provideAddUniversityUseCase(
         universityRepository: UniversityRepository
-    ): AddUniversityUseCase{
-        return  AddUniversityUseCase(
+    ): AddClassroomUseCase{
+        return  AddClassroomUseCase(
             universityRepository
                 )
     }
@@ -61,8 +61,8 @@ class UseCaseModule {
     @Provides
     fun provideGetUniversityUseCase(
         universityRepository: UniversityRepository
-    ): GetUniversityUsesCase {
-        return  GetUniversityUsesCase(
+    ): GetClassroomUsesCase {
+        return  GetClassroomUsesCase(
             universityRepository
         )
     }

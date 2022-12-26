@@ -13,11 +13,11 @@ import com.example.mytask.R
 import com.example.mytask.data.model.Weather
 import com.example.mytask.databinding.MainScreenBinding
 import com.example.mytask.presentation.blankAddSubject.BlankAddedSubjectFragment
-import com.example.mytask.presentation.mainChooseUniversity.MainScrolChooseUniversity.MainChooseUniversityFragment
 import com.example.mytask.presentation.startScreen.StartScreenFragment
 import com.example.mytask.presentation.blankAddedUniversity.BlankAddedUniversityFragment
-import com.example.mytask.presentation.blankAddedTeacher.BlankAddedTeacherFragment
+import com.example.mytask.data.api.blankAddedTeacher.BlankAddedTeacherFragment
 import com.example.mytask.presentation.scrollForSubject.ScrollForSubjectFragment
+import com.example.mytask.presentation.scrollForTeacher.ScrollForAuditoriumFragment
 import com.example.mytask.presentation.scrollForTeacher.ScrollForTeacherFragment
 import javax.inject.Inject
 
@@ -64,14 +64,23 @@ class MainFragment : Fragment() {
         binding.buttonWeekSchedule.setOnClickListener {
             openStartScreen()
         }
-        binding.buttonPlusUniversity.setOnClickListener {
-            openBlankAddedUniversity()
+        binding.buttonPlusAuditorium.setOnClickListener {
+            openBlankAddedAuditorium()
         }
         binding.buttonAddTeacher.setOnClickListener {
             openBlankAddedTeacher()
         }
         binding.buttonPlusSubject.setOnClickListener {
             openBlankAddSubject()
+        }
+        binding.buttonTeacher.setOnClickListener{
+            openScrollForTeacher()
+        }
+        binding.buttonAuditorium.setOnClickListener{
+            openScrollForAuditoria()
+        }
+        binding.buttonSubject.setOnClickListener{
+            openScrollForSubject()
         }
 
         viewModel.myTemp.observe(viewLifecycleOwner) { mainModel ->
@@ -95,7 +104,7 @@ class MainFragment : Fragment() {
             .commit()
     }
 
-    private fun openBlankAddedUniversity() {
+    private fun openBlankAddedAuditorium() {
         parentFragmentManager.beginTransaction()
             .replace(
                 R.id.container,
@@ -106,7 +115,38 @@ class MainFragment : Fragment() {
             .commit()
     }
 
+    private fun openScrollForTeacher(){
+        parentFragmentManager.beginTransaction()
+            .replace(
+                R.id.container,
+                ScrollForSubjectFragment.newInstance(),
+                StartScreenFragment.TAG
+            )
+            .addToBackStack(TAG)
+            .commit()
+    }
 
+    private fun openScrollForSubject(){
+        parentFragmentManager.beginTransaction()
+            .replace(
+                R.id.container,
+                ScrollForSubjectFragment.newInstance(),
+                StartScreenFragment.TAG
+            )
+            .addToBackStack(TAG)
+            .commit()
+    }
+
+    private fun openScrollForAuditoria(){
+        parentFragmentManager.beginTransaction()
+            .replace(
+                R.id.container,
+                ScrollForAuditoriumFragment.newInstance(),
+                StartScreenFragment.TAG
+            )
+            .addToBackStack(TAG)
+            .commit()
+    }
     private fun openBlankAddedTeacher() {
         parentFragmentManager.beginTransaction()
             .replace(

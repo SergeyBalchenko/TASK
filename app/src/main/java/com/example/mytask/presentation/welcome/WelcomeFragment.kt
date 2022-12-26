@@ -29,7 +29,7 @@ class WelcomeFragment : Fragment() {
     ): View {
         binding = FragmentWelcomeBinding.inflate(inflater, container, false)
 
-        val wednesdayViewModel = ViewModelProvider(this).get(WelcomeViewModel::class.java)
+        val wednesdayViewModel = ViewModelProvider(this)[WelcomeViewModel::class.java]
 
         return binding.root
     }
