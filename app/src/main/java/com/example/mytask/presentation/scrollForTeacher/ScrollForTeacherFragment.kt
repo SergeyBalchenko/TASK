@@ -39,6 +39,7 @@ class ScrollForTeacherFragment : Fragment() {
         super.onCreate(savedInstanceState)
         diSetup()
         viewModel = ViewModelProvider(this, viewModelFactory)[ScrollForTeacherViewModel::class.java]
+        adapter = TeacherListAdapter()
     }
 
     override fun onCreateView(
@@ -51,8 +52,6 @@ class ScrollForTeacherFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        adapter = TeacherListAdapter()
         binding.teacherRecyclerView.adapter = adapter
 
         binding.buttonBack.setOnClickListener {

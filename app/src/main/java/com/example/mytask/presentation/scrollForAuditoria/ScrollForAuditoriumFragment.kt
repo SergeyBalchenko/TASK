@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.example.mytask.databinding.FragmentScrollForAuditiriumBinding
-import com.example.mytask.databinding.FragmentScrollForTeacherBinding
+import com.example.mytask.presentation.scrollForAuditoria.AuditoriumListAdapter
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
