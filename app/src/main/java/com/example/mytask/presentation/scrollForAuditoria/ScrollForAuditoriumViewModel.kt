@@ -1,6 +1,7 @@
 package com.example.mytask.presentation.scrollForTeacher
 
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.example.mytask.data.entities.Classroom
 import com.example.mytask.domain.usecase.GetClassroomUsesCase
@@ -8,6 +9,7 @@ import com.example.mytask.presentation.scrollForTeacher.ViewStateAudit.Companion
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 class ScrollForAuditoriumViewModel(
     private val getClassroomUsesCase: GetClassroomUsesCase
@@ -45,5 +47,10 @@ data class ViewStateAudit(
         val INIT_VALUE_CLASS = ViewStateAudit()
     }
 }
-
-// TODO: сделаешь viewModelFactory
+class ScrollForAuditoriumFactory @Inject constructor(
+    private val getClassroomUsesCase: GetClassroomUsesCase
+): ViewModelProvider.Factory {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        return ScrollForAuditoriumViewModel(getClassroomUsesCase) as T
+    }
+}

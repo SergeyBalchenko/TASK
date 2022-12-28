@@ -10,6 +10,8 @@ import com.example.mytask.presentation.blankAddSubject.BlankAddedSubjectFragment
 import com.example.mytask.data.api.blankAddedTeacher.BlankAddedTeacherFragment
 import com.example.mytask.presentation.blankAddedUniversity.BlankAddedUniversityFragment
 import com.example.mytask.presentation.main.MainFragment
+import com.example.mytask.presentation.scrollForSubject.ScrollForSubjectFragment
+import com.example.mytask.presentation.scrollForTeacher.ScrollForAuditoriumFragment
 import com.example.mytask.presentation.scrollForTeacher.ScrollForTeacherFragment
 import dagger.BindsInstance
 import dagger.Component
@@ -42,4 +44,6 @@ interface AppComponent {
     fun inject(fragment: BlankAddedUniversityFragment)
     fun inject(fragment: BlankAddedTeacherFragment)
     fun inject(fragment: ScrollForTeacherFragment)
+    fun inject(fragment: ScrollForSubjectFragment)
+    fun inject(fragment: ScrollForAuditoriumFragment)
 }

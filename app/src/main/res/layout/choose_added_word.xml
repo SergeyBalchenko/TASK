@@ -9,7 +9,7 @@
     app:cardPreventCornerOverlap="false">
 
     <TextView
-        android:id="@+id/teacherNameTextView"
+        android:id="@+id/wordNameTextView"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_50"
         android:background="@drawable/bg_general_mood"

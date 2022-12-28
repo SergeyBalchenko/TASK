@@ -17,6 +17,9 @@ class AuditoriumListAdapter(
         val binding: ChooseAddedWordBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
+        fun onBind(classroom: Classroom) {
+            binding.wordNameTextView.text = classroom.classroomName
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AuditoriumViewHolder {
@@ -27,8 +30,6 @@ class AuditoriumListAdapter(
 
     override fun onBindViewHolder(holder: AuditoriumViewHolder, position: Int) {
         val auditorium = currentList[position]
-        with(holder.binding) {
-            teacherNameTextView.text = auditorium.classroomName
-        }
+        holder.onBind(auditorium)
     }
 }

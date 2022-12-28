@@ -7,10 +7,10 @@ class ScrollForSubjectDiffUtil(
 ): DiffUtil.ItemCallback<Subject>() {
 
     override fun areItemsTheSame(oldItem: Subject, newItem: Subject): Boolean {
-        TODO("Not yet implemented")
+        return oldItem.subjectName == newItem.subjectName
     }
 
     override fun areContentsTheSame(oldItem: Subject, newItem: Subject): Boolean {
-        TODO("Not yet implemented")
+        return  oldItem == newItem
     }
 }

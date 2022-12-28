@@ -7,8 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mytask.data.entities.Subject
 import com.example.mytask.databinding.ChooseAddedWordBinding
 
-class ScrollForSubjectAdapter(
-) : ListAdapter<Subject, ScrollForSubjectAdapter.SubjectViewHolder>(
+class SubjectListAdapter(
+) : ListAdapter<Subject, SubjectListAdapter.SubjectViewHolder>(
     ScrollForSubjectDiffUtil()
 ) {
 
@@ -16,6 +16,9 @@ class ScrollForSubjectAdapter(
         val binding: ChooseAddedWordBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
+        fun onBind(subject: Subject) {
+            binding.wordNameTextView.text = subject.subjectName
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SubjectViewHolder {
@@ -26,8 +29,6 @@ class ScrollForSubjectAdapter(
 
     override fun onBindViewHolder(holder: SubjectViewHolder, position: Int) {
         val subject = currentList[position]
-        with(holder.binding) {
-            teacherNameTextView.text = subject.subjectName
-        }
+        holder.onBind(subject)
     }
 }

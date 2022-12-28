@@ -13,6 +13,7 @@ import com.example.mytask.presentation.scrollForTeacher.ScrollForTeacherViewMode
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 class ScrollForSubjectViewModel(
     private  val getSubjectsUseCase: GetSubjectsUseCase
@@ -49,11 +50,10 @@ data class ViewStateSubject(
         val INIT_VALUE_SUB = ViewStateSubject()
     }
 }
-class ScrollForTeacherFactory(
-    private val getSubjectsUseCase: GetSubjectsUseCase,
-    application: Application
+class ScrollForTeacherFactory @Inject constructor
+    (private val getSubjectsUseCase: GetSubjectsUseCase
 )
-    : ViewModelProvider.AndroidViewModelFactory(application){
+    : ViewModelProvider.Factory{
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return ScrollForSubjectViewModel(getSubjectsUseCase) as T
     }

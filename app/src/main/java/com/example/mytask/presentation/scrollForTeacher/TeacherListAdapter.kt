@@ -18,7 +18,7 @@ class TeacherListAdapter(
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun onBind(teacher: Teacher) {
-            binding.teacherNameTextView.text = teacher.teacherName
+            binding.wordNameTextView.text = teacher.teacherName
         }
     }
 

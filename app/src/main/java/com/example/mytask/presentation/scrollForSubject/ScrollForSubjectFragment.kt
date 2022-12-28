@@ -7,14 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelStore
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import com.example.mytask.App
 import com.example.mytask.databinding.FragmentScrollForSubjectBinding
-import com.example.mytask.presentation.scrollForTeacher.ViewState
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 class ScrollForSubjectFragment : Fragment() {
 
@@ -22,7 +22,10 @@ class ScrollForSubjectFragment : Fragment() {
 
     private lateinit var viewModel: ScrollForSubjectViewModel
 
-    private lateinit var adapter: ScrollForSubjectAdapter
+    private lateinit var adapter: SubjectListAdapter
+
+    @Inject
+    lateinit var viewModelFactory: ScrollForTeacherFactory
 
     companion object {
         val TAG = ScrollForSubjectFragment::class.simpleName
@@ -32,20 +35,25 @@ class ScrollForSubjectFragment : Fragment() {
         }
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        diSetup()
+        viewModel = ViewModelProvider(this, viewModelFactory)[ScrollForSubjectViewModel::class.java]
+        adapter = SubjectListAdapter()
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentScrollForSubjectBinding.inflate(inflater, container, false)
-
-        val scrollForSubjectViewModel =
-            ViewModelProvider(this).get(ScrollForSubjectViewModel::class.java)
-
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.recyclerViewSubject.adapter = adapter
 
         binding.buttonBack.setOnClickListener {
             popBack()
@@ -55,6 +63,9 @@ class ScrollForSubjectFragment : Fragment() {
                 viewModel.viewState.onEach(::handleUiStateSub).launchIn(this)
             }
         }
+    }
+    private fun diSetup() {
+        (requireActivity().application as App).appComponent.inject(this)
     }
 
     private fun handleUiStateSub(viewState: ViewStateSubject) {
