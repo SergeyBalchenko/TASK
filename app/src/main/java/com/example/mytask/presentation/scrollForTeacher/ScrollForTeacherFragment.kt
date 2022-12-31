@@ -10,7 +10,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.example.mytask.App
+import com.example.mytask.R
+import com.example.mytask.data.api.blankAddedTeacher.BlankAddedTeacherFragment
 import com.example.mytask.databinding.FragmentScrollForTeacherBinding
+import com.example.mytask.presentation.main.MainFragment
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
@@ -57,6 +60,9 @@ class ScrollForTeacherFragment : Fragment() {
         binding.buttonBack.setOnClickListener {
             popBack()
         }
+        binding.buttonPlus.setOnClickListener{
+            openBlankAddedTeacher()
+        }
 
         viewLifecycleOwner.lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
@@ -85,5 +91,15 @@ class ScrollForTeacherFragment : Fragment() {
 
     private fun popBack() {
         parentFragmentManager.popBackStack()
+    }
+    private fun openBlankAddedTeacher() {
+        parentFragmentManager.beginTransaction()
+            .replace(
+                R.id.container,
+                BlankAddedTeacherFragment.newInstance(),
+                BlankAddedTeacherFragment.TAG
+            )
+            .addToBackStack(MainFragment.TAG)
+            .commit()
     }
 }

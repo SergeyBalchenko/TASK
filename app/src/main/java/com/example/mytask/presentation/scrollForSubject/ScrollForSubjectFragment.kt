@@ -10,7 +10,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.example.mytask.App
+import com.example.mytask.R
 import com.example.mytask.databinding.FragmentScrollForSubjectBinding
+import com.example.mytask.presentation.blankAddSubject.BlankAddedSubjectFragment
+import com.example.mytask.presentation.main.MainFragment
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
@@ -58,6 +61,9 @@ class ScrollForSubjectFragment : Fragment() {
         binding.buttonBack.setOnClickListener {
             popBack()
         }
+        binding.buttonPlus.setOnClickListener{
+            openBlankAddSubject()
+        }
         viewLifecycleOwner.lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.viewState.onEach(::handleUiStateSub).launchIn(this)
@@ -81,8 +87,17 @@ class ScrollForSubjectFragment : Fragment() {
             adapter.submitList(viewState.subjects)
         }
     }
-
     private fun popBack() {
         parentFragmentManager.popBackStack()
+    }
+    private fun openBlankAddSubject() {
+        parentFragmentManager.beginTransaction()
+            .replace(
+                R.id.container,
+                BlankAddedSubjectFragment.newInstance(),
+                BlankAddedSubjectFragment.TAG
+            )
+            .addToBackStack(MainFragment.TAG)
+            .commit()
     }
 }

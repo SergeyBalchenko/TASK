@@ -10,7 +10,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.example.mytask.App
+import com.example.mytask.R
 import com.example.mytask.databinding.FragmentScrollForAuditiriumBinding
+import com.example.mytask.presentation.blankAddedUniversity.BlankAddedUniversityFragment
+import com.example.mytask.presentation.main.MainFragment
 import com.example.mytask.presentation.scrollForAuditoria.AuditoriumListAdapter
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
@@ -58,6 +61,9 @@ class ScrollForAuditoriumFragment : Fragment() {
         binding.buttonBack.setOnClickListener {
             popBack()
         }
+        binding.buttonPlus.setOnClickListener {
+            openBlankAddedAuditorium()
+        }
 
         viewLifecycleOwner.lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
@@ -85,5 +91,16 @@ class ScrollForAuditoriumFragment : Fragment() {
 
     private fun popBack() {
         parentFragmentManager.popBackStack()
+    }
+
+    private fun openBlankAddedAuditorium() {
+        parentFragmentManager.beginTransaction()
+            .replace(
+                R.id.container,
+                BlankAddedUniversityFragment.newInstance(),
+                BlankAddedUniversityFragment.TAG
+            )
+            .addToBackStack(MainFragment.TAG)
+            .commit()
     }
 }
