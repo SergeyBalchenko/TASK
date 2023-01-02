@@ -9,8 +9,8 @@ import com.example.mytask.data.db.UniversityDatabase
 import com.example.mytask.data.entities.Classroom
 import com.example.mytask.data.entities.Subject
 import com.example.mytask.data.entities.Teacher
-import com.example.mytask.data.entities.University
 import com.example.mytask.data.entities.relations.ClassroomSubjectCrossRef
+import com.example.mytask.data.entities.relations.SubjectInfoCrossRef
 import com.example.mytask.data.entities.relations.TeacherSubjectCrossRef
 import com.example.mytask.databinding.ActivityMainBinding
 import com.example.mytask.presentation.welcome.WelcomeFragment
@@ -60,6 +60,7 @@ class MainActivity : AppCompatActivity() {
         val subjectDao = UniversityDatabase.getInstance(this).subjectDao
         val sWtDao = UniversityDatabase.getInstance(this).sWtDao
         val cWsDao = UniversityDatabase.getInstance(this).cWsDao
+        val subjectInfoDb = UniversityDatabase.getInstance(this).subjectInfo
 
         val classroom = listOf(
             Classroom("Mike Litoris"),
@@ -103,6 +104,9 @@ class MainActivity : AppCompatActivity() {
             ClassroomSubjectCrossRef("Hom Tanks", "Avoiding depression"),
             ClassroomSubjectCrossRef("Hom Tanks", "Dating for programmers")
         )
+        val subjectInfo = listOf(
+            SubjectInfoCrossRef("Dating for programmers","main","Philipp Lackner")
+        )
 
         lifecycleScope.launch {
             classroom.forEach { classroomDao.insertClassroom(it) }
@@ -110,6 +114,7 @@ class MainActivity : AppCompatActivity() {
             teacher.forEach { teacherDao.insertTeacher(it) }
             teacherSubjectCrossRef.forEach { sWtDao.insertTeacherSubjectCrossRef(it) }
             classroomSubjectCrossRef.forEach { cWsDao.insertClassroomSubjectCrossRef(it) }
+            subjectInfo.forEach {subjectInfoDb.insertSubjectInfoCrossRef(it)}
         }
     }
 

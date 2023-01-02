@@ -1,4 +1,4 @@
-package com.example.mytask.data.api.blankAddedTeacher
+package com.example.mytask.presentation.blankAddedTeacher
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

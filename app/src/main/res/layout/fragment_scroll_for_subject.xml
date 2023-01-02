@@ -113,12 +113,14 @@
         android:layout_marginTop="@dimen/dp_20"
         android:orientation="vertical"
         android:padding="@dimen/dp_10"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
         app:layout_constraintTop_toBottomOf="@id/button_subject"
+        app:layout_constraintVertical_bias="0.0"
         tools:itemCount="7"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/choose_added_word"
         tools:orientation="vertical">
 

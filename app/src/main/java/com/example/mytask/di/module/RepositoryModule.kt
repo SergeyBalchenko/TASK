@@ -3,6 +3,7 @@ package com.example.mytask.di.module
 import com.example.mytask.data.api.WeatherApi
 import com.example.mytask.data.dao.ClassroomDao
 import com.example.mytask.data.dao.SubjectDao
+import com.example.mytask.data.dao.SubjectInfoDao
 import com.example.mytask.data.dao.TeacherDao
 import com.example.mytask.data.dao.UniversityDao
 import com.example.mytask.data.repository.UniversityRepositoryRoom
@@ -22,13 +23,15 @@ class RepositoryModule {
         subjectDao: SubjectDao,
         universityDao: UniversityDao,
         teacherDao: TeacherDao,
-        classroomDao: ClassroomDao
+        classroomDao: ClassroomDao,
+        subjectInfoDao: SubjectInfoDao
     ): UniversityRepository {
         return UniversityRepositoryRoom(
             subjectDao,
             universityDao,
             teacherDao,
-            classroomDao
+            classroomDao,
+            subjectInfoDao
         )
     }
 

@@ -15,7 +15,7 @@ import com.example.mytask.databinding.MainScreenBinding
 import com.example.mytask.presentation.blankAddSubject.BlankAddedSubjectFragment
 import com.example.mytask.presentation.startScreen.StartScreenFragment
 import com.example.mytask.presentation.blankAddedUniversity.BlankAddedUniversityFragment
-import com.example.mytask.data.api.blankAddedTeacher.BlankAddedTeacherFragment
+import com.example.mytask.presentation.blankAddedTeacher.BlankAddedTeacherFragment
 import com.example.mytask.presentation.scrollForSubject.ScrollForSubjectFragment
 import com.example.mytask.presentation.scrollForTeacher.ScrollForAuditoriumFragment
 import com.example.mytask.presentation.scrollForTeacher.ScrollForTeacherFragment

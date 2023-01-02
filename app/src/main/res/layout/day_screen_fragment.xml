@@ -110,11 +110,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/name_Day"
+            android:layout_marginTop="-1dp"
             android:background="@color/major"
             android:padding="@dimen/dp_10"
             android:visibility="visible"
             tools:itemCount="2"
-            tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/fragment_view_day_shedule"
             tools:orientation="vertical" />
     </RelativeLayout>

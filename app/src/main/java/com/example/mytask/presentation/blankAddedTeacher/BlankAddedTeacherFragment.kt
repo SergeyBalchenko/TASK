@@ -1,4 +1,4 @@
-package com.example.mytask.data.api.blankAddedTeacher
+package com.example.mytask.presentation.blankAddedTeacher
 
 import android.os.Bundle
 import android.view.LayoutInflater

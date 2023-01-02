@@ -11,7 +11,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.example.mytask.App
 import com.example.mytask.R
-import com.example.mytask.data.api.blankAddedTeacher.BlankAddedTeacherFragment
+import com.example.mytask.presentation.blankAddedTeacher.BlankAddedTeacherFragment
 import com.example.mytask.databinding.FragmentScrollForTeacherBinding
 import com.example.mytask.presentation.main.MainFragment
 import kotlinx.coroutines.flow.launchIn

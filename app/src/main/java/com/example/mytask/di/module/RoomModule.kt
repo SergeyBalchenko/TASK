@@ -3,6 +3,7 @@ package com.example.mytask.di.module
 import android.content.Context
 import com.example.mytask.data.dao.ClassroomDao
 import com.example.mytask.data.dao.SubjectDao
+import com.example.mytask.data.dao.SubjectInfoDao
 import com.example.mytask.data.dao.TeacherDao
 import com.example.mytask.data.dao.UniversityDao
 import com.example.mytask.data.db.UniversityDatabase
@@ -52,4 +53,11 @@ class RoomModule {
             ): UniversityDao{
                 return  database.universityDao
             }
+    @Provides
+    @Singleton
+    fun provideSubjectInfoDao(
+        database: UniversityDatabase
+    ): SubjectInfoDao{
+        return  database.subjectInfo
+    }
 }
